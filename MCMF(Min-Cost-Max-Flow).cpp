@@ -4,12 +4,25 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 const int MAX = 2502;
 const int S = MAX-2, E = MAX-1;
+/**
+ * c : capacity
+ * f : flow
+ */
 int c[MAX][MAX], f[MAX][MAX], cost[MAX][MAX], curCost[MAX], prv[MAX];
 bool inQueue[MAX];
 vector<vector<int>> conn(MAX);
 
 int main() {
-    
+    /**
+     * 순방향 간선
+     * conn[a].push_back(b);
+     * c[a][b] = inputCapacity;
+     * cost[a][b] = inputCost;
+     * 
+     * 역방향 간선
+     * conn[b].push_back(a);
+     * cost[b][a] = -inputCost;
+     */
     int totalCost=0;
     while(true) {
         memset(prv, -1, sizeof prv);
