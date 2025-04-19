@@ -5,7 +5,7 @@ using namespace std;
 /**
  * MAX : 배열 크기
  * _size : 사용할 배열의 크기 (_size/2 ~ _size-1까지 값이 저장됨)
- * arr : 배열
+ * arr : 구간 정보를 담아둘 배열
  */
 typedef long long ll;
 const int MAX = 3'000'000;
