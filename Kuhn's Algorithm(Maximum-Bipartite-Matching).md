@@ -1,4 +1,4 @@
-## Kuhn's-Algorithm(Maximum-Bipartite-Matching, 이분 매칭)
+## Kuhn's Algorithm(Maximum-Bipartite-Matching, 이분 매칭)
 
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽과 오른쪽의 쌍의 수)를 찾는 알고리즘
 
