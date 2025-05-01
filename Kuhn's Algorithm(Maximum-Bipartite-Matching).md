@@ -4,6 +4,8 @@
 
 ![image](https://github.com/user-attachments/assets/56ba1be0-a03c-4bb8-8816-b7da371723da)
 
+시간복잡도 O(VE) V : 양쪽 그룹 중 더 큰 정점의 크기
+
 [연습 문제(백준 11375번)](https://www.acmicpc.net/problem/11375)
 
 직원들을 각각 왼쪽 정점으로, 일들을 각각 오른쪽 정점으로 설정해두고 직원-일 간의 최대 쌍의 수를 구해주면 된다.
