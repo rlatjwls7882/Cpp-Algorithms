@@ -46,3 +46,8 @@
 그래프에서 시작 지점에서 유량을 흘려서, 도착지점까지 유량이 얼마나 도착하는지 찾는 알고리즘
 
 시간복잡도 O(VE²)
+
+## [Dinic's Algorithm](/Dinic's%20Algorithm.md)
+Edmonds-Karp 알고리즘을 최적화한 알고리즘
+
+시간복잡도 O(V²E)
