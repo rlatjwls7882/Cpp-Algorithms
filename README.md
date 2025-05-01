@@ -34,7 +34,7 @@
   * Lazy Propagation
 
 * DP
-  * TSP (Traveling Salesman Problem)
+  * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
 
 ## [Kuhn's Algorithm (Maximum-Bipartite-Matching, 이분 매칭)](src/Kuhn's%20Algorithm(Maximum-Bipartite-Matching).md)
@@ -53,6 +53,61 @@ Edmonds-Karp 알고리즘을 최적화한 알고리즘
 시간복잡도 : O(V²E)
 
 ## [MCMF (Min-Cost-Max-Flow) Algorithm](src/MCMF(Min-Cost-Max-Flow)%20Algorithm.md)
-Edmonds-Karp 알고리즘과 비슷한 모양을 한 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
+Edmonds-Karp 알고리즘에 SPFA를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
 시간복잡도 : O(FVE) (F : 최대 유량)
+
+## SCC (Strongly Connected Component) 
+그래프에서 나타나는 [사이클](https://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_(%EA%B7%B8%EB%9E%98%ED%94%84_%EC%9D%B4%EB%A1%A0))을 그룹화하여 뽑아내는 알고리즘
+
+시간복잡도 : O(N)
+
+## 2-SAT (2-Satisfiability Problem)
+2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/%EB%85%BC%EB%A6%AC%EA%B3%B1_%ED%91%9C%EC%A4%80%ED%98%95)가 주어졌을 때, 이를 만족시키는 변수를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC로 확인하는 문제
+
+시간복잡도 : O(N)
+
+## Heavy-Light Decomposition
+트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
+
+시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
+
+## KMP (Knuth-Morris-Pratt) Algorithm
+한 문자열에서 다른 문자열의 포함 여부를 찾는(문자열 검색) 알고리즘
+
+시간복잡도 : O(N+M) (N+M : 두 문자열의 길이 합)
+
+## Trie
+여러 문자열을 공통 접두사로 압축해 저장하는 자료구조
+
+시간복잡도 : O(S) (S : 모든 문자열의 길이)
+
+## Aho-Corasick
+Trie구조를 활용한 일대다 패턴매칭 알고리즘
+
+시간복잡도 : O(S) (S : 모든 문자열의 길이)
+
+## Line Intersection
+선분 교차 판별하는 알고리즘
+
+시간복잡도 : O(1)
+
+## Segment Tree
+포화 이진 트리 구조를 이용하여 구간 쿼리를 최적화하는 알고리즘
+
+시간복잡도 : O(QlogN) (Q : 쿼리의 수)
+
+## Lazy Propagation
+세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
+
+시간복잡도 : O(QlogN) (Q : 쿼리의 수)
+
+## TSP (Traveling Salesman Problem, 외판원 순회 문제)
+비트마스킹 DP를 이용하여 외판원 순회에 필요한 최소 비용을 계산하는 알고리즘
+
+시간복잡도 : O(N x 2<sup>N</sup>)
+
+## Deque Trick
+덱에 단조 증가 또는 단조 감소하는 인덱스를 유지하여 슬라이딩 윈도우 내에서 최소값 또는 최대값을 O(1)에 찾는 알고리즘
+
+시간복잡도 : O(N)
