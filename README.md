@@ -42,7 +42,7 @@
 
 시간복잡도 O(VE) V : 양쪽 그룹 중 더 큰 정점의 크기
 
-## Edmonds-Karp Algorithm
+## [Edmonds-Karp Algorithm](Edmonds-Karp%20Algorithm.md)
 그래프에서 시작 지점에서 유량을 흘려서, 도착지점까지 유량이 얼마나 도착하는지 찾는 알고리즘
 
 시간복잡도 O(VE²)
