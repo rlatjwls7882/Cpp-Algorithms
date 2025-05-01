@@ -1,7 +1,7 @@
 ## MCMF(Min-Cost-Max-Flow) Algorithm
-최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
+Edmonds-Karp 알고리즘과 비슷한 모양을 한 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
-시간복잡도 : O(VE)
+시간복잡도 : O(FVE) (F : 최대 유량)
 
 벨만 포드 기반의 SPFA(Shortest-Path-Faster-Algorithm)을 이용하여 구현한다.
 
