@@ -1,12 +1,20 @@
+## MCMF(Min-Cost-Max-Flow) Algorithm
+최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
+
+시간복잡도 : O(VE)
+
+벨만 포드 기반의 SPFA(Shortest-Path-Faster-Algorithm)을 이용하여 구현한다.
+
+``` c++
 /** https://www.acmicpc.net/problem/11408 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
 /**
  * MAX : 최대 정점 개수
- * INF : INT_MAX
- * S : source
- * E : sink
+ * INF : 대략 10억
+ * S : source (시작 지점)
+ * E : sink (도착 지점)
  */
 const int MAX = 802;
 const int INF = 0x3f3f3f3f;
@@ -15,10 +23,11 @@ const int S=MAX-2, E=MAX-1;
 /**
  * c[u][v] : u에서 v로의 최대 용량(capacity)
  * f[u][v] : u에서 v로 흐르는 유량(flow)
- * cost[u][v] : u에서 v로 가는데 드는 비
- * prv[i] : i에 도달하기 위해 방문한 이전 정점용
+ * cost[u][v] : u에서 v로 가는데 드는 비용
+ * cost[v][u] : v에서 u로 가는데 드는 비용 (역방향, =-cost[u][v])
+ * prv[i] : i에 도달하기 위해 방문한 이전 정점
  * curCost[i] : i에 도달하기 위해 드는 최소 비용
- * inQueue[i] : i가 큐에 들어있는지 (메모리, 시간 최적화)
+ * inQueue[i] : i가 큐에 들어있는지 (이미 들어있으면 넣지 않음으로써 메모리와 시간 최적화)
  * conn[u][v] : 순방향 간선
  * conn[v][u] : 역방향 간선
  */
@@ -40,6 +49,9 @@ int main() {
         c[i][E]=1;
     }
 
+    /** 
+     * 애드몬드-카프 알고리즘에서 순방향에는 cost[i][j]에는 +비용, cost[j][i]에는 -비용 집어넣는 것 추가
+     */
     for(int i=0;i<n;i++) {
         int cnt; cin >> cnt;
         while(cnt--) {
@@ -51,6 +63,14 @@ int main() {
         }
     }
 
+    /** 
+     * 애드몬드-카프 알고리즘과의 차이점
+     * inQueue 배열을 통해 정점이 현재 큐에 들어있는지 체크해줘야 함.
+     * curCost를 기록해서 source에서 cur번 정점까지의 최소 비용을 계산함.
+     * 
+     * 애드몬드-카프 알고리즘은 이미 방문한 정점은 더이상 방문하지 않았지만, MCMF 알고리즘은 curCost[next]가 작아지면 갱신
+     * 그렇기에 갱신이 많아져서 큐에 넣는 횟수가 증가함 -> inQueue로 이미 들어있는 정점은 큐에 넣지 않음으로써 최적화 해줘야함.
+     */
     int totalCost=0, flow=0;
     while(true) {
         memset(prv, -1, sizeof prv);
@@ -83,3 +103,4 @@ int main() {
     }
     cout << flow << '\n' << totalCost;
 }
+```
