@@ -1,7 +1,7 @@
 ## Edmonds-Karp Algorithm
 그래프에서 시작 지점(source)에서 유량을 흘려서, 도착 지점(sink)까지 유량이 얼마나 도착하는지 찾는 알고리즘
 
-시간복잡도 O(VE²)
+시간복잡도 : O(VE²)
 
 [연습 문제(백준 17412번)](https://www.acmicpc.net/problem/17412)
 
