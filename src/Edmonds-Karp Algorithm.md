@@ -3,7 +3,7 @@
 
 시간복잡도 : O(VE²)
 
-[연습 문제(백준 17412번)](https://www.acmicpc.net/problem/17412)
+[연습 문제 (백준 17412번)](https://www.acmicpc.net/problem/17412)
 
 ``` c++
 /** https://www.acmicpc.net/problem/17412 제출 코드 */
