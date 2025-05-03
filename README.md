@@ -16,7 +16,7 @@
     * Dinic's Algorithm
     * MCMF (Min Cost Max Flow) Algorithm
   * 컴포넌트 분해
-    * SCC (Strongly Connected Component)
+    * Kosaraju's Algorithm
     * 2-SAT (2-Satisfiability Problem)
   * 트리
     * Heavy-Light Decomposition
@@ -57,8 +57,8 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-## SCC (Strongly Connected Component) 
-그래프에서 나타나는 [사이클](https://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_(%EA%B7%B8%EB%9E%98%ED%94%84_%EC%9D%B4%EB%A1%A0))을 그룹화하여 뽑아내는 알고리즘
+## Kosaraju's Algorithm
+그래프에서 나타나는 [SCC(Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 dfs로 뽑아내는 알고리즘
 
 시간복잡도 : O(N)
 
