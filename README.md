@@ -67,7 +67,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [HLD(Heavy Light Decomposition)](src/HLD(Heavy%20Light%20Decomposition).md)
+## [HLD (Heavy Light Decomposition)](src/HLD(Heavy%20Light%20Decomposition).md)
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
 
 시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
