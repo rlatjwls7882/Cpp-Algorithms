@@ -21,7 +21,7 @@
   * 트리
     * Segment Tree
     * Lazy Propagation
-    * HLD(Heavy Light Decomposition)
+    * HLD (Heavy Light Decomposition)
 
 * 문자열
   * KMP (Knuth-Morris-Pratt) Algorithm
@@ -29,6 +29,7 @@
   * Aho-Corasick
 
 * 기하
+  * CCW (Counter ClockWise) Algorithm
   * Line Intersection
 
 * DP
@@ -94,6 +95,11 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 Trie구조를 활용한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(S) (S : 모든 문자열의 길이)
+
+## [CCW (Counter ClockWise) Algorithm](src/CCW(Counter%20ClockWise)%20Algorithm.md)
+세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
+
+시간복잡도 : O(1)
 
 ## Line Intersection
 선분 교차 판별하는 알고리즘
