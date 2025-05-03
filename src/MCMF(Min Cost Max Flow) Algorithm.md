@@ -1,9 +1,9 @@
-## MCMF (Min-Cost-Max-Flow) Algorithm
-Edmonds-Karp 알고리즘에 SPFA를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
+## MCMF (Min Cost Max Flow) Algorithm
+Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-벨만 포드 기반의 SPFA(Shortest-Path-Faster-Algorithm)을 이용하여 구현한다.
+벨만 포드 알고리즘 기반의 SPFA을 이용하여 구현한다.
 
 ``` c++
 /** https://www.acmicpc.net/problem/11408 제출 코드 */
