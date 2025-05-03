@@ -60,12 +60,12 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 ## [Tarjan’s Algorithm](src/Tarjan’s%20Algorithm.md)
 그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 한번의 dfs로 뽑아내는 알고리즘
 
-시간복잡도 : O(N)
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
 ## 2-SAT (2-Satisfiability Problem)
 2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/%EB%85%BC%EB%A6%AC%EA%B3%B1_%ED%91%9C%EC%A4%80%ED%98%95)가 주어졌을 때, 이를 만족시키는 변수를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC로 확인하는 문제
 
-시간복잡도 : O(N)
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
 ## Heavy-Light Decomposition
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
