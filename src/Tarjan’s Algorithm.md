@@ -87,11 +87,11 @@ int main() {
         conn[a].push_back(b);
     }
 
-    /** Kosaraju's Algorithm 시작 */
+    /** Tarjan's Algorithm 시작 */
     for(int i=1;i<=v;i++) {
         if(!visited[i]) dfs(i);
     }
-    /** Kosaraju's Algorithm 끝 */
+    /** Tarjan's Algorithm 끝 */
 
     for(int i=0;i<SCCs.size();i++) {
         sort(SCCs[i].begin(), SCCs[i].end());
@@ -106,5 +106,4 @@ int main() {
         cout << "-1\n";
     }
 }
-
 ```
