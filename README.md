@@ -81,8 +81,8 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
 
-## KMP (Knuth-Morris-Pratt) Algorithm
-한 문자열에서 다른 문자열의 포함 여부를 찾는(문자열 검색) 알고리즘
+## [KMP (Knuth-Morris-Pratt) Algorithm](src/KMP(Knuth-Morris-Pratt%20Algorithm).md)
+한 문자열에서 다른 문자열이 어디에 등장하는지 찾아주는 문자열 검색 알고리즘
 
 시간복잡도 : O(N+M) (N+M : 두 문자열의 길이 합)
 
