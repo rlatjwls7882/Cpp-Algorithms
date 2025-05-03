@@ -19,6 +19,8 @@
     * Tarjan’s Algorithm (SCC)
     * 2-SAT (2-Satisfiability Problem)
   * 트리
+    * Segment Tree
+    * Lazy Propagation
     * HLD(Heavy Light Decomposition)
 
 * 문자열
@@ -28,10 +30,6 @@
 
 * 기하
   * Line Intersection
-
-* 세그먼트 트리
-  * Segment Tree
-  * Lazy Propagation
 
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
