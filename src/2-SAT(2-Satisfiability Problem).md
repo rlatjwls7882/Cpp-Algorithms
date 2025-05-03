@@ -1,6 +1,8 @@
 ## 2-SAT (2-Satisfiability Problem)
 2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/%EB%85%BC%EB%A6%AC%EA%B3%B1_%ED%91%9C%EC%A4%80%ED%98%95)가 주어졌을 때, 이를 만족시도록 변수에 (True/False)를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC를 형성해 확인하는 문제
 
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
+
 2-SAT 문제에서 (A∨B) ∧ (B∨C)인 경우 A 또는 B가 참이어야 하고, B 또는 C가 참이어야 한다.
 
 이를 말로 풀어서 쓰면 다음과 같다.
