@@ -70,7 +70,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
-## Lazy Propagation
+## [Lazy Propagation](src/Lazy%20Propagation.md)
 세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
