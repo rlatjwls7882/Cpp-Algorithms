@@ -12,7 +12,7 @@
 * 그래프
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
-    * Edmonds Karp Algorithm
+    * Edmonds-Karp Algorithm
     * Dinic's Algorithm
     * MCMF (Min Cost Max Flow) Algorithm
   * 컴포넌트 분해
