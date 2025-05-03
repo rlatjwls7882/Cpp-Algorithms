@@ -3,7 +3,7 @@ Edmonds-Karp 알고리즘을 최적화한 알고리즘
 
 시간복잡도 : O(V²E)
 
-[연습 문제(백준 13161번)](https://www.acmicpc.net/problem/13161)
+[연습 문제 (백준 13161번)](https://www.acmicpc.net/problem/13161)
 
 ``` c++
 /** https://www.acmicpc.net/problem/13161 제출 코드 */
