@@ -106,8 +106,8 @@ Trie구조를 활용한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(1)
 
-## TSP (Traveling Salesman Problem, 외판원 순회 문제)
-비트마스킹 DP를 이용하여 외판원 순회에 필요한 최소 비용을 계산하는 알고리즘
+## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/TSP(Traveling%20Salesman%20Problem).md)
+비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
 
 시간복잡도 : O(N x 2<sup>N</sup>)
 
