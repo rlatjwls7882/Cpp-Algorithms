@@ -16,7 +16,7 @@
     * Dinic's Algorithm
     * MCMF (Min Cost Max Flow) Algorithm
   * 컴포넌트 분해
-    * Tarjan’s Algorithm
+    * Tarjan’s Algorithm (SCC)
     * 2-SAT (2-Satisfiability Problem)
   * 트리
     * Heavy-Light Decomposition
@@ -57,7 +57,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-## [Tarjan’s Algorithm](src/Tarjan’s%20Algorithm.md)
+## [Tarjan’s Algorithm (SCC)](src/Tarjan’s%20Algorithm(SCC).md)
 그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 한번의 dfs로 뽑아내는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
