@@ -58,7 +58,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 시간복잡도 : O(FVE) (F : 최대 유량)
 
 ## Kosaraju's Algorithm
-그래프에서 나타나는 [SCC(Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 dfs로 뽑아내는 알고리즘
+그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 dfs로 뽑아내는 알고리즘
 
 시간복잡도 : O(N)
 
