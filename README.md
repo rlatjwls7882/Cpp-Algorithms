@@ -92,7 +92,7 @@ Trie구조를 활용한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(1)
 
-## Segment Tree
+## [Segment Tree](src/Segment%20Tree.md)
 포화 이진 트리 구조를 이용하여 구간 쿼리를 최적화하는 알고리즘
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
