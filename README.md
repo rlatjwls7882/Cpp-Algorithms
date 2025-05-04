@@ -7,6 +7,7 @@
   * BCC
   * mos
   * Extended Euclidean
+* 기초 알고리즘도 추가 (DFS, BFS, 플로이드와샬, 다익, 벨만포드, SPFA, 크루스칼, 이분탐색, 프림, 위상정렬, DSU, ...)
 
 ## 목차
 * 그래프
