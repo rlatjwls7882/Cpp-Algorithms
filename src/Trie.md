@@ -5,6 +5,11 @@
 
 [연습 문제 (백준 5670번)](https://www.acmicpc.net/problem/5670)
 
+연습문제의 테스트케이스 3가지를 트라이 구조로 나타내면 다음과 같다
+![img1](https://github.com/user-attachments/assets/c4d9fff1-4e5f-4f95-92d8-c2ea5982a1ff)
+
+모양이 이렇기 때문에 접두사 트리 (Prefix Tree)라고도 부른다.
+
 ``` c++
 /** https://www.acmicpc.net/problem/5670 제출 코드 */
 #include<bits/stdc++.h>
