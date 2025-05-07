@@ -20,20 +20,16 @@
     * Lazy Propagation
     * Merge Sort Tree
     * HLD (Heavy Light Decomposition)
-
 * 문자열
   * KMP (Knuth-Morris-Pratt) Algorithm
   * Trie
   * Aho-Corasick
-
 * 기하
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
-
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
-
 * 쿼리 처리
   * Offline Query
 
