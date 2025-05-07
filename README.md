@@ -19,7 +19,6 @@
     * Segment Tree
     * Lazy Propagation
     * Merge Sort Tree
-    * Offline Query
     * HLD (Heavy Light Decomposition)
 
 * 문자열
@@ -34,6 +33,9 @@
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
+
+* 쿼리 처리
+  * Offline Query
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
@@ -80,9 +82,6 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
 
-## [Offline Query](src/Offline%20Query.md)
-복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
-
 ## [HLD (Heavy Light Decomposition)](src/HLD(Heavy%20Light%20Decomposition).md)
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
 
@@ -122,3 +121,6 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 덱에 단조 증가 또는 단조 감소하는 인덱스를 유지하여 슬라이딩 윈도우 내에서 최소값 또는 최대값을 O(1)에 찾는 알고리즘
 
 시간복잡도 : O(N)
+
+## [Offline Query](src/Offline%20Query.md)
+복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
