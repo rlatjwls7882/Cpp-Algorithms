@@ -19,6 +19,7 @@
     * Segment Tree
     * Lazy Propagation
     * Merge Sort Tree
+    * Offline Query
     * HLD (Heavy Light Decomposition)
 
 * 문자열
@@ -78,6 +79,9 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 세그먼트 트리에 합병 정렬된 내용을 담아 범위탐색 시간을 줄인 알고리즘 
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
+
+## [Offline Query](src/Offline%20Query.md)
+복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
 
 ## [HLD (Heavy Light Decomposition)](src/HLD(Heavy%20Light%20Decomposition).md)
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
