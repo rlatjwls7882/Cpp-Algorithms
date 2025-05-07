@@ -78,8 +78,8 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
-## Merge Sort Tree
-...
+## [Merge Sort Tree](src/Merge%20Sort%20Tree.md)
+세그먼트 트리에 합병 정렬된 내용을 담아 범위탐색 시간을 줄인 알고리즘 
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
 
