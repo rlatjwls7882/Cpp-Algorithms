@@ -122,7 +122,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/Offline%20Query.md)
 복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
 
-## [Sqrt Decomposition (Square Root Decomposition, 평방 분할)](Sqrt%20Decomposition%20(Square%20Root%20Decomposition))
-값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시에 처리하는 알고리즘
+## [Sqrt Decomposition (Square Root Decomposition, 평방 분할)](Sqrt%20Decomposition(Square%20Root%20Decomposition))
+값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
