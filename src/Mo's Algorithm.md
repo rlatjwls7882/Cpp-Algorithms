@@ -1,6 +1,8 @@
 ## Mo's Algorithm
 Sqrt Decomposition을 구간 쿼리에 적용시켜 O(√N) 시간에 해결하는 알고리즘
 
+시간복잡도 : O(Q√N)
+
 값의 수정 없이 구간 쿼리가 반복해서 주어질 때, 쿼리의 겹치는 구간만큼 덜 계산해서 계산 속도를 늘리자는 아이디어입니다.
 
 [연습 문제 (백준 13547번)](https://www.acmicpc.net/problem/13547)
