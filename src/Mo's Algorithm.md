@@ -1,5 +1,5 @@
 ## Mo's Algorithm
-Sqrt Decomposition을 구간 쿼리에 적용시켜 O(√N) 시간에 해결하는 알고리즘
+Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
 
 시간복잡도 : O(Q√N)
 
