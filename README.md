@@ -106,7 +106,9 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 시간복잡도 : O(1)
 
 ## [Line Intersection](src/Line%20Intersection.md)
-두 선분이 서로 교차하는지 CCW를 통해 판별하는 알고리즘 (진교차 기준) // 일반 교차 쓰려다 귀찮아서 그만...
+두 선분이 서로 교차하는지 CCW를 통해 판별하는 알고리즘 (진교차 기준)
+
+※ 추후에 일반 교차로 수정 예
 
 시간복잡도 : O(1)
 
@@ -129,6 +131,6 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
 
 ## [Mo's Algorithm](src/Mo's%20Algorithm.md)
-Sqrt Decomposition을 구간 쿼리에 적용시켜 O(√N) 시간에 해결하는 알고리즘
+Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
 
 시간복잡도 : O(Q√N)
