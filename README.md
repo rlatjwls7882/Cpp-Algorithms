@@ -33,6 +33,7 @@
 * 쿼리 처리
   * Offline Query
   * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
+  * Mo's Algorithm
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
@@ -126,3 +127,8 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
+
+## [Mo's Algorithm](src/Mo's%20Algorithm.md)
+Sqrt Decomposition을 구간 쿼리에 적용시켜 O(√N) 시간에 해결하는 알고리즘
+
+시간복잡도 : O(Q√N)
