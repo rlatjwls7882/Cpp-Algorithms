@@ -1,4 +1,4 @@
-## [Sqrt Decomposition (Square Root Decomposition, 평방 분할)](Sqrt%20Decomposition%20(Square%20Root%20Decomposition))
+## Sqrt Decomposition (평방 분할)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
