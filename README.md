@@ -34,6 +34,7 @@
   * Offline Query
   * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
   * Mo's Algorithm
+  * Parallel Binary Search (병렬 이분 탐색)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
@@ -108,7 +109,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 ## [Line Intersection](src/Line%20Intersection.md)
 두 선분이 서로 교차하는지 CCW를 통해 판별하는 알고리즘 (진교차 기준)
 
-※ 추후에 일반 교차로 수정 예
+※ 추후에 일반 교차로 수정 예정
 
 시간복잡도 : O(1)
 
@@ -134,3 +135,8 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
 
 시간복잡도 : O(Q√N)
+
+## [Parallel Binary Search (병렬 이분 탐색)]
+이분 탐색 쿼리가 여러 번 주어질 때, 중복되는 부분을 최소화하는 알고리즘
+
+시간복잡도 : O((N+Q)logN)
