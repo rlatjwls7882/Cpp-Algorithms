@@ -136,7 +136,7 @@ Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) �
 
 시간복잡도 : O(Q√N)
 
-## [Parallel Binary Search (병렬 이분 탐색)]
+## [Parallel Binary Search (병렬 이분 탐색)](src/Parallel%20Binary%20Search.md)
 이분 탐색 쿼리가 여러 번 주어질 때, 중복되는 부분을 최소화하는 알고리즘
 
 시간복잡도 : O((N+Q)logN)
