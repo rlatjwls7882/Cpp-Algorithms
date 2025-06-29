@@ -1,4 +1,4 @@
-## [Parallel Binary Search (병렬 이분 탐색)]
+## Parallel Binary Search (병렬 이분 탐색)
 이분 탐색 쿼리가 여러 번 주어질 때, 모든 쿼리를 동시에 mid 기준으로 묶어서 병렬 처리함으로써 중복 계산을 줄이는 테크닉
 
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
