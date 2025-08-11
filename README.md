@@ -27,6 +27,7 @@
 * 기하
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
+  * Graham's scan (Convex Hull)
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
@@ -110,6 +111,11 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 두 선분이 서로 교차하는지 CCW를 통해 판별하는 알고리즘
 
 시간복잡도 : O(1)
+
+## [Graham's scan (Convex Hull)](src/Graham's%20scan%20(Convex%20Hull).md)
+기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
+
+시간복잡도 : O(NlogN)
 
 ## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/TSP(Traveling%20Salesman%20Problem).md)
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
