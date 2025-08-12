@@ -51,21 +51,13 @@ int main() {
 
     /** 
      * Graham's scan
+     * 점들이 한 방향으로만 돌도록 선택
+     * 이 풀이에서는 점들을 시계 반대 방향으로 정렬했으니, 각 점들이 순서대로 시계 반대방향(ccw>0)이 되도록 선택
      */
     vector<pos> stk;
     for(int i=0;i<n;i++) {
-        if(stk.size()<2) {
-            stk.push_back(v[i]);
-        } else {
-            /**
-             * 점들이 한 방향으로만 돌도록 선택
-             * 이 풀이에서는 점들을 시계 반대 방향으로 정렬했으니, 각 점들이 순서대로 시계 반대방향(ccw>0)이 되도록 선택
-             */
-            while(stk.size()>=2 && ccw(stk[stk.size()-2], stk[stk.size()-1], v[i])<=0) {
-                stk.pop_back();
-            }
-            stk.push_back(v[i]);
-        }
+        while(stk.size()>=2 && ccw(stk[stk.size()-2], stk[stk.size()-1], v[i])<=0) stk.pop_back();
+        stk.push_back(v[i]);
     }
     cout << stk.size();
 }
