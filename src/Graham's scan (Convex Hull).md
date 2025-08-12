@@ -24,7 +24,7 @@ struct pos {
 
 ll ccw(pos a, pos b, pos c) {
     pos vec1 = {b.x-a.x, b.y-a.y};
-    pos vec2 = {c.x-b.x, c.y-b.y};
+    pos vec2 = {c.x-a.x, c.y-a.y};
     return vec1.x*vec2.y - vec1.y*vec2.x;
 }
 
