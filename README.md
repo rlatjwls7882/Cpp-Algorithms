@@ -53,7 +53,7 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [Dijkstra's Algorithm (다익스트라 알고리즘)](src/그래프/경로%20탐색/최단%20경로/Dijkstra's%20Algorithm)
+## [Dijkstra's Algorithm (다익스트라 알고리즘)](src/그래프/경로%20탐색/최단%20경로/Dijkstra's%20Algorithm.md)
 가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
 
 시간복잡도 : O(ElogV)
