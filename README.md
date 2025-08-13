@@ -3,10 +3,12 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, prefix sum, binary search, bfs, dfs, backtracking, topological sort, dijkstra, bellman-ford, floyd-warshall, SPFA, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, prefix sum, binary search, bfs, backtracking, topological sort, dijkstra, bellman-ford, floyd-warshall, SPFA, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 그래프
+  * 경로 탐색
+    * DFS (Depth First Search)
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
     * Edmonds-Karp Algorithm
@@ -36,6 +38,11 @@
   * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
   * Mo's Algorithm
   * Parallel Binary Search (병렬 이분 탐색)
+
+## [DFS (Depth First Search)](src/그래프/경로%20탐색/DFS%20(Depth%20First%20Search).md)
+그래프에서 한 노드에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
+
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
@@ -130,7 +137,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md)
 복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
 
-## [Sqrt Decomposition (Square Root Decomposition, 평방 분할)](src/쿼리%20처리/Sqrt%20Decomposition(Square%20Root%20Decomposition).md)
+## [Sqrt Decomposition (Square Root Decomposition)](src/쿼리%20처리/Sqrt%20Decomposition(Square%20Root%20Decomposition).md)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
