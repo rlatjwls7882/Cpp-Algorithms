@@ -3,12 +3,13 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, prefix sum, binary search, bfs, backtracking, topological sort, dijkstra, bellman-ford, floyd-warshall, SPFA, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, prefix sum, binary search, backtracking, topological sort, dijkstra, bellman-ford, floyd-warshall, SPFA, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 그래프
   * 경로 탐색
     * DFS (Depth First Search, 깊이 우선 탐색)
+    * BFS (Breadth First Search, 너비 우선 탐색)
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
     * Edmonds-Karp Algorithm
@@ -41,6 +42,11 @@
 
 ## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/DFS%20(Depth%20First%20Search).md)
 그래프에서 한 노드에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
+
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
+
+## [BFS (Breadth First Search, 너비 우선 탐색)](src/그래프/경로%20탐색/BFS%20(Breadth%20First%20Search).md)
+그래프에서 시작 정점에서 가까운 정점부터 차례대로 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
