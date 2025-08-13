@@ -79,7 +79,6 @@ int main() {
         fill(curCost, curCost+MAX, INF);
         queue<int> q; q.push(S);
         curCost[S]=0;
-        inQueue[S]=true;
         while(!q.empty()) {
             int cur = q.front(); q.pop();
             inQueue[cur]=false;
