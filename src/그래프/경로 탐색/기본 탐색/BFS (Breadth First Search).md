@@ -1,9 +1,9 @@
 ## BFS (Breadth First Search)
 그래프에서 시작 정점에서 가까운 정점부터 차례대로 탐색하는 알고리즘
 
-시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
-
 큐를 사용해 구현하고, 무가중치 그래프에서 최단 거리를 구할 때 자주 사용된다.
+
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
 ![bfs animation1](https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif)
 
