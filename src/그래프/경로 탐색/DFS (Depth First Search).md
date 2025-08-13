@@ -3,6 +3,8 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
+스택(재귀 호출 스택 또는 자료구조 스택)을 사용해 구현하며, 인접 정점 순서가 탐색 순서를 결정된다.
+
 ![DFS animation](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif)
 
 [연습 문제 (백준 24479번)](https://www.acmicpc.net/problem/24479)
