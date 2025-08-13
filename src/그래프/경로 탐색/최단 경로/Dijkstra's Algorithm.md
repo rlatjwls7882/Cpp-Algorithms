@@ -1,8 +1,6 @@
 ## Dijkstra's Algorithm
 가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
 
-우선순위 큐와 최단 거리 배열을 사용해, 더 짧은 경로를 발견할 때마다 업데이트한다.
-
 시간복잡도 : O(ElogV)
 
 ![Dijkstra's Algorithm Animation](https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif)
@@ -24,7 +22,7 @@ struct element {
     }
 };
 
-int minCost[MAX];
+int minCost[MAX]; // 최단 거리를 저장하는 배열
 vector<vector<element>> conn(MAX);
 
 int main() {
