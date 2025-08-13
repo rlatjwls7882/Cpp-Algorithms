@@ -13,6 +13,7 @@
       * BFS (Breadth First Search, 너비 우선 탐색)
     * 최단 경로
       * Dijkstra's Algorithm
+      * Bellman-Ford Algorithm
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
     * Edmonds-Karp Algorithm
@@ -57,6 +58,11 @@
 가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
 
 시간복잡도 : O(ElogV)
+
+## [Bellman-Ford Algorithm](src/그래프/경로%20탐색/최단%20경로/Bellman-Ford%20Algorithm.md)
+가중치가 음수인 그래프에서도, 모든 간선을 최대 V-1번 완화해 최단 거리를 구하고 음수 사이클 여부를 판별하는 알고리즘
+
+시간복잡도 : O(VE)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
