@@ -5,7 +5,7 @@
 
 ![DFS animation](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif)
 
-[연습 문제](https://www.acmicpc.net/problem/24479)
+[연습 문제 (백준 24479번)](https://www.acmicpc.net/problem/24479)
 
 ``` c++
 /** https://www.acmicpc.net/problem/24479 제출 코드 */
