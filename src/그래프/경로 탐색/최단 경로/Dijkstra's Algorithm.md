@@ -5,6 +5,8 @@
 
 ![Dijkstra's Algorithm Animation](https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif)
 
+![image](https://i.imgur.com/EKu1v4e.png)
+
 [연습 문제 (백준 1753번)](https://www.acmicpc.net/problem/1753)
 
 ``` c++
