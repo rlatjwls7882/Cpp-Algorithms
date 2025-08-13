@@ -3,6 +3,8 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
+![DFS animation](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif)
+
 [연습 문제](https://www.acmicpc.net/problem/24479)
 
 ``` c++
