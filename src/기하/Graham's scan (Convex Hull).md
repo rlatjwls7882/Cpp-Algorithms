@@ -3,6 +3,8 @@
 
 시간복잡도 : O(NlogN)
 
+![Graham's scan Animation](https://upload.wikimedia.org/wikipedia/commons/7/71/GrahamScanDemo.gif)
+
 [연습 문제(백준 1708번)](https://www.acmicpc.net/problem/1708)
 
 ``` c++
