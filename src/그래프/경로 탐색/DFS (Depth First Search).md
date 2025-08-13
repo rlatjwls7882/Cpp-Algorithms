@@ -1,4 +1,4 @@
-## DFS (Depth First Search)
+## DFS (Depth First Search, 깊이 우선 탐색)
 그래프에서 한 노드에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
