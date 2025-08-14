@@ -3,7 +3,7 @@
 
 시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
 
-![dsu image](https://cp-algorithms.com/data_structures/DSU_path_compression.png)
+![dsu image](https://scaler.com/topics/images/disjoint-set-optimisation1-path-compression.webp)
 
 [연습 문제 (백준 1717번)](https://www.acmicpc.net/problem/1717)
 
