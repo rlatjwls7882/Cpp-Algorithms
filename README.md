@@ -31,7 +31,7 @@
     * MCMF (Min Cost Max Flow) Algorithm
   * 컴포넌트 분해
     * Tarjan’s Algorithm (SCC)
-    * 2-SAT (2-Satisfiability Problem)
+    * 2-SAT (2-Satisfiability)
   * 트리
     * Segment Tree
     * Lazy Propagation
@@ -139,7 +139,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [2-SAT (2-Satisfiability Problem)](src/그래프/컴포넌트%20분해/2-SAT.md)
+## [2-SAT (2-Satisfiability)](src/그래프/컴포넌트%20분해/2-SAT.md)
 2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/논리곱_표준형)가 주어졌을 때, 이를 만족시도록 변수에 (True/False)를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC를 형성해 확인하는 문제
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
