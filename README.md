@@ -3,7 +3,7 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, topological sort, two pointer, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, two pointer, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 기본 알고리즘
@@ -21,6 +21,8 @@
       * Bellman-Ford Algorithm
       * Floyd-Warshall Algorithm
       * SPFA (Shortest Path Faster Algorithm)
+  * DAG(Directed Acyclic Graph)
+    * Kahn’s Algorithm (Topological Sort, 위상 정렬)
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
     * Edmonds-Karp Algorithm
@@ -100,6 +102,11 @@
 큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
 
 시간복잡도 : 경험적 평균 O(V+E), 최악 O(VE) (V : 정점 수, E : 간선 수)
+
+## [Kahn’s Algorithm (Topological Sort, 위상 정렬)](src/그래프/DAG/Kahn’s%20Algorithm.md)
+방향성이 있고 사이클이 없는 그래프[(DAG)](https://ko.wikipedia.org/wiki/유향_비순환_그래프)에서, 모든 정점을 선행 관계를 만족하도록 나열하는 알고리즘
+
+시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
