@@ -49,7 +49,7 @@
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
 * 쿼리 처리
-  * Offline Query
+  * Offline Query (오프라인 개념념)
   * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
   * Mo's Algorithm
   * Parallel Binary Search (병렬 이분 탐색)
