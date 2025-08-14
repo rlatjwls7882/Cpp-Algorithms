@@ -3,11 +3,12 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, prefix sum, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 기본 알고리즘
   * Binary Search (이분 탐색)
+  * Prefix Sum (누적 합)
 * 그래프
   * 경로 탐색
     * 기본 탐색
@@ -53,8 +54,13 @@
 
 시간복잡도 : O(MlogN) (N : 데이터 개수, M : 탐색 횟수)
 
+## [Prefix Sum (누적 합)](src/기본%20알고리즘/Prefix%20Sum.md)
+배열의 각 인덱스까지의 합을 미리 계산해 두어, 임의 구간의 합을 O(1)에 구하는 알고리즘
+
+시간복잡도 : 전처리 O(N), 쿼리 O(1) (N : 데이터 개수)
+
 ## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS%20(Depth%20First%20Search).md)
-그래프에서 한 노드에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
+그래프에서 한 정점점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
@@ -81,7 +87,7 @@
 ## [SPFA (Shortest Path Faster Algorithm)](src/그래프/경로%20탐색/최단%20경로/SPFA.md)
 큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
 
-시간복잡도 : (경험적 평균) O(V+E), (최악) O(VE) (V : 정점 수, E : 간선 수)
+시간복잡도 : 경험적 평균 O(V+E), 최악 O(VE) (V : 정점 수, E : 간선 수)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
