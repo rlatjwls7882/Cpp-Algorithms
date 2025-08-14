@@ -73,12 +73,12 @@
 
 시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
 
-## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS%20(Depth%20First%20Search).md)
+## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS.md)
 그래프에서 한 정점점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [BFS (Breadth First Search, 너비 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/BFS%20(Breadth%20First%20Search).md)
+## [BFS (Breadth First Search, 너비 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/BFS.md)
 그래프에서 시작 정점에서 가까운 정점부터 차례대로 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
@@ -108,7 +108,7 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
+## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm.md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
 
 시간복잡도 : O(VE) (V : 양쪽 그룹 중 더 큰 정점의 크기)
@@ -123,17 +123,17 @@ Edmonds-Karp 알고리즘을 최적화한 알고리즘
 
 시간복잡도 : O(V²E)
 
-## [MCMF (Min Cost Max Flow) Algorithm](src/그래프/유량/MCMF(Min%20Cost%20Max%20Flow)%20Algorithm.md)
+## [MCMF Algorithm](src/그래프/유량/MCMF(Min%20Cost%20Max%20Flow)%20Algorithm.md)
 Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-## [Tarjan’s Algorithm (SCC)](src/그래프/컴포넌트%20분해/Tarjan’s%20Algorithm(SCC).md)
+## [Tarjan’s Algorithm (SCC)](src/그래프/컴포넌트%20분해/Tarjan’s%20Algorithm.md)
 그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)을 한번의 dfs로 뽑아내는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [2-SAT (2-Satisfiability Problem)](src/그래프/컴포넌트%20분해/2-SAT(2-Satisfiability%20Problem).md)
+## [2-SAT (2-Satisfiability Problem)](src/그래프/컴포넌트%20분해/2-SAT.md)
 2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/논리곱_표준형)가 주어졌을 때, 이를 만족시도록 변수에 (True/False)를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC를 형성해 확인하는 문제
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
@@ -153,7 +153,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
 
-## [HLD (Heavy Light Decomposition)](src/그래프/트리/HLD(Heavy%20Light%20Decomposition).md)
+## [HLD (Heavy Light Decomposition)](src/그래프/트리/HLD.md)
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
 
 시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
@@ -188,7 +188,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(NlogN)
 
-## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/DP/TSP(Traveling%20Salesman%20Problem).md)
+## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/DP/TSP.md)
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
 
 시간복잡도 : O(N x 2<sup>N</sup>)
