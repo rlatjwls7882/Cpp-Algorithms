@@ -1,13 +1,13 @@
-# 미래의 나(와 혹시 모를 다른사람들)를 위한 알고리즘 정리
+# Well-Known 알고리즘 정리
 
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, prefix sum, binary search, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, prefix sum, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 기본 알고리즘
-  * ...
+  * Binary Search (이분 탐색)
 * 그래프
   * 경로 탐색
     * 기본 탐색
@@ -38,7 +38,7 @@
 * 기하
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
-  * Graham's scan (Convex Hull)
+  * Graham's scan (Convex Hull, 볼록껍질)
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
@@ -47,6 +47,11 @@
   * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
   * Mo's Algorithm
   * Parallel Binary Search (병렬 이분 탐색)
+
+## [Binary Search (이분 탐색)](src/기본%20알고리즘/Binary%20Search.md)
+정렬된 데이터에서 원하는 값을 찾기 위해 탐색 범위를 절반씩 줄여가는 알고리즘
+
+시간복잡도 : O(MlogN) (N : 데이터 개수, M : 탐색 횟수)
 
 ## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS%20(Depth%20First%20Search).md)
 그래프에서 한 노드에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
