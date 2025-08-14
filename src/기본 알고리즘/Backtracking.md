@@ -3,6 +3,8 @@
 
 시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
 
+![backtracking image](https://github.com/user-attachments/assets/753916ab-5999-4c9d-9c03-1d6e5db03b6b)
+
 [연습 문제 (백준 15649번)](https://www.acmicpc.net/problem/15649)
 
 ``` c++
