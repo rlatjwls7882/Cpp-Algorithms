@@ -1,4 +1,4 @@
-## Graham's scan (Convex Hull)
+## Graham's Scan (Convex Hull)
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
