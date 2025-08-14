@@ -123,7 +123,7 @@ Edmonds-Karp 알고리즘을 최적화한 알고리즘
 
 시간복잡도 : O(V²E)
 
-## [MCMF Algorithm](src/그래프/유량/MCMF(Min%20Cost%20Max%20Flow)%20Algorithm.md)
+## [MCMF (Min Cost Max Flow) Algorithm](src/그래프/유량/MCMF%20Algorithm.md)
 Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
 시간복잡도 : O(FVE) (F : 최대 유량)
