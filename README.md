@@ -158,7 +158,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
 
-## [KMP (Knuth-Morris-Pratt) Algorithm](src/문자열/KMP(Knuth-Morris-Pratt%20Algorithm).md)
+## [KMP (Knuth-Morris-Pratt) Algorithm](src/문자열/KMP%20Algorithm.md)
 한 문자열에서 다른 문자열이 어디에 등장하는지 찾아주는 문자열 검색 알고리즘
 
 시간복잡도 : O(N+M) (N+M : 두 문자열의 길이 합)
@@ -173,7 +173,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(S) (S : 모든 문자열의 길이)
 
-## [CCW (Counter ClockWise) Algorithm](src/기하/CCW(Counter%20ClockWise)%20Algorithm.md)
+## [CCW (Counter ClockWise) Algorithm](src/기하/CCW%20Algorithm.md)
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
 
 시간복잡도 : O(1)
@@ -183,7 +183,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(1)
 
-## [Graham's scan (Convex Hull)](src/기하/Graham's%20scan%20(Convex%20Hull).md)
+## [Graham's scan (Convex Hull)](src/기하/Graham's%20scan.md)
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
@@ -201,7 +201,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md)
 복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
 
-## [Sqrt Decomposition (Square Root Decomposition)](src/쿼리%20처리/Sqrt%20Decomposition(Square%20Root%20Decomposition).md)
+## [Sqrt Decomposition (Square Root Decomposition)](src/쿼리%20처리/Sqrt%20Decomposition.md)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
