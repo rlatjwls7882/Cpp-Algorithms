@@ -3,13 +3,14 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, backtracking, topological sort, two pointer, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, topological sort, two pointer, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 기본 알고리즘
   * Binary Search (이분 탐색)
   * Prefix Sum (누적 합)
   * DSU (Disjoint Set Union, 분리 집합)
+  * Backtracking (백트래킹)
 * 그래프
   * 경로 탐색
     * 기본 탐색
@@ -64,6 +65,11 @@
 서로 겹치지 않는 집합을 관리하고 합치거나 찾는 연산을 효율적으로 처리하는 자료구조
 
 시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
+
+## [Backtracking (백트래킹)](src/기본%20알고리즘/Backtracking.md)
+모든 경우를 탐색하되, 해답이 될 수 없는 경로는 중간에 가지치기하여 탐색을 중단하는 완전 탐색 알고리즘
+
+시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
 
 ## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS%20(Depth%20First%20Search).md)
 그래프에서 한 정점점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
