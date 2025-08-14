@@ -116,7 +116,7 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-## [Kruskal’s Algorithm](src/그래프/최소%20스패닝%20트리/Kruskal’s%20Algorithm)
+## [Kruskal’s Algorithm](src/그래프/최소%20스패닝%20트리/Kruskal’s%20Algorithm.md)
 간선을 가중치 순으로 정렬해 사이클을 피하며 [최소 스패닝 트리](https://en.wikipedia.org/wiki/Minimum_spanning_tree)를 만드는 알고리즘
 
 시간복잡도 : O(ElogE) (E : 간선 수)
