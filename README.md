@@ -46,7 +46,7 @@
 * 기하
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
-  * Graham's scan (Convex Hull, 볼록껍질)
+  * Graham's Scan (Convex Hull, 볼록껍질)
 * 스위핑
   * Sweeping Algorithm
 * DP
@@ -71,7 +71,7 @@
 ## [Two Pointer](src/기본%20알고리즘/Two%20Pointer.md)
 두 개의 포인터를 움직이며 배열이나 리스트에서 원하는 조건을 만족하는 구간을 효율적으로 찾는 알고리즘
 
-시간복잡도 : O(N) (N : 데이터 개수)
+시간복잡도 : O(NlogN) (N : 데이터 개수, 정렬 O(NlogN) + 스캔 O(N))
 
 ## [DSU (Disjoint Set Union, 분리 집합)](src/기본%20알고리즘/Disjoint%20Set%20Union.md)
 서로 겹치지 않는 집합을 관리하고 합치거나 찾는 연산을 효율적으로 처리하는 자료구조
@@ -84,7 +84,7 @@
 시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
 
 ## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS.md)
-그래프에서 한 정점점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
+그래프에서 한 정점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
@@ -198,7 +198,7 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(1)
 
-## [Graham's scan (Convex Hull)](src/기하/Graham's%20scan.md)
+## [Graham's Scan (Convex Hull)](src/기하/Graham's%20Scan.md)
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
