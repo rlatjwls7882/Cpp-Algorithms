@@ -1,7 +1,7 @@
 ## SPFA (Shortest Path Faster Algorithm)
 큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
 
-시간복잡도 : (경험적 평균) O(V+E), (최악) O(VE) (V : 정점 수, E : 간선 수)
+시간복잡도 : 경험적 평균 O(V+E), 최악 O(VE) (V : 정점 수, E : 간선 수)
 
 [연습 문제 (백준 11657번)](https://www.acmicpc.net/problem/11657)
 
