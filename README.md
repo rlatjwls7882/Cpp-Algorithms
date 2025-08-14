@@ -3,7 +3,7 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, Prim, Solin, sweeping, imos, ...)
+* 기초 알고리즘도 추가 (Prim, Solin, sweeping, imos, ...)
 
 ## 목차
 * 기본 알고리즘
