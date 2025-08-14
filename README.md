@@ -11,7 +11,7 @@
   * Prefix Sum (누적 합)
   * Two Pointer
   * DSU (Disjoint Set Union, 분리 집합)
-  * Backtracking (백트래킹)
+  * Backtracking
 * 그래프
   * 경로 탐색
     * 기본 탐색
@@ -74,7 +74,7 @@
 
 시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
 
-## [Backtracking (백트래킹)](src/기본%20알고리즘/Backtracking.md)
+## [Backtracking](src/기본%20알고리즘/Backtracking.md)
 모든 경우를 탐색하되, 해답이 될 수 없는 경로는 중간에 가지치기하여 탐색을 중단하는 완전 탐색 알고리즘
 
 시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
