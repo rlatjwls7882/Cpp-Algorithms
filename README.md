@@ -3,7 +3,7 @@
 ## 목표
 * 증명보다는 알고리즘 구현 위주로 설명 추가
 * 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
-* 기초 알고리즘도 추가 (dp, prefix sum, binary search, backtracking, topological sort, SPFA, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
+* 기초 알고리즘도 추가 (dp, prefix sum, binary search, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
 * 그래프
@@ -15,6 +15,7 @@
       * Dijkstra's Algorithm
       * Bellman-Ford Algorithm
       * Floyd-Warshall Algorithm
+      * SPFA (Shortest Path Faster Algorithm)
   * 유량
     * Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
     * Edmonds-Karp Algorithm
@@ -58,17 +59,22 @@
 ## [Dijkstra's Algorithm](src/그래프/경로%20탐색/최단%20경로/Dijkstra's%20Algorithm.md)
 가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
 
-시간복잡도 : O(ElogV)
+시간복잡도 : O(ElogV) (V : 정점 수, E : 간선 수)
 
 ## [Bellman-Ford Algorithm](src/그래프/경로%20탐색/최단%20경로/Bellman-Ford%20Algorithm.md)
 가중치가 음수인 그래프에서도, 모든 간선을 최대 V-1번 완화해 최단 거리를 구하고 음수 사이클 여부를 판별하는 알고리즘
 
-시간복잡도 : O(VE)
+시간복잡도 : O(VE) (V : 정점 수, E : 간선 수)
 
 ## [Floyd-Warshall Algorithm](src/그래프/경로%20탐색/최단%20경로/Floyd-Warshall%20Algorithm.md)
 모든 정점 쌍 사이의 최단 거리를 DP로 구하는 알고리즘
 
 시간복잡도 : O(V³), 공간복잡도 : O(V²)
+
+## [SPFA (Shortest Path Faster Algorithm)](src/그래프/경로%20탐색/최단%20경로/SPFA.md)
+큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
+
+시간복잡도 : (경험적 평균) O(V+E), (최악) O(VE) (V : 정점 수, E : 간선 수)
 
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm(Maximum%20Bipartite%20Matching).md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
