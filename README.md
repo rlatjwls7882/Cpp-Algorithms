@@ -6,6 +6,8 @@
 * 기초 알고리즘도 추가 (dp, prefix sum, binary search, backtracking, topological sort, two pointer, DSU, MST(Kruskal, Prim, Solin), sweeping, imos, ...)
 
 ## 목차
+* 기본 알고리즘
+  * ...
 * 그래프
   * 경로 탐색
     * 기본 탐색
