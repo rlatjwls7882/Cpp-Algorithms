@@ -31,7 +31,15 @@ int main() {
         minCost[a][b] = min(minCost[a][b], c);
     }
 
-    // Floyd-Warshall Algorithm
+    /** 
+     * Floyd-Warshall Algorithm
+     * 모든 정점 쌍 최단거리 계산
+     * - mid : 경유지
+     * - start : 출발지
+     * - end : 도착지
+     * 
+     * mid를 하나씩 늘려가며 start → end 경로와 start → mid → end 경로 중 더 짧은 경로를 선택
+     */
     for(int mid=1;mid<=n;mid++) {
         for(int start=1;start<=n;start++) {
             for(int end=1;end<=n;end++) {
