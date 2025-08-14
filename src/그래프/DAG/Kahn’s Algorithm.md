@@ -14,12 +14,12 @@ using namespace std;
 
 /** 
  * MAX : 최대 정점 수
- * inBound[i] : 정점 i으로 들어오는 간선의 개수
+ * inDegree[i] : 정점 i으로 들어오는 간선의 개수
  * conn[i] : 정점 i에서 다른 정점으로 향하는 간선들
  */
 const int MAX = 32'001;
 
-int inBound[MAX];
+int inDegree[MAX];
 vector<vector<int>> conn(MAX);
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
     int n, m; cin >> n >> m;
     while(m--) {
         int a, b; cin >> a >> b;
-        inBound[b]++; // 정점 b로 들어오는 간선의 개수 +1
+        inDegree[b]++; // 정점 b로 들어오는 간선의 개수 +1
         conn[a].push_back(b); // 정점 a에서 정점 b로의 간선 연결
     }
 
@@ -38,22 +38,22 @@ int main() {
      */
     queue<int> q;
     for(int i=1;i<=n;i++) {
-        if(!inBound[i]) {
+        if(!inDegree[i]) {
             q.push(i);
         }
     }
 
     /** 
-     * 정점 cur에서 도착 가능한 바로 다음 정점의 inBound 값을 1씩 감소
-     * 다음 정점의 inBound 값이 0이 되면 큐에 추가
-     * - inBound[next]==0 -> next보다 선행되야 하는 정점이 없다.
+     * 정점 cur에서 도착 가능한 바로 다음 정점의 inDegree 값을 1씩 감소
+     * 다음 정점의 inDegree 값이 0이 되면 큐에 추가
+     * - inDegree[next]==0 -> next보다 선행되야 하는 정점이 없다.
      * 이 문제에서는 사이클이 없지만 만약 사이클이 있다면 큐에 들어가는 총 정점 수가 n보다 작음
      */
     while(!q.empty()) {
         int cur = q.front(); q.pop();
         cout << cur << ' ';
         for(int next:conn[cur]) {
-            if(--inBound[next]==0) q.push(next);
+            if(--inDegree[next]==0) q.push(next);
         }
     }
 }
