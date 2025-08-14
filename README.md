@@ -47,6 +47,8 @@
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
   * Graham's scan (Convex Hull, 볼록껍질)
+* 스위핑
+  * Sweeping Algorithm
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제)
   * Deque Trick
@@ -200,6 +202,11 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
+
+## [Sweeping Algorithm](src/스위핑/Sweeping%20Algorithm.md)
+선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
+
+시간복잡도 : O(NlogN) (N : 이벤트 개수, 정렬 O(NlogN) + 스캔 O(N))
 
 ## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/DP/TSP.md)
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
