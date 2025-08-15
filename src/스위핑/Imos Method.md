@@ -3,7 +3,8 @@
 
 시간복잡도 : O(N<sup>D</sup>+Q) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
 
-![Imos0](https://github.com/user-attachments/assets/4c237655-42f6-487f-81a3-390e009ef54b)
+![Imos0](https://github.com/user-attachments/assets/b583f51a-1765-44a7-a79d-c0adca081ecb)
+
 Imos Method로 사각형을 구하는 방식은 4군데를 마킹한 후 오른쪽으로 쓸고, 아래로 쓸면 된다. 자세한 내용은 [Imos Lab](https://imoz.jp/algorithms/imos_method.html)에서 확인 가능하다.
 
 Imos Method로 한 변의 길이가 4인 직각 삼각형을 구해보자.
@@ -74,5 +75,6 @@ int main() {
 }
 ```
 
-![Imos5](https://github.com/user-attachments/assets/d06e1cac-385e-433e-8688-0f9b8bf6fb36)
+![Imos5](https://github.com/user-attachments/assets/ffab57aa-4395-43fa-a73c-986b836cfc0d)
+
 연습 문제의 최종 결과는 이렇게 된다.
