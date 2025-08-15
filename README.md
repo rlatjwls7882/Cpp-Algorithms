@@ -45,7 +45,8 @@
 * 기하
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
-  * Graham's Scan (Convex Hull, 볼록껍질)
+  * Graham's Scan (Convex Hull, 볼록 껍질)
+  * Rotating Calipers (회전하는 캘리퍼스)
 * 스위핑
   * Sweeping Algorithm
   * Imos Method (いもす法)
@@ -202,6 +203,11 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
+
+## Rotating Calipers (회전하는 캘리퍼스)
+볼록 껍질에서 가장 먼 두 점을 O(N)에 찾는 알고리즘
+
+시간복잡도 : O(N)
 
 ## [Sweeping Algorithm](src/스위핑/Sweeping%20Algorithm.md)
 선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
