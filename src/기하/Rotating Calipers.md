@@ -5,58 +5,56 @@
 
 ![rotating calipers](https://www-cgrl.cs.mcgill.ca/~godfried/research/calipers.gif)
 
-[연습 문제 (백준 10254번)](https://www.acmicpc.net/problem/10254)
+[연습 문제 (백준 9240번)](https://www.acmicpc.net/problem/9240)
 
 ``` c++
-/** https://www.acmicpc.net/problem/10254 제출 코드 */
+/** https://www.acmicpc.net/problem/9240 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-
-struct pos {
-    ll x, y, p=0, q=0;
-    bool operator<(const pos o) const {
+struct point {
+    int x, y, p=0, q=0;
+    bool operator<(const point o) const {
         if(p*o.q!=q*o.p) return p*o.q > q*o.p;
         if(y!=o.y) return y < o.y;
         return x < o.x;
     }
 };
 
-ll ccw(pos a, pos b, pos c) {
-    pos vec1 = {b.x-a.x, b.y-a.y};
-    pos vec2 = {c.x-b.x, c.y-b.y};
+int ccw(point a, point b, point c) {
+    point vec1 = {b.x-a.x, b.y-a.y};
+    point vec2 = {c.x-a.x, c.y-a.y};
     return vec1.x*vec2.y - vec1.y*vec2.x;
 }
 
-ll ccw(pos a, pos b, pos c, pos d) {
-    pos vec1 = {b.x-a.x, b.y-a.y};
-    pos vec2 = {d.x-c.x, d.y-c.y};
+int ccw(point a, point b, point c, point d) {
+    point vec1 = {b.x-a.x, b.y-a.y};
+    point vec2 = {d.x-c.x, d.y-c.y};
     return vec1.x*vec2.y - vec1.y*vec2.x;
 }
 
-vector<pos> graham_Scan() {
-    int n; cin >> n;
-    vector<pos> v(n);
-    for(int i=0;i<n;i++) cin >> v[i].x >> v[i].y;
+vector<point> graham_scan() {
+    int c; cin >> c;
+    vector<point> v(c);
+    for(int i=0;i<c;i++) cin >> v[i].x >> v[i].y;
     sort(v.begin(), v.end());
 
-    for(int i=1;i<n;i++) {
-        v[i].p = v[i].x - v[0].x;
-        v[i].q = v[i].y - v[0].y;
+    for(int i=1;i<c;i++) {
+        v[i].p = v[i].x-v[0].x;
+        v[i].q = v[i].y-v[0].y;
     }
     sort(v.begin(), v.end());
 
-    vector<pos> stk;
-    for(int i=0;i<n;i++) {
+    vector<point> stk;
+    for(int i=0;i<c;i++) {
         while(stk.size()>=2 && ccw(stk[stk.size()-2], stk[stk.size()-1], v[i])<=0) stk.pop_back();
         stk.push_back(v[i]);
     }
     return stk;
 }
 
-ll dist(pos a, pos b) {
-    return (b.x-a.x)*(b.x-a.x) + (b.y-a.y)*(b.y-a.y);
+int dist(point a, point b) {
+    return (a.x-b.x)*(a.x-b.x) + (a.y-b.y)*(a.y-b.y);
 }
 
 /** 
@@ -77,29 +75,19 @@ ll dist(pos a, pos b) {
  * - - j가 한 바퀴 도는 경우, 겹치는 쌍을 탐색하기 때문에
  * - - ex) (1, 5) 쌍과 (5, 1) 쌍
  */
-void rotating_Calipers(vector<pos> stk) {
-    int n = stk.size();
-    pos a, b;
-    ll maxDist=0;
-    int i=0, j=1;
+void rotating_calipers(vector<point> hull) {
+    int n = hull.size();
+    int maxDist=0, i=0, j=1;
     while(i<n && j<n) {
-        ll curDist = dist(stk[i], stk[j]);
-        if(curDist>maxDist) {
-            maxDist = curDist;
-            a = stk[i];
-            b = stk[j];
-        }
-        if(ccw(stk[i], stk[(i+1)%n], stk[j], stk[(j+1)%n])>0) j++;
+        maxDist = max(maxDist, dist(hull[i], hull[j]));
+        if(ccw(hull[i], hull[(i+1)%n], hull[j], hull[(j+1)%n])>0) j++;
         else i++;
     }
-    cout << a.x << ' ' << a.y << ' ' << b.x << ' ' << b.y << '\n';
+    cout << setprecision(6) << fixed << sqrt(maxDist);
 }
 
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
-    int t; cin >> t;
-    while(t--) {
-        rotating_Calipers(graham_Scan());
-    }
+    rotating_calipers(graham_scan());
 }
 ```
