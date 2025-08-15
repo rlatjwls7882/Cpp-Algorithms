@@ -204,10 +204,10 @@ Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(NlogN)
 
-## Rotating Calipers (회전하는 캘리퍼스)
-볼록 껍질에서 가장 먼 두 점을 O(N)에 찾는 알고리즘
+## [Rotating Calipers (회전하는 캘리퍼스)](src/기하/Rotating%20Calipers.md)
+볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
 
-시간복잡도 : O(N)
+시간복잡도 : O(NlogN) (그라함 스캔 O(NlogN), 회전하는 캘리퍼스 O(N))
 
 ## [Sweeping Algorithm](src/스위핑/Sweeping%20Algorithm.md)
 선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
