@@ -89,7 +89,7 @@ void rotating_Calipers(vector<pos> stk) {
             a = stk[i];
             b = stk[j];
         }
-        if(ccw(stk[i], stk[i+1], stk[j], stk[j+1])>0) j++;
+        if(ccw(stk[i], stk[(i+1)%n], stk[j], stk[(j+1)%n])>0) j++;
         else i++;
     }
     cout << a.x << ' ' << a.y << ' ' << b.x << ' ' << b.y << '\n';
