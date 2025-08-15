@@ -14,19 +14,19 @@ using namespace std;
 
 typedef long long ll;
 
-struct pos {
+struct point {
     ll x, y;
     ll p=0, q=0; // 기준점으로부터의 상대 위치
-    bool operator<(const pos b) const {
+    bool operator<(const point b) const {
         if(p*b.q!=q*b.p) return p*b.q > q*b.p;
         if(y!=b.y) return y < b.y;
         return x < b.x;
     }
 };
 
-ll ccw(pos a, pos b, pos c) {
-    pos vec1 = {b.x-a.x, b.y-a.y};
-    pos vec2 = {c.x-a.x, c.y-a.y};
+ll ccw(point a, point b, point c) {
+    point vec1 = {b.x-a.x, b.y-a.y};
+    point vec2 = {c.x-a.x, c.y-a.y};
     return vec1.x*vec2.y - vec1.y*vec2.x;
 }
 
@@ -37,7 +37,7 @@ int main() {
      * 모든 점들 입력
      * 그 후 y가 가장 작고, x가 가장 작은 점을 찾기 위해 정렬
      */
-    vector<pos> v(n);
+    vector<point> v(n);
     for(int i=0;i<n;i++) cin >> v[i].x >> v[i].y;
     sort(v.begin(), v.end());
 
@@ -56,7 +56,7 @@ int main() {
      * 점들이 한 방향으로만 돌도록 선택
      * 이 풀이에서는 점들을 시계 반대 방향으로 정렬했으니, 각 점들이 순서대로 시계 반대방향(ccw>0)이 되도록 선택
      */
-    vector<pos> stk;
+    vector<point> stk;
     for(int i=0;i<n;i++) {
         while(stk.size()>=2 && ccw(stk[stk.size()-2], stk[stk.size()-1], v[i])<=0) stk.pop_back();
         stk.push_back(v[i]);
