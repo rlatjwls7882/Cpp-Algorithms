@@ -1,7 +1,7 @@
 ## Rotating Calipers (회전하는 캘리퍼스)
 볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
 
-시간복잡도 : O(NlogN) (그라함 스캔 O(NlogN), 회전하는 캘리퍼스 O(N))
+시간복잡도 : O(N) (그라함 스캔 제외)
 
 ![rotating calipers](https://www-cgrl.cs.mcgill.ca/~godfried/research/calipers.gif)
 
