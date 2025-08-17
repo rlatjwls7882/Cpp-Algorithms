@@ -2,11 +2,11 @@
 
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽과 오른쪽의 쌍의 수)를 찾는 알고리즘
 
+시간복잡도 : O(VE) (V : 양쪽 그룹 중 더 큰 정점의 크기)
+
 ![image](https://github.com/user-attachments/assets/56ba1be0-a03c-4bb8-8816-b7da371723da)
 
 이분 그래프란 정점들을 그림처럼 왼쪽 정점 그룹과 오른쪽 정점 그룹으로 나누었을 때, 서로 다른 그룹들 사이에만 간선이 있는 그래프이다.
-
-시간복잡도 : O(VE) (V : 양쪽 그룹 중 더 큰 정점의 크기)
 
 [연습 문제 (백준 11375번)](https://www.acmicpc.net/problem/11375)
 
