@@ -3,6 +3,32 @@
 
 시간복잡도 : O(NlogN) (N : 데이터 개수, 정렬 O(NlogN) + 스캔 O(N))
 
+![tp1](https://github.com/user-attachments/assets/a6fdf51a-8df6-4c60-bddd-327060570c47)
+
+배열 A가 위와 같이 주어졌고, 두 수의 합이 9가 되는 쌍을 구한다고 하자.
+
+![tp2](https://github.com/user-attachments/assets/8a3ba921-cded-4de3-9286-28cb72e03410)
+
+left를 왼쪽 끝, right를 오른쪽 끝으로 두고 비교를 시작한다.
+
+A[left]+A[right]가 9와 같기에 cnt를 1 증가, left를 1 증가, right를 1 감소시킨다.
+
+![tp3](https://github.com/user-attachments/assets/62471380-8337-4568-844e-7a4b924a583a)
+
+A[left]+A[right]가 9보다 크기에 right를 1 감소시킨다.
+
+![tp4](https://github.com/user-attachments/assets/e44552ce-91d8-4b8d-a3d0-347ac0aea451)
+
+A[left]+A[right]가 9와 같기에 cnt를 1 증가, left를 1 증가, right를 1 감소시킨다.
+
+![tp5](https://github.com/user-attachments/assets/4aea4b00-6c64-4202-a5e3-e59b2dbf07fb)
+
+A[left]+A[right]가 9보다 작기에 left를 1 증가시킨다.
+
+![tp6](https://github.com/user-attachments/assets/6128e62c-e983-472f-a582-c358e988f76b)
+
+A[left]+A[right]가 9보다 크기에 right를 1 감소시킨다.
+
 [연습 문제 (백준 3273번)](https://www.acmicpc.net/problem/3273)
 
 ``` c++
