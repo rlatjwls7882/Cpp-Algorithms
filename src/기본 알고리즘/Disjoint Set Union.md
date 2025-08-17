@@ -3,6 +3,8 @@
 
 시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
 
+[연습 문제 (백준 1717번)](https://www.acmicpc.net/problem/1717)
+
 DSU에는 union 연산과, find 연산이 존재한다.
 
 find 연산은 해당 그룹의 대표 원소를 반환하는 연산이고 (경로 압축까지 포함), union 연산은 두 그룹의 대표 원소를 연결하여 합치는 연산이다. (대표 원소 찾을때 각각 find 연산 사용)
@@ -28,8 +30,6 @@ O(N²) DSU에서는 그렇지만 O(α(N)) DSU에서는 경로 압축 해주어 �
 ![](https://github.com/user-attachments/assets/610f8f03-4877-4996-9ef1-9bb41573ffb3)
 
 따라서 이 사진과 같게 되어야 한다.
-
-[연습 문제 (백준 1717번)](https://www.acmicpc.net/problem/1717)
 
 ``` c++
 /** https://www.acmicpc.net/problem/1717 제출 코드 */
