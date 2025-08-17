@@ -3,7 +3,15 @@
 
 시간복잡도 : 전처리 O(N), 쿼리 O(1) (N : 데이터 개수)
 
-![prefix sum image](https://github.com/user-attachments/assets/ce588973-d10a-4442-888f-66d91ddc2bca)
+![preSum1](https://github.com/user-attachments/assets/39b43d6b-7b87-47c0-8b0d-5064c5e1a7e6)
+
+입력된 배열 A가 다음과 같다고 하자.
+
+![preSum2](https://github.com/user-attachments/assets/34f47c73-25fd-4ac0-aea5-8ba7115a7f59)
+
+그러면 배열 A의 누적 합 preSum은 다음과 같다고 할 수 있다. 여기서 preSum[i]는 A[0] ~ A[i] 까지의 합이다.
+
+이제 A[i] ~ A[j] 까지의 합은 A[0] ~ A[j]의 합 - (A[0] ~ A[i-1]의 합)으로 나타낼 수 있고, 이는 preSum[j] - preSum[i-1]과 같다.
 
 [연습 문제 (백준 11659번)](https://www.acmicpc.net/problem/11659)
 
