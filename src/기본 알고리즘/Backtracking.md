@@ -3,53 +3,53 @@
 
 시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
 
-![backtracking image](https://github.com/user-attachments/assets/753916ab-5999-4c9d-9c03-1d6e5db03b6b)
+![](https://github.com/user-attachments/assets/753916ab-5999-4c9d-9c03-1d6e5db03b6b)
 
 [연습 문제 (백준 15649번)](https://www.acmicpc.net/problem/15649)
 
 위 문제는 nPm을 전부 출력하는 문제로, 깊이마다 선택지를 하나씩 채워 넣고, 사용된 숫자는 제외하는 방식으로 구현된다.
 
-![back1](https://github.com/user-attachments/assets/15c12411-6cf2-45ab-98c7-ec599bd16e6b)
+![](https://github.com/user-attachments/assets/15c12411-6cf2-45ab-98c7-ec599bd16e6b)
 
 n=4, m=3인 경우를 예로 살펴보겠다.
 
 초기에는 위와 같이 할당되어 있다.
 
-![back2](https://github.com/user-attachments/assets/46c53ca8-f25d-41ab-bdf7-b10d0e921297)
+![](https://github.com/user-attachments/assets/46c53ca8-f25d-41ab-bdf7-b10d0e921297)
 
 출력의 깊이 0 (첫 번째 칸)에서 1~4까지 반복문을 돌며 사용하지 않은 것을 사용한다.
 
 그 결과 첫 번째 칸에는 1이 할당되었다.
 
-![back3](https://github.com/user-attachments/assets/93da5a15-d9d3-4396-93d9-90cee6411df0)
+![](https://github.com/user-attachments/assets/93da5a15-d9d3-4396-93d9-90cee6411df0)
 
 깊이 1에서는 2가 할당되어 다음과 같아진다.
 
-![back4](https://github.com/user-attachments/assets/08069977-a5ad-4d72-97ed-939239eb67e1)
+![](https://github.com/user-attachments/assets/08069977-a5ad-4d72-97ed-939239eb67e1)
 
 깊이 2에서는 3이 할당되어 다음과 같아진다.
 
-![back5](https://github.com/user-attachments/assets/6950fd5d-b975-4490-aaa9-2b984067e5c1)
+![](https://github.com/user-attachments/assets/6950fd5d-b975-4490-aaa9-2b984067e5c1)
 
 깊이 3에서는 범위를 벗어나 지금까지 기록한 '1 2 3'을 출력된다.
 
-![back6](https://github.com/user-attachments/assets/65dffecc-8b6b-4f18-8738-a3010b010b62)
+![](https://github.com/user-attachments/assets/65dffecc-8b6b-4f18-8738-a3010b010b62)
 
 다시 깊이 2로 돌아가보니 이번에는 4가 할당된다.
 
-![back7](https://github.com/user-attachments/assets/a95f8b20-3e16-43ef-87da-a6790c8f0df3)
+![](https://github.com/user-attachments/assets/a95f8b20-3e16-43ef-87da-a6790c8f0df3)
 
 깊이 3에서는 이번에는 기록한 '1 2 4'를 출력된다.
 
-![back8](https://github.com/user-attachments/assets/dbff43a2-fdc5-4eec-9044-50aef6730a65)
+![](https://github.com/user-attachments/assets/dbff43a2-fdc5-4eec-9044-50aef6730a65)
 
 그 다음에는 깊이 1까지 돌아가 깊이 1에 3이 할당된다.
 
-![back9](https://github.com/user-attachments/assets/c1309fa2-9951-4c4b-abf2-e96b49503d5f)
+![](https://github.com/user-attachments/assets/c1309fa2-9951-4c4b-abf2-e96b49503d5f)
 
 깊이 2에서는 2가 할당된다.
 
-![back10](https://github.com/user-attachments/assets/02d56a61-06dd-4e3d-8790-022f0b89d7e3)
+![](https://github.com/user-attachments/assets/02d56a61-06dd-4e3d-8790-022f0b89d7e3)
 
 깊이 3에서는 기록한 '1 3 2'가 출력된다.
 
