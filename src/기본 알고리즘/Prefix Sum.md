@@ -3,11 +3,11 @@
 
 시간복잡도 : 전처리 O(N), 쿼리 O(1) (N : 데이터 개수)
 
-![preSum1](https://github.com/user-attachments/assets/39b43d6b-7b87-47c0-8b0d-5064c5e1a7e6)
+![](https://github.com/user-attachments/assets/39b43d6b-7b87-47c0-8b0d-5064c5e1a7e6)
 
 입력된 배열 A가 다음과 같다고 하자.
 
-![preSum2](https://github.com/user-attachments/assets/34f47c73-25fd-4ac0-aea5-8ba7115a7f59)
+![](https://github.com/user-attachments/assets/34f47c73-25fd-4ac0-aea5-8ba7115a7f59)
 
 그러면 배열 A의 누적 합 preSum은 다음과 같다고 할 수 있다. 여기서 preSum[i]는 A[0] ~ A[i] 까지의 합이다.
 
