@@ -3,9 +3,43 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-![bfs animation1](https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif)
+![](https://github.com/user-attachments/assets/db80081e-9bb2-4fad-9669-bddeb24483cf)
 
-![bfs animation2](https://upload.wikimedia.org/wikipedia/commons/f/f5/BFS-Algorithm_Search_Way.gif)
+이렇게 연결된 그래프가 있고, 1번 정점에서 탐색을 시작하며, 동시에 여러 개의 정점에 도달할 수 있다면 정점 번호 오름차순으로 이동한다고 가정하자.
+
+![](https://github.com/user-attachments/assets/ef0d9085-aa81-49e1-9e40-50d262bf01bc)
+
+맨 처음에는 1번 정점에 이동할 것이다. 이 정점에서 이동할 수 있는 정점은 2번, 3번, 5번 정점이다.
+
+![](https://github.com/user-attachments/assets/3495d9e2-cf4a-4193-85ca-7a6678630b49)
+
+아직 방문하지 않은 2번, 3번, 5번 정점을 큐에 넣는다.
+
+![](https://github.com/user-attachments/assets/bf9d07b9-4487-4cca-bb59-d98a6e61920b)
+
+큐에서 맨 앞에 있는 2번 정점으로 이동한다. 이 정점에서 이동할 수 있는 정점은 1번, 4번 정점이다.
+
+![](https://github.com/user-attachments/assets/9a6c6e59-133a-4cb6-bc02-9c8c9ab67274)
+
+아직 방문하지 않은 4번 정점을 큐에 넣는다.
+
+![](https://github.com/user-attachments/assets/ed3e841c-c479-4711-8d64-42776d4cd45b)
+
+큐에서 맨 앞에 있는 3번 정점으로 이동한다. 이 정점에서 이동할 수 있는 정점은 1번, 4번 정점이다.
+
+큐에 넣을 수 있는 정점은 없다.
+
+![](https://github.com/user-attachments/assets/828b9bc1-126d-4d38-9edf-04c4ae69cc6f)
+
+큐에서 맨 앞에 있는 5번 정점으로 이동한다. 이 정점에서 이동할 수 있는 정점은 1번 정점이다.
+
+큐에 넣을 수 있는 정점은 없다.
+
+![](https://github.com/user-attachments/assets/99eef719-02b4-4274-9317-9f272fb1f250)
+
+큐에서 맨 앞에 있는 4번 정점으로 이동한다. 이 정점에서 이동할 수 있는 정점은 2번, 3번 정점이다.
+
+큐에 넣을 수 있는 정점은 없다. 큐가 비어 종료한다.
 
 [연습 문제 (백준 24444번)](https://www.acmicpc.net/problem/24444)
 
