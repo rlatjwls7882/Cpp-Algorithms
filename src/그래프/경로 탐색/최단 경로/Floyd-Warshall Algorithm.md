@@ -3,6 +3,44 @@
 
 시간복잡도 : O(V³), 공간복잡도 : O(V²)
 
+![](https://github.com/user-attachments/assets/2ec3a22f-d56c-417a-9375-98aa31300ea1)
+
+위와 같은 그래프를 사용해보겠다.
+
+![](https://github.com/user-attachments/assets/7cb8c016-4641-4c6d-81cb-49667ba54bad)
+
+그래프의 간선을 입력해 인접 행렬을 만드면 다음과 같다. i번 행, j번 열의 원소는 i번 정점에서 j번 정점에 도달하기 위한 최소 거리이다.
+
+![](https://github.com/user-attachments/assets/12799956-fcf1-4925-8285-732dba799f47)
+
+이후 mid(경유지)를 1로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+
+2 -> 1 -> 3, 3 -> 1 -> 2, 3 -> 1 -> 5, 5 -> 1 -> 3 경로에 대해 최단 거리가 단축된다.
+
+![](https://github.com/user-attachments/assets/43c6cfb2-5628-4013-99d7-53d51fd7d5bb)
+
+mid를 2로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+
+1 -> 2 -> 4, 4 -> 2 -> 1 경로에 대해 최단 거리가 단축된다.
+
+![](https://github.com/user-attachments/assets/d69a14a6-893b-4a66-823f-bee996dac040)
+
+mid를 3으로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+
+1 -> 3 -> 4, 4 -> 3 -> 1 경로에 대해 최단 거리가 단축된다.
+
+![](https://github.com/user-attachments/assets/a5524a8e-d8a8-4d70-ae0b-e540c5e03f54)
+
+mid를 4로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+
+2 -> 4 -> 3, 3 -> 4 -> 2 경로에 대해 최단 거리가 단축된다.
+
+![](https://github.com/user-attachments/assets/12b60334-6832-4537-818e-5da7d010ee2a)
+
+mid를 5로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+
+mid=5에 대해서는 단축될 최단 거리가 없다.
+
 [연습 문제 (백준 11404번)](https://www.acmicpc.net/problem/11404)
 
 ``` c++
