@@ -3,7 +3,41 @@
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
 
-![Kahn's Algorithm GIF](https://iq.opengenus.org/content/images/2020/03/algo.gif)
+![](https://github.com/user-attachments/assets/c09465b0-191a-4f6e-a462-d3390f347c3e)
+
+이렇게 생긴 그래프가 있다고 하자.
+
+![](https://github.com/user-attachments/assets/dcee373c-edf9-4d49-bb53-8b1846884df5)
+
+먼저 각 정점의 진입 차수를 구한다. 그 후 진입 차수가 0인 모든 정점을 큐에 넣는다.
+
+![](https://github.com/user-attachments/assets/1742d00a-5dcd-47ec-b0fb-ada171b86d22)
+
+큐에 가장 앞에 있는 정점인 1번 정점을 꺼낸다. 1번 정점에서 접근 가능한 2번, 3번 정점의 진입차수를 지운다.
+
+그 결과 2번, 3번 정점이 진입차수가 0이 되어 큐에 들어간다.
+
+![](https://github.com/user-attachments/assets/527b4e9f-b1d8-496b-b3b0-b2abcfb24e0b)
+
+큐에 가장 앞에 있는 정점인 2번 정점을 꺼낸다. 2번 정점에서 접근 가능한 4번 정점의 진입차수를 지운다.
+
+![](https://github.com/user-attachments/assets/d3f2da13-4fd5-458a-83d6-d8f0550f6b43)
+
+큐에 가장 앞에 있는 정점인 3번 정점을 꺼낸다. 3번 정점에서 접근 가능한 4번, 5번 정점의 진입차수를 지운다.
+
+그 결과 4번 정점이 진입차수가 0이 되어 큐에 들어간다.
+
+![](https://github.com/user-attachments/assets/65b27450-ca26-4c86-8aea-17cb8da2a4df)
+
+큐에 가장 앞에 있는 정점인 4번 정점을 꺼낸다. 3번 정점에서 접근 가능한 5번 정점의 진입차수를 지운다.
+
+그 결과 5번 정점이 진입차수가 0이 되어 큐에 들어간다.
+
+![](https://github.com/user-attachments/assets/caec3611-db39-44fc-940d-88cde058550a)
+
+큐에 가장 앞에 있는 정점인 5번 정점을 꺼낸다. 5번 정점에서는 접근 가능한 정점이 없다.
+
+다음 반복에서 큐가 비어 종료한다.
 
 [연습 문제 (백준 2252번)](https://www.acmicpc.net/problem/2252)
 
