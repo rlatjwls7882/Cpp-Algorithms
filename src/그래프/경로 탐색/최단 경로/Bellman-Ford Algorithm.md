@@ -11,7 +11,7 @@
 
 1번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
 
-![KakaoTalk_20250819_110124408_02](https://github.com/user-attachments/assets/cca6aff3-4f14-4d2d-93a3-186a6a376797)
+![](https://github.com/user-attachments/assets/cca6aff3-4f14-4d2d-93a3-186a6a376797)
 
 2번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
 
@@ -69,8 +69,7 @@ vector<vector<element>> conn(MAX);
 
 /** 
  * Bellman-Ford Algorithm
- * - 음수인 간선이 있는 경우 다익스트라 대신 사용
- * - 음수 사이클 판별 가능
+ * - 음수 사이클이 존재하는 경우 return false
  */
 bool bellman_ford() {
     fill(minCost, minCost+MAX, INF);
