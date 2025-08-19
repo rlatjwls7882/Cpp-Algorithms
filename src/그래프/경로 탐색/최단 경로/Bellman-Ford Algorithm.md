@@ -3,7 +3,47 @@
 
 시간복잡도 : O(VE)
 
-![image](https://i.imgur.com/hcWT22F.png)
+![](https://github.com/user-attachments/assets/ec2faed3-229f-4245-adcc-87edc20913fd)
+
+이렇게 연결된 그래프가 있고 1번 정점에서 탐색을 시작한다고 가정하자.
+
+![](https://github.com/user-attachments/assets/932be387-a036-4e10-a117-55a87ba01bb1)
+
+1번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
+
+![KakaoTalk_20250819_110124408_02](https://github.com/user-attachments/assets/cca6aff3-4f14-4d2d-93a3-186a6a376797)
+
+2번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
+
+![](https://github.com/user-attachments/assets/9f06c533-496f-4332-8e91-9998f4d73b4d)
+
+3번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
+
+![](https://github.com/user-attachments/assets/57a7f37b-dd3e-4a59-962b-089d194166af)
+
+4번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
+
+![](https://github.com/user-attachments/assets/84589da1-f873-44e9-9517-d3727c68a334)
+
+5번 정점에서 연결된 다른 모든 정점에 대해 최소비용 업데이트를 한다.
+
+첫번째 반복이 끝났다. 이번 반복에서 최단거리 업데이트가 이루어졌으니 다음 반복을 시작한다. (최단거리 업데이트가 한번이라도 발생하지 않으면 종료)
+
+![](https://github.com/user-attachments/assets/66b74bbf-ffb3-4047-abff-4c4a0bc71d79)
+
+두번째 반복의 결과는 다음과 같다. 이번 반복에서 최단거리 업데이트가 이루어졌으니 다음 반복을 시작한다.
+
+![](https://github.com/user-attachments/assets/dffba307-d85c-4ea0-a05c-c73a8cb87267)
+
+세번째 반복의 결과는 다음과 같다. 이번 반복에서 최단거리 업데이트가 이루어졌으니 다음 반복을 시작한다.
+
+...
+
+이렇게 쭉 반복하다 n(정점 수)번째 반복에서도 반복이 이루어지면 이 그래프에는 음수 사이클이 존재한다고 판단하고 종료한다.
+
+그 이유는 한번의 반복에서 아주 운이 없어서 업데이트가 적게 이루어진다 하더라도 최소 1개의 정점은 업데이트 된다. (0개면 종료)
+
+처음 거리가 0인 기준점을 제외하면 업데이트 시킬 정점이 n-1개이니, n번째 반복에는 정상적인 경우라면 업데이트가 이루어질 수 없다.
 
 [연습 문제 (백준 11657번)](https://www.acmicpc.net/problem/11657)
 
