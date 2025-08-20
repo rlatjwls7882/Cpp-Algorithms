@@ -2,11 +2,35 @@
 
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84)로 나타내었을 때 최대 매칭 수(왼쪽과 오른쪽의 쌍의 수)를 찾는 알고리즘
 
-시간복잡도 : O(VE) (V : 양쪽 그룹 중 더 큰 정점의 크기)
+시간복잡도 : O(VE) (V : 왼쪽 그룹의 정점 수)
 
-![image](https://github.com/user-attachments/assets/56ba1be0-a03c-4bb8-8816-b7da371723da)
+![](https://github.com/user-attachments/assets/22f0f71c-b5b1-4f0c-90e0-565170d61714)
+
+이렇게 생긴 이분 그래프와 초기 상태가 다음과 같은 배열 2개가 있다고 가정하자. 이 그래프에서 왼쪽 정점 - 오른쪽 정점의 어떤 점도 중복되지 않은 최대 쌍의 수를 구할 것이다.
 
 이분 그래프란 정점들을 그림처럼 왼쪽 정점 그룹과 오른쪽 정점 그룹으로 나누었을 때, 서로 다른 그룹들 사이에만 간선이 있는 그래프이다.
+
+![](https://github.com/user-attachments/assets/64fa9a91-c479-43fd-91a8-01d0147d19a3)
+
+먼저 A1를 연결 가능한 첫번째 매칭 상대인 B1과 연결한다. 중복이 없으니 넘어간다.
+
+![](https://github.com/user-attachments/assets/e797957b-fcdc-4bbd-9e08-cdf69a2571e8)
+
+A2를 연결 가능한 첫번째 매칭 상대인 B3와 연결한다. 중복이 없으니 넘어간다.
+
+![](https://github.com/user-attachments/assets/3656594b-fc8d-44a3-bdf9-05d81dab8e7b)
+
+A3를 연결 가능한 첫번째 매칭 상대인 B1과 연결한다. 중복이 발생했다.
+
+![](https://github.com/user-attachments/assets/f061def3-b7c5-46ba-ad35-2ad6faeaa7d7)
+
+B1과 원래 연결되어있던 A1을 연결 가능한 다음 정점으로 연결하게 한다. 결국 A1은 B2와 연결되었다.
+
+![](https://github.com/user-attachments/assets/9deda089-4d71-4ba0-b037-a5bf49204326)
+
+A4를 연결 가능한 첫번째 매칭 상대인 B3과 연결한다. 중복이 발생했다.
+
+하지만 원래 B3과 연결되어있던 A2는 다른 정점과 연결할 수 없고 이대로 종료된다. (B4는 매칭 실패)
 
 [연습 문제 (백준 11375번)](https://www.acmicpc.net/problem/11375)
 
