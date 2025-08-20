@@ -128,7 +128,7 @@
 ## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm.md)
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽 정점과 오른쪽 정점의 쌍의 수)를 찾는 알고리즘
 
-시간복잡도 : O(VE) (V : 양쪽 그룹 중 더 큰 정점의 크기)
+시간복잡도 : O(VE) (V : 왼쪽 그룹의 정점 수)
 
 ## [Edmonds-Karp Algorithm](src/그래프/유량/Edmonds-Karp%20Algorithm.md)
 그래프에서 시작 지점에서 유량을 흘려서, 도착지점까지 유량이 얼마나 도착하는지 찾는 알고리즘
