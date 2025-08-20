@@ -136,7 +136,7 @@
 시간복잡도 : O(VE²)
 
 ## [Dinic's Algorithm](src/그래프/유량/Dinic's%20Algorithm.md)
-Edmonds-Karp 알고리즘을 최적화한 알고리즘
+Edmonds-Karp 알고리즘을 최적화한 알고리즘으로, 레벨 그래프를 구성해 블로킹 플로우를 흘려 불필요한 탐색을 줄여 최대 유량을 구하는 알고리즘
 
 시간복잡도 : O(V²E)
 
