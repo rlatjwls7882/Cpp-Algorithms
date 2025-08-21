@@ -3,7 +3,26 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-벨만 포드 알고리즘 기반의 SPFA을 이용하여 구현한다.
+![](https://github.com/user-attachments/assets/2b044011-572e-4512-af79-d1b4dcb90c38)
+
+해당 그래프가 주어지고, 역추적을 위한 prev 배열과 최소 비용을 위한 curCost 배열을 이용한다.  
+
+![](https://github.com/user-attachments/assets/192977de-97a2-4600-923d-21da567b6c5e)
+
+반복에서 Edmonds-Karp에서 BFS를 사용했던 것과 달리, SPFA를 사용해 탐색한다. (조건: c-f>0, curCost[cur] + 간선의 비용 < curCost[next])  
+이 때, S -> 3 -> 2 -> E 경로가 발견되고, 비용과 유량을 업데이트한다.
+
+![](https://github.com/user-attachments/assets/d11ac2eb-eb0f-4a54-97d6-2970a876be0c)
+
+다음 반복에서는 S -> 1 -> 2 -> E 경로가 발견되었고, 비용과 유량을 업데이트한다.
+
+![](https://github.com/user-attachments/assets/c485c37a-7477-4649-ac01-5609288406f4)
+
+다음 반복에서는 S -> 3 -> 4 -> E 경로가 발견되었고, 비용과 유량을 업데이트한다.  
+
+![](https://github.com/user-attachments/assets/89d6e08b-2e89-46a9-bdc5-7211ef47a27a)
+
+다음 반복에서는 S에서 E로 가는 경로가 발견되지 않았고, 반복을 종료한다.
 
 [연습 문제 (백준 11408번)](https://www.acmicpc.net/problem/11408)
 
