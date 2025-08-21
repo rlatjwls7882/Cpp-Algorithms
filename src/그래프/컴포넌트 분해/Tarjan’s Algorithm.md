@@ -1,9 +1,82 @@
 ## Tarjan’s Algorithm (SCC)
 
-그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/%EA%B0%95%ED%95%9C_%EC%97%B0%EA%B2%B0_%EC%9A%94%EC%86%8C)을 한번의 dfs로 뽑아내는 알고리즘
+그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)을 한번의 dfs로 뽑아내는 알고리즘
 SCC : 임의의 두 정점 사이에 사이클이 존재해 서로 왔다 갔다 할 수 있는 정점들의 그룹
 
 시간복잡도 : O(V + E) (V : 정점 수, E : 간선 수)
+
+![](https://github.com/user-attachments/assets/736940b8-7a30-4be8-89c1-8586b49ed4ce)
+
+이런 그래프가 주어진다고 하자. 여기서 자신이 속한 그룹 번호를 나타내는 parent와, 이미 그룹화했는지 확인하는 visited 두개의 배열을 사용한다.
+
+![](https://github.com/user-attachments/assets/e322aed2-f672-49dc-815f-1e39537e1219)
+
+먼저 1번 정점부터 방문한다. 1번 정점을 스택에 넣고, remember(해당 정점이 방문 가능한 가장 작은 그룹 번호)과 1번 정점의 parent에 1(parent[cur] = ++idx, 그룹번호 1번)을 저장한다.  
+1번 정점과 연결된 2번 정점을 방문한 적 없기에(parent[next]==0) 먼저 방문한다.
+
+![](https://github.com/user-attachments/assets/2ca7a60c-a619-47eb-b504-d31818963458)
+
+2번 정점에 방문한다. 2번 정점을 스택에 넣고, remember과 2번 정점의 parent에 2을 저장한다.  
+2번 정점과 연결된 3번 정점을 방문한 적 없기에 먼저 방문한다.
+
+![](https://github.com/user-attachments/assets/1ccdc827-2878-4b92-8096-df30c56804d6)
+
+3번 정점에 방문한다. 3번 정점을 스택에 넣고, remember과 3번 정점의 parent에 3을 저장한다.  
+3번 정점과 연결된 4번 정점을 방문한 적 없기에 먼저 방문한다.
+
+![](https://github.com/user-attachments/assets/e80cb2b1-56e4-4ebd-9803-f6d7fe74bef1)
+
+4번 정점에 방문한다. 4번 정점을 스택에 넣고, remember과 4번 정점의 parent에 4를 저장한다.  
+4번 정점과 연결된 3번 정점을 방문한 적 있지만(parent[3]!=0), 3번 정점의 그룹이 확정되지 않았기에(visited[next]==false) remember에 원래의 값과 4번 정점의 현재 그룹(parent[4]) 중 작은 값을 저장한다.  
+4번 정점과 연결된 8번 정점을 방문한 적 없기에 먼저 방문한다.
+
+![](https://github.com/user-attachments/assets/26b53322-acba-4509-b8f8-2b12d9def098)
+
+8번 정점에 방문한다. 8번 정점을 스택에 넣고, remember과 4번 정점의 parent에 5를 저장한다.  
+8번 정점과 연결된 8번 정점을 방문한 적 있지만, 8번 정점의 그룹이 확정되지 않았기에 remember에 원래의 값과 8번 정점의 현재 그룹 중 작은 값을 저장한다.  
+
+![](https://github.com/user-attachments/assets/e8479f11-5100-45c9-b1e2-a7907d08842d)
+
+8번 정점에서 더이상 방문할 수 있는 정점이 없다.  
+remember값이 처음 저장한 값과 동일하다면(그룹의 대표 정점) 스택에서 cur가 나올때까지 빼서 사이클 목록에 저장하고, visited 값을 true로, parent 값을 remember로 업데이트한다.  
+그 결과, 8번 정점만 꺼내져서 업데이트 되었다.  
+만들어진 그룹(사이클)은 파란색으로 표시하였다.
+
+![](https://github.com/user-attachments/assets/aac174e6-4d88-4c65-af4f-99465b18861b)
+
+4번 정점으로 되돌아가서, 4번 정점에서 더이상 방문할 수 있는 정점이 없다.  
+remember값이 처음 저장한 값과 동일하기에 스택에서 cur가 나올때까지 빼서 사이클 목록에 저장하고, visited 값을 true로, parent 값을 remember로 업데이트한다.  
+그 결과, 3번, 4번 정점이 꺼내져서 업데이트 되었다.
+
+![](https://github.com/user-attachments/assets/779a50b3-7202-47f7-bd46-2af82898ab2e)
+
+3번 정점으로 되돌아가서, 3번 정점과 연결된 7번 정점을 방문한 적 없기에 방문한다. 7번 정점을 스택에 넣고, remember과 7번 정점의 parent에 6을 저장한다.  
+
+![](https://github.com/user-attachments/assets/3b866c15-d718-4483-bdc5-758b47b57947)
+
+6번 정점에 방문한다. 6번 정점을 스택에 넣고, remember과 6번 정점의 parent에 7을 저장한다.
+6번 정점과 연결된 7번 정점을 방문한 적 있지만, 7번 정점의 그룹이 확정되지 않았기에 remember에 원래의 값과 7번 정점의 현재 그룹 중 작은 값을 저장한다.  
+remember값이 처음 저장한 값과 동일하지 않기에 되돌아간다.
+
+![](https://github.com/user-attachments/assets/3cc85dbc-47cc-4aae-84a3-638ab71389d7)
+
+7번 정점으로 되돌아간다. 연결된 8번 정점은 이미 그룹이 만들어져서 패스한다.  
+7번 정점에서 더이상 방문할 수 있는 정점이 없다.  
+remember값이 처음 저장한 값과 동일하기에 스택에서 cur가 나올때까지 빼서 사이클 목록에 저장하고, visited 값을 true로, parent 값을 remember로 업데이트한다.  
+그 결과, 6번, 7번 정점이 꺼내져서 업데이트 되었다.
+
+![](https://github.com/user-attachments/assets/1d7a749c-95b7-4492-a89d-a7cae0db4cf2)
+
+몇 번의 과정 후에 2번 정점까지 되돌아가서 5번 정점을 방문한다. 2번 정점을 스택에 넣고, remember과 2번 정점의 parent에 8를 저장한다.  
+5번 정점과 연결된 1번 정점을 방문한 적 있지만, 1번 정점의 그룹이 확정되지 않았기에 remember에 원래의 값과 1번 정점의 현재 그룹 중 작은 값을 저장한다.  
+
+![](https://github.com/user-attachments/assets/e7b127c0-ac55-4de6-aedf-2ad033226978)
+
+몇 번의 과정 후에 1번 정점까지 되돌아간다. 1번 정점에서 더이상 방문할 수 있는 정점이 없다.  
+remember값이 처음 저장한 값과 동일하기에 스택에서 cur가 나올때까지 빼서 사이클 목록에 저장하고, visited 값을 true로, parent 값을 remember로 업데이트한다.  
+그 결과, 1번, 2번, 5번 정점이 꺼내져서 업데이트 되었다.
+
+그리고 스택이 비어있고 방문 하지 않은 정점이 없어 종료한다. (방문 안한 정점이 있다면 그 정점을 root로 추가 탐색 시작)
 
 [연습 문제 (백준 2150번)](https://www.acmicpc.net/problem/2150)
 
