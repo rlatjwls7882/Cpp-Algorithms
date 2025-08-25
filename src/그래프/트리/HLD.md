@@ -16,7 +16,7 @@
 
 ![](https://github.com/user-attachments/assets/ca539917-9dae-4088-8d1d-d2e42c0a11d5)
 
-이렇게 평면 상에 근사된 트리의 정점들을 그룹화하는 dfs2이다.  
+이렇게 새로 재배치한 정점에 새로운 정점번호를 붙여 직선으로 분해하여, 세그먼트 트리를 쓰기 용이하게 하는 것이 dfs2이다.  
 nodeNum과 nodeCnt는 새로 할당하는 정점 번호이고, groupNum과 groupCnt는 이 정점의 그룹 번호이다.  
 depth와 curDepth는 해당 정점의 깊이이고, head는 자신이 해당하는 그룹 중 깊이가 가장 작은 정점이다.
 
