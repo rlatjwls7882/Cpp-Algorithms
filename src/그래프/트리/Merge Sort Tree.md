@@ -3,6 +3,11 @@
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
 
+![](https://github.com/user-attachments/assets/52fcb02f-adaf-43b6-993a-1364d14d343f)
+
+이번에도 이전 설명과 같이 원소 4개를 저장한다고 하자.  
+4 ~ 7 정점까지 값을 하나 넣고, 4, 5를 병합 정렬하여 2번 정점에 채워넣고, 6, 7을 병합 정렬하여 3번 정점에 채워넣고, etc ...
+
 [연습 문제 (백준 13544번)](https://www.acmicpc.net/problem/13544)
 
 ``` c++
