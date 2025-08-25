@@ -5,6 +5,100 @@
 
 [연습 문제 (백준 13510번)](https://www.acmicpc.net/problem/13510)
 
+![](https://github.com/user-attachments/assets/7ff6bf36-71a8-4992-b582-91fa7627d87a)
+
+이렇게 생긴 트리가 있다고 생각하자.  
+
+![](https://github.com/user-attachments/assets/8b55075e-ec82-479a-a6c1-dacd5f06392b)
+
+먼저 dfs를 이용해 모든 정점에 대해 가장 서브트리가 큰 자식을 첫번째 자식으로 오도록 재배치한다. (dfs1)  
+이 글을 읽는 시점에서는 dfs1의 동작 과정은 코드만 봐도 알거라 생각해 자세한 동작과정은 생략한다.
+
+![](https://github.com/user-attachments/assets/ca539917-9dae-4088-8d1d-d2e42c0a11d5)
+
+이렇게 평면 상에 근사된 트리의 정점들을 그룹화하는 dfs2이다.  
+nodeNum과 nodeCnt는 새로 할당하는 정점 번호이고, groupNum과 groupCnt는 이 정점의 그룹 번호이다.  
+depth와 curDepth는 해당 정점의 깊이이고, head는 자신이 해당하는 그룹 중 깊이가 가장 작은 정점이다.
+
+루트인 1번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 0으로 할당하고 nodeCnt가 1 증가한다.  
+해당 정점번호에 그룹 번호가 할당되지 않았으니 그룹 번호를 0으로 할당하고,  
+해당 정점번호의 그룹 번호가 새로 할당되는 것이니 이 정점을 head로 둔다.  
+첫 번째 자식인 4로 이동한다.
+
+![](https://github.com/user-attachments/assets/f08ae767-2670-48bc-9c4a-10e133c148d9)
+
+4번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 1로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 0으로 할당하고,  
+head가 이미 할당되었으니 패스한다.  
+첫 번째 자식인 6으로 이동한다.
+
+![](https://github.com/user-attachments/assets/61b3ec43-f491-4e8b-aa72-aec32cf0c16b)
+
+6번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 2로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 0으로 할당하고,  
+head가 이미 할당되었으니 패스한다.  
+첫 번째 자식인 8로 이동한다.
+
+![](https://github.com/user-attachments/assets/fb80d3b0-4a07-4457-8ab1-f403ba9919d3)
+
+8번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 3으로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 0으로 할당하고,  
+head가 이미 할당되었으니 패스한다.  
+자식이 없어 groupCnt가 1 증가한다.  
+5 -> 3 으로 올라가며 7의 parent에 5를, 5의 parent에 3을 넣는다.
+
+![](https://github.com/user-attachments/assets/aabb6cc8-61dd-47d8-8f28-1f53b896e315)
+
+3번 정점의 두번째 자식인 6번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 4로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 1로 할당하고,  
+해당 정점번호의 그룹 번호가 새로 할당되는 것이니 이 정점을 head로 둔다.  
+자식이 없어 groupCnt가 1 증가한다.  
+3 -> 0 으로 올라가며 6의 parent에 3을, 3의 parent에 0을 넣는다.
+
+![](https://github.com/user-attachments/assets/64c8af1f-c163-4ec7-964a-e31a948932c6)
+
+0번 정점의 두번째 자식인 1번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 5로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 2로 할당하고,  
+해당 정점번호의 그룹 번호가 새로 할당되는 것이니 이 정점을 head로 둔다.  
+첫 번째 자식인 4로 이동한다.
+
+![](https://github.com/user-attachments/assets/8f7e582b-1974-4243-a8e3-3e6cb48d1ed7)
+
+4번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 6으로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 2로 할당하고,  
+head가 이미 할당되었으니 패스한다.  
+자식이 없어 groupCnt가 1 증가한다.  
+1 -> 0 으로 올라가며 4의 parent에 1을, 1의 parent에 0을 넣는다.
+
+![](https://github.com/user-attachments/assets/ae3ae568-8832-478c-b6b8-38b43ec8b5a2)
+
+0번 정점의 세번째 자식인 2번 정점에 도착한다.  
+정점 번호가 할당되지 않았으니 정점 번호를 7로 할당하고 nodeCnt가 1 증가한다.  
+그룹 번호가 할당되지 않았으니 그룹 번호를 3으로 할당하고,  
+해당 정점번호의 그룹 번호가 새로 할당되는 것이니 이 정점을 head로 둔다.  
+자식이 없어 groupCnt가 1 증가한다.  
+0 으로 올라가며 2의 parent에 0을 넣는다.
+
+![](https://github.com/user-attachments/assets/6c4f9d90-b1ad-4a10-a962-bb7d239cd137)
+
+4와 5, 두 정점 사이의 거리를 구해보자.  
+먼저 5의 정점 번호는 2이고, 그룹번호는 0, 이 그룹의 head는 0이다.  
+4의 정점 번호는 6이고, 그룹번호는 2, 이 그룹의 head는 5이다.  
+두 head 중 더 깊이있는 것부터 해당 정점 ~ head 까지의 세그먼트 트리를 하며 올라오면 된다.  
+
+![](https://github.com/user-attachments/assets/e32e8476-41e1-4bf8-b243-046fc4749221)
+
+처음에는 4가 속한 그룹의 head가 더 아래에 있어 4의 정점번호 6부터 head인 5까지 세그먼트 트리 연산을 하고, head의 parent로 올라간다.  
+이렇게 head의 깊이가 낮은 정점부터 올려보내다 보면, 어느 순간 그룹이 같아지는 때가 나타난다.  
+이 때는 마지막으로, 두 정점 사이의 세그먼트 트리 연산을 하고 종료하면 된다.
+
 ``` c++
 /** https://www.acmicpc.net/problem/13510 제출 코드 */
 #include<bits/stdc++.h>
@@ -70,7 +164,7 @@ void dfs1(int cur) {
             dfs1(next);
             subTreeCnt[cur] += subTreeCnt[next];
             child[cur].push_back(next);
-            if(subTreeCnt[child[cur].front()] > subTreeCnt[child[cur].back()]) swap(child[cur].front(), child[cur].back());
+            if(subTreeCnt[child[cur].front()] < subTreeCnt[child[cur].back()]) swap(child[cur].front(), child[cur].back());
         }
     }
 }
