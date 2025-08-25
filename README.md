@@ -35,7 +35,7 @@
     * 2-SAT (2-Satisfiability)
   * 트리
     * Segment Tree
-    * Lazy Propagation
+    * Segment Tree with Lazy Propagation
     * Merge Sort Tree
     * HLD (Heavy Light Decomposition)
 * 문자열
@@ -160,7 +160,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
-## [Lazy Propagation](src/그래프/트리/Lazy%20Propagation.md)
+## [Segment Tree with Lazy Propagation](src/그래프/트리/Segment%20Tree%20with%20Lazy%20Propagation.md)
 세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
