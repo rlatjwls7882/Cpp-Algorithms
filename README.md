@@ -183,7 +183,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 ## [Trie](src/문자열/Trie.md)
 여러 문자열을 공통 접두사로 압축해 저장하는 자료구조
 
-시간복잡도 : O(S) (S : 모든 문자열의 길이)
+시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
 
 ## [Aho-Corasick](src/문자열/Aho-Corasick.md)
 Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
