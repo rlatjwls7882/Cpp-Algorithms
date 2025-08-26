@@ -1,12 +1,48 @@
 ## Trie
 여러 문자열을 공통 접두사로 압축해 저장하는 자료구조
 
-시간복잡도 : O(S) (S : 모든 문자열의 길이)
+시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
+
+![](https://github.com/user-attachments/assets/3c91f65b-7b0a-435a-b0b4-6d1b6dd1f9c9)
+
+처음에는 이렇게 루트만 존재한다.  
+she라는 단어를 집어넣어 보겠다.
+
+![](https://github.com/user-attachments/assets/f526c261-917f-4927-b3fb-ee701a37303f)
+
+root에서 s로 가는 길이 없어 새로 생성한다.  
+s로 이동한다.
+
+![](https://github.com/user-attachments/assets/70fdbe7f-c2fe-46d3-b433-16ec86c2ca52)
+
+s에서 h로 가는 길이 없어 새로 생성한다.  
+h로 이동한다.
+
+![](https://github.com/user-attachments/assets/89202832-30f3-448c-8836-e04dd79b780e)
+
+h에서 e로 가는 길이 없어 새로 생성한다.  
+e로 이동한다.
+
+![](https://github.com/user-attachments/assets/21544fb6-f507-42a6-b599-1026ce002d90)
+
+더이상 방문할 문자가 없다.  
+현재 정점에서 끝나는 단어의 수를 1 증가시킨다.
+
+![](https://github.com/user-attachments/assets/6c6cd2d7-5f57-4436-9f8e-695657393058)
+
+이번엔 he라는 단어를 집어넣겠다.  
+root -> h -> e로 가는 길이 없어 새로 생성하고 e에서 끝나는 단어의 수를 1 증가시킨다.
+
+![](https://github.com/user-attachments/assets/9b928c17-c922-47e4-a4d0-999050a02c5b)
+
+이번엔 her이라는 단어를 집어넣겠다.  
+root -> h -> e로 가는 길이 이미 있어 따라 가고 e -> r로 가는 길은 없어 새로 생성한다.  
+r에서 끝나는 단어의 수를 1 증가시킨다.
 
 [연습 문제 (백준 5670번)](https://www.acmicpc.net/problem/5670)
 
 연습문제의 테스트케이스 3가지를 트라이 구조로 나타내면 다음과 같다
-![img1](https://github.com/user-attachments/assets/c4d9fff1-4e5f-4f95-92d8-c2ea5982a1ff)
+![](https://github.com/user-attachments/assets/c4d9fff1-4e5f-4f95-92d8-c2ea5982a1ff)
 
 모양이 이렇기 때문에 접두사 트리 (Prefix Tree)라고도 부른다.
 
