@@ -2,7 +2,7 @@
 
 ## 목표
 * 증명보다는 알고리즘 동작 방식과 구현 위주로 설명 추가
-* 알고리즘 복습 및 추가 (LCA, BCC, EEA, ...)
+* 알고리즘 복습 및 추가 (LCA, BCC, EEA)
 
 ## 목차
 * 기본 알고리즘
@@ -186,9 +186,9 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
 
 ## [Aho-Corasick](src/문자열/Aho-Corasick.md)
-Trie구조에 실패함수를 추가한 일대다 패턴매칭 알고리즘
+Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
-시간복잡도 : O(S) (S : 모든 문자열의 길이)
+시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
 
 ## [CCW (Counter ClockWise) Algorithm](src/기하/CCW%20Algorithm.md)
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
