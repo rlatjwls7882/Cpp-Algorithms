@@ -44,7 +44,7 @@ mid=5에 대해서는 단축될 최단 거리가 없다.
 [연습 문제 (백준 11404번)](https://www.acmicpc.net/problem/11404)
 
 ``` c++
-/** https://www.acmicpc.net/problem/11404 제출 코드 */
+/** http://boj.kr/16aa77515ca84d378b5b10dabfa5ba2a 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
