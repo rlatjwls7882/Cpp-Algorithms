@@ -75,7 +75,7 @@
 
 시간복잡도 : O(NlogN) (N : 데이터 개수, 정렬 O(NlogN) + 스캔 O(N))
 
-## [DSU (Disjoint Set Union, 분리 집합)](src/기본%20알고리즘/Disjoint%20Set%20Union.md)
+## [DSU (Disjoint Set Union, 분리 집합)](src/기본%20알고리즘/DSU.md)
 서로 겹치지 않는 집합을 관리하고 합치거나 찾는 연산을 효율적으로 처리하는 자료구조
 
 시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
