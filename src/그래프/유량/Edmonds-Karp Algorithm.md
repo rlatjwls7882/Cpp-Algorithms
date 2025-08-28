@@ -48,7 +48,7 @@ S -> 3 -> 2 -> E 방향으로 1만큼의 유량이 흐른 후 S -> 1 -> 2 -> E �
 [연습 문제 (백준 17412번)](https://www.acmicpc.net/problem/17412)
 
 ``` c++
-/** https://www.acmicpc.net/problem/17412 제출 코드 */
+/** http://boj.kr/abf5d13ef49941ca81ce5ad00ea918a9 제출 코드 */
 #include <bits/stdc++.h>
 using namespace std;
 
