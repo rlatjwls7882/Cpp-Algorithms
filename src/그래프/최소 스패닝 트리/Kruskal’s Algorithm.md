@@ -36,7 +36,7 @@
 [연습 문제 (백준 1197번)](https://www.acmicpc.net/problem/1197)
 
 ``` c++
-/** https://www.acmicpc.net/problem/1197 제출 코드 */
+/** http://boj.kr/71ab3ebe37394291bb957f50cd5b3228 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
