@@ -37,7 +37,7 @@ A4를 연결 가능한 첫번째 매칭 상대인 B3과 연결한다. 중복이 
 직원들을 각각 왼쪽 정점으로, 일들을 각각 오른쪽 정점으로 설정해두고 직원-일 간의 최대 쌍의 수를 구해주면 된다.
 
 ``` c++
-/** https://www.acmicpc.net/problem/11375 제출 코드 */
+/** http://boj.kr/9a1034036ddb47bfaada13f84cc7e70a 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
