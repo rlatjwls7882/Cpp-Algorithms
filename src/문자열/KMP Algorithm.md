@@ -57,7 +57,7 @@ P[i]와 P[idx]가 다르기에 매칭에 실패한다. idx에 실패함수 값�
 [연습 문제 (백준 1786번)](https://www.acmicpc.net/problem/1786)
 
 ``` c++
-/** https://www.acmicpc.net/problem/1786 제출 코드 */
+/** http://boj.kr/085dfffd934f4710a2f39791af06f331 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
