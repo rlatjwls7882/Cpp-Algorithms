@@ -65,7 +65,7 @@ $...$
 이 출력된다.
 
 ``` c++
-/** https://www.acmicpc.net/problem/15649 제출 코드 */
+/** http://boj.kr/1a898dba13d74c9fb524af5ca7770877 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
