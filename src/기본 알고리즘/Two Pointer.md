@@ -32,7 +32,7 @@ A[left]+A[right]가 9보다 크기에 right를 1 감소시킨다.
 [연습 문제 (백준 3273번)](https://www.acmicpc.net/problem/3273)
 
 ``` c++
-/** https://www.acmicpc.net/problem/3273 제출 코드 */
+/** http://boj.kr/bba07bce85944877bf61c2508cd6a062 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
