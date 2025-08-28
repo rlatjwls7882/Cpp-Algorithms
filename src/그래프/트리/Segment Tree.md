@@ -75,7 +75,7 @@ nodeNum은 현재 정점 번호이고, L R은 현재 정점이 나타내는 구�
 [연습 문제 (백준 2042번)](https://www.acmicpc.net/problem/2042)
 
 ``` c++
-/** https://www.acmicpc.net/problem/2042 제출 코드 */
+/** http://boj.kr/4dbb42cb6d1d492c912cecadf4ab776b 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
