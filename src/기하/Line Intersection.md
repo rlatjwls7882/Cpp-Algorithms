@@ -3,10 +3,30 @@
 
 시간복잡도 : O(1)
 
+![](https://github.com/user-attachments/assets/b5c9a42d-d7a4-4e83-9311-8a8e6ee994dd)
+
+이렇게 두 개의 직선이 있다고 하자. P1 P2를 직선 A의 양 끝 점으로, P3 P4를 직선 B의 양 끝 점으로 두자.
+
+![](https://github.com/user-attachments/assets/e22665a3-5862-4ca8-97a9-624abf0aee25)
+
+이 때, 두 직선이 겹치는 첫 번째 조건은 직선 A에 대해 P3, P4가 서로 CCW 로 다른 방향에 위치해야 한다.  
+위 사진에서는 P1 -> P2 -> P4 가 반시계 방향이고, P1 -> P2 -> P3가 시계방향으로 서로 반대이다.
+
+![](https://github.com/user-attachments/assets/8ba7e268-d338-49df-a297-9125d43a1712)
+
+두 번째 조건은 직선 B에 대해 P1, P2가 서로 CCW 로 다른 방향에 위치해야 한다.  
+위 사진에서는 P3 -> P4 -> P1 가 반시계 방향이고, P3 -> P4 -> P2가 시계방향으로 서로 반대이다.
+
+![](https://github.com/user-attachments/assets/e0982725-1d28-4015-b598-b1618b105b90)
+
+하지만 만약 이렇게 두 직선이 일직선으로 되는 경우는 예외 처리해주어야 한다.  
+두 직선이 일직선이면, 이전 두 조건에서 판별한 4가지 값이 모두 0이 나올 것이다. (일직선)  
+그리고 이 때는, P3 또는 P4가 P1과 P2 사이에 있는 경우, P1 또는 P2가 P3와 P4 사이에 있는 경우에 두 직선이 교차한다.
+
 [연습 문제 (백준 17387번)](https://www.acmicpc.net/problem/17387)
 
 ``` c++
-/** https://www.acmicpc.net/problem/17387 제출 코드 */
+/** http://boj.kr/b7c8e66120fa4c15abd64f5511e852d4 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
