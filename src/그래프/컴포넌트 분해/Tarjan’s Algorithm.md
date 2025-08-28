@@ -81,7 +81,7 @@ remember값이 처음 저장한 값과 동일하기에 스택에서 cur가 나�
 [연습 문제 (백준 2150번)](https://www.acmicpc.net/problem/2150)
 
 ``` c++
-/** https://www.acmicpc.net/problem/2150 제출 코드 */
+/** http://boj.kr/e132006f2a584d7a8aa3894bc4db617d 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
