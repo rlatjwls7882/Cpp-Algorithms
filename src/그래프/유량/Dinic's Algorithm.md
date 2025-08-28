@@ -36,7 +36,7 @@ S에서 bfs로 E에 도착하지 못하기 때문에 dfs 탐색을 더 이상 �
 [연습 문제 (백준 13161번)](https://www.acmicpc.net/problem/13161)
 
 ``` c++
-/** https://www.acmicpc.net/problem/13161 제출 코드 */
+/** http://boj.kr/fd246063e6b649e88d3a5088f9724c8f 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
