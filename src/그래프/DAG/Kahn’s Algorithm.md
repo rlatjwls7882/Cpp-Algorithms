@@ -42,7 +42,7 @@
 [연습 문제 (백준 2252번)](https://www.acmicpc.net/problem/2252)
 
 ``` c++
-/** https://www.acmicpc.net/problem/2252 제출 코드 */
+/** http://boj.kr/b66cea97849d422ebafedfee26b5643d 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
