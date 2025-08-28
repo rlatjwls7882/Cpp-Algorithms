@@ -34,7 +34,7 @@
 [연습 문제 (백준 11280번)](https://www.acmicpc.net/problem/11280)
 
 ``` c++
-/** https://www.acmicpc.net/problem/11280 제출 코드 */
+/** http://boj.kr/b20a77bd213644739a5eb1305a00df79 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
