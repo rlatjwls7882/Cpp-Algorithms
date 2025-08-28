@@ -27,7 +27,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 [연습 문제 (백준 11408번)](https://www.acmicpc.net/problem/11408)
 
 ``` c++
-/** https://www.acmicpc.net/problem/11408 제출 코드 */
+/** http://boj.kr/45a5538a7b074a278245ac4898da2fa6 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
