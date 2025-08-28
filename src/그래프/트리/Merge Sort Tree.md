@@ -11,7 +11,7 @@
 [연습 문제 (백준 13544번)](https://www.acmicpc.net/problem/13544)
 
 ``` c++
-/** https://www.acmicpc.net/problem/13544 제출 코드 */
+/** http://boj.kr/4f92e7d51e5c4383b2ae01963d1dea9d 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
