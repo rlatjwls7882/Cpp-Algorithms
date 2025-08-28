@@ -100,7 +100,7 @@ head가 이미 할당되었으니 패스한다.
 이 때는 마지막으로, 두 정점 사이의 세그먼트 트리 연산을 하고 종료하면 된다.
 
 ``` c++
-/** https://www.acmicpc.net/problem/13510 제출 코드 */
+/** http://boj.kr/809d1087267e4ddc8fe48b616e24388a 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
