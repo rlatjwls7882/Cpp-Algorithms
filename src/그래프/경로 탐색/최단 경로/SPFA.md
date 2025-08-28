@@ -46,7 +46,7 @@
 [연습 문제 (백준 11657번)](https://www.acmicpc.net/problem/11657)
 
 ``` c++
-/** https://www.acmicpc.net/problem/11657 제출 코드 */
+/** http://boj.kr/99e189479d7c4da1a50839057be86dc9 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
