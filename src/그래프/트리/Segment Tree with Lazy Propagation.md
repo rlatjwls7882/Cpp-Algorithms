@@ -66,7 +66,7 @@
 [연습 문제 (백준 10999번)](https://www.acmicpc.net/problem/10999)
 
 ``` c++
-/** https://www.acmicpc.net/problem/10999 제출 코드 */
+/** http://boj.kr/7d57bb756bc44d4a8445b52137d4fe5f 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
