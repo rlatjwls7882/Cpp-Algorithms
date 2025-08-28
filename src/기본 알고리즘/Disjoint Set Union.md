@@ -32,7 +32,7 @@ O(N²) DSU에서는 그렇지만 O(α(N)) DSU에서는 경로 압축 해주어 �
 [연습 문제 (백준 1717번)](https://www.acmicpc.net/problem/1717)
 
 ``` c++
-/** https://www.acmicpc.net/problem/1717 제출 코드 */
+/** http://boj.kr/61d6f3b974084fc3ab1aca437121bcb9 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
