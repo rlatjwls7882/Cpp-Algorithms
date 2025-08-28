@@ -50,7 +50,7 @@ d1의 실패 링크인 루트에서 d로의 경로가 있기 때문에 그대로
 [연습문제 (백준 9250번)](https://www.acmicpc.net/problem/9250)
 
 ``` c++
-/** https://www.acmicpc.net/problem/9250 제출 코드 */
+/** http://boj.kr/2079694a33ba44918c419f2c33ca021b 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
