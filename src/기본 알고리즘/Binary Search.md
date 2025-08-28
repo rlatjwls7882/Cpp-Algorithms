@@ -26,7 +26,7 @@
 [연습 문제 (백준 1920번)](https://www.acmicpc.net/problem/1920)
 
 ``` c++
-/** https://www.acmicpc.net/problem/1920 제출 코드 */
+/** http://boj.kr/13586b0c1d744fe8b0c4f6a8393ed65c 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
