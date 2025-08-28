@@ -47,7 +47,7 @@ r에서 끝나는 단어의 수를 1 증가시킨다.
 모양이 이렇기 때문에 접두사 트리 (Prefix Tree)라고도 부른다.
 
 ``` c++
-/** https://www.acmicpc.net/problem/5670 제출 코드 */
+/** http://boj.kr/a9405512ef8f4c4e835bc367d7ea851a 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
