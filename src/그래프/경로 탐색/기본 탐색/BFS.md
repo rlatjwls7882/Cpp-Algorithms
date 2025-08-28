@@ -44,7 +44,7 @@
 [연습 문제 (백준 24444번)](https://www.acmicpc.net/problem/24444)
 
 ``` c++
-/** https://www.acmicpc.net/problem/24444 제출 코드 */
+/** http://boj.kr/5a29153331384b3cb8dc9d68127f6b34 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
