@@ -30,7 +30,7 @@
 [연습 문제 (백준 20670번)](https://www.acmicpc.net/problem/20670)
 
 ``` c++
-/** https://www.acmicpc.net/problem/20670 제출 코드 */
+/** http://boj.kr/53b52acf09254afc8ee95823889d15d8 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
