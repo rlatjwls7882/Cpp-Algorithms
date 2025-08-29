@@ -3,27 +3,27 @@
 
 시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
 
-![pch1](https://github.com/user-attachments/assets/4dc402a8-f23c-4b39-8382-c2e8c3f41fdf)
+![](https://github.com/user-attachments/assets/4dc402a8-f23c-4b39-8382-c2e8c3f41fdf)
 
 빨간색 점이 첫 번째 점(0)이고 파란색 점이 판별할 점(p)이라고 하자.
 
-![pch2](https://github.com/user-attachments/assets/b456ff22-00be-45d7-9d74-71371d2a8f69)
+![](https://github.com/user-attachments/assets/b456ff22-00be-45d7-9d74-71371d2a8f69)
 
 점 p가 볼록 껍질 내부에 있으려면 0 -> 1 -> p 벡터가 반시계 방향이어야 하고, 0 -> 5 -> p 벡터가 시계 방향이어야 한다.
 
-![pch3](https://github.com/user-attachments/assets/a33dbe38-7101-45f8-9544-c63677510918)
+![](https://github.com/user-attachments/assets/a33dbe38-7101-45f8-9544-c63677510918)
 
 이분 탐색에서의 첫번째 반복에서는 0 -> 3 -> p 벡터가 반시계 방향이다. (left = mid)
 
 점 p가 0 -> 3 왼쪽에 있으니 자동으로 0 -> 1, 0 -> 2일 때도 점 p가 왼쪽에 존재한다는 것을 알 수 있다.
 
-![pch4](https://github.com/user-attachments/assets/af04d3cd-b3e7-4e3a-bdc1-c7b0837347a0)
+![](https://github.com/user-attachments/assets/af04d3cd-b3e7-4e3a-bdc1-c7b0837347a0)
 
 이분 탐색에서의 두 번째 반복에서는 0 -> 4 -> p 벡터가 시계 방향이다. (right = mid)
 
 점 p가 0 -> 4 오른쪽에 있으니 자동으로 0 -> 5일 때도 점 p가 오른쪽에 존재한다는 것을 알 수 있다.
 
-![pch5](https://github.com/user-attachments/assets/da152538-4000-4179-8479-82793031a5e4)
+![](https://github.com/user-attachments/assets/da152538-4000-4179-8479-82793031a5e4)
 
 마지막으로 left -> right -> p 가 반시계 방향이라면 점 p는 볼록 껍질 안에 존재한다.
 
