@@ -46,7 +46,7 @@
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
   * Graham's Scan (Convex Hull, 볼록 껍질)
-  * Point in Convex Hull Algorithm (볼록 껍질 내부의 점 판정 알고리즘)
+  * Point in Convex Hull (볼록 껍질 내부의 점 판정)
   * Rotating Calipers (회전하는 캘리퍼스)
 * 스위핑
   * Sweeping Algorithm
@@ -56,7 +56,7 @@
   * Deque Trick
 * 쿼리 처리
   * Offline Query
-  * Sqrt Decomposition (Square Root Decomposition, 평방 분할)
+  * Square Root Decomposition (평방 분할)
   * Mo's Algorithm
   * Parallel Binary Search (병렬 이분 탐색)
 
@@ -205,7 +205,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(NlogN)
 
-## [Point in Convex Hull Algorithm (볼록 껍질 내부의 점 판정 알고리즘)](src/기하/Point%20in%20Convex%20Hull%20Algorithm.md)
+## [Point in Convex Hull (볼록 껍질 내부의 점 판정)](src/기하/Point%20in%20Convex%20Hull%20Algorithm.md)
 볼록 껍질에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
 
 시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
@@ -238,7 +238,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md)
 복잡한 연산을 단순화하기 위해, 쿼리의 처리 순서를 바꿔 답을 찾는 테크닉
 
-## [Sqrt Decomposition (Square Root Decomposition)](src/쿼리%20처리/Sqrt%20Decomposition.md)
+## [Square Root Decomposition (평방 분할)](src/쿼리%20처리/Sqrt%20Decomposition.md)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
