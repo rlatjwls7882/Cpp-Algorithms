@@ -3,12 +3,54 @@
 
 시간복잡도 : O(NlogN)
 
-![Graham's scan Animation](https://upload.wikimedia.org/wikipedia/commons/7/71/GrahamScanDemo.gif)
+![](https://github.com/user-attachments/assets/b2981dcf-e7e9-4f5a-89ab-a1f0e90ee898)
+
+이렇게 5개의 점이 있다고 하자.
+
+![](https://github.com/user-attachments/assets/6fda21b7-0eee-4986-92fe-d4348567791e)
+
+처음에는 우선 기준점을 잡아야 한다. (보통 y가 가장 작고, y값이 같다면 x가 가장 작은 점)
+
+![](https://github.com/user-attachments/assets/8dea310c-7b84-4f8a-9844-738aa51d51ec)
+
+기준점 p1을 기준으로 반시계방향으로 각도 정렬을 하여, 방문할 점 순서를 정한다.
+
+![](https://github.com/user-attachments/assets/142d34ce-2e6a-41fd-b0bc-e6b38c91f3c4)
+
+첫번째 점과 두번째 점은 스택에 넣어놓는다.
+
+![](https://github.com/user-attachments/assets/29b47def-84a8-4fd2-af1f-e150f9a3d826)
+
+P3를 볼록 껍질에 넣을지 판단한다.  
+P1 -> P2 -> P3가 반시계 방향으로 회전하는지 확인한다. (처음에 시계 방향으로 각도 정렬했으면 시계방향으로 회전하는지 확인)  
+반시계 방향으로 회전해 그대로 스택에 넣는다.
+
+![](https://github.com/user-attachments/assets/f04e1f42-efa8-4709-8791-ac768133be97)
+
+P4를 볼록 껍질에 넣을지 판단한다.  
+P2 -> P3 -> P4가 반시계 방향으로 회전하는지 확인한다.  
+반시계 방향으로 회전해 그대로 스택에 넣는다.
+
+![](https://github.com/user-attachments/assets/1ba5366c-8efd-4d18-bfd7-7a5648791000)
+
+P5를 볼록 껍질에 넣을지 판단한다.  
+P3 -> P4 -> P5가 반시계 방향으로 회전하는지 확인한다.  
+시계 방향으로 회전해 이전에 스택에 넣었던 P4를 꺼낸다.
+
+![](https://github.com/user-attachments/assets/32b573e3-5211-4c32-90f8-9a212cffe474)
+
+P2 -> P3 -> P5가 반시계 방향으로 회전하는지 확인한다.  
+반시계 방향으로 회전해 그대로 스택에 넣는다.
+
+![](https://github.com/user-attachments/assets/273fdb37-a601-448c-a825-fb8088fdbea8)
+
+더 이상 확인할 점이 없어서 P5를 P1과 연결한다.
+
 
 [연습 문제(백준 1708번)](https://www.acmicpc.net/problem/1708)
 
 ``` c++
-/** https://www.acmicpc.net/problem/1708 제출 코드 */
+/** http://boj.kr/c12b0c398f4e4d8b8b98d469f194e9be 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
