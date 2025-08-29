@@ -46,7 +46,7 @@
   * CCW (Counter ClockWise) Algorithm
   * Line Intersection
   * Graham's Scan (Convex Hull, 볼록 껍질)
-  * Point in Convex Hull (볼록 껍질 내부의 점 판정)
+  * Point in Convex Polygon (볼록 다각형 내부의 점 판정)
   * Rotating Calipers (회전하는 캘리퍼스)
 * 스위핑
   * Sweeping Algorithm
@@ -205,8 +205,8 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(NlogN)
 
-## [Point in Convex Hull (볼록 껍질 내부의 점 판정)](src/기하/Point%20in%20Convex%20Hull%20Algorithm.md)
-볼록 껍질에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
+## [Point in Convex Polygon (볼록 다각형 내부의 점 판정)](src/기하/Point%20in%20Convex%20Polygon.md)
+볼록 다각형에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
 
 시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
 
