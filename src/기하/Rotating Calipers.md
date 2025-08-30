@@ -3,12 +3,53 @@
 
 시간복잡도 : O(N) (그라함 스캔 제외)
 
-![rotating calipers](https://www-cgrl.cs.mcgill.ca/~godfried/research/calipers.gif)
+![](https://github.com/user-attachments/assets/03bf9b93-10f5-4e34-883d-676f7c67cfd3)
+
+이미 그라함 스캔을 마쳐 볼록 껍질을 찾은 상태라고 하자.  
+i=0, j=1인 상태에서 반복을 시작한다.  
+현재 위치한 두 점 i=0, j=1 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+0 -> 1 벡터와 1 -> 2벡터가 반시계 방향으로 회전하기 때문에 (ccw>0) j를 증가시킨다. (잘 살펴보면 반시계 방향으로 회전하는 경우 다음 점으로 갈수록 멀어진다.)
+
+![](https://github.com/user-attachments/assets/fbf5b71c-b593-4ab5-997f-a4f0777d92f7)
+
+현재 위치한 두 점 i=0, j=2 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+0 -> 1 벡터와 2 -> 3벡터가 반시계 방향으로 회전하기 때문에 j를 증가시킨다.
+
+![](https://github.com/user-attachments/assets/58be6c68-6132-4945-9b52-1525b63975fc)
+
+현재 위치한 두 점 i=0, j=3 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+0 -> 1 벡터와 3 -> 4벡터가 반시계 방향으로 회전하기 때문에 j를 증가시킨다.
+
+![](https://github.com/user-attachments/assets/a3bdaecd-060e-4945-b860-0a751929e400)
+
+현재 위치한 두 점 i=0, j=4 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+0 -> 1 벡터와 4 -> 5벡터가 반시계 방향으로 회전하지 않기 때문에 i를 증가시킨다. (잘 살펴보면 반시계 방향으로 회전하지 않는 경우 다음 점으로 갈수록 가까워진다.)
+
+![](https://github.com/user-attachments/assets/55131dd8-0c7a-4c36-83a2-e27c035429db)
+
+현재 위치한 두 점 i=1, j=4 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+1 -> 2 벡터와 4 -> 5벡터가 반시계 방향으로 회전하지 않기 때문에 i를 증가시킨다.
+
+![](https://github.com/user-attachments/assets/acd1b7f8-5c8b-4d11-9fb7-030f64e985e4)
+
+현재 위치한 두 점 i=2, j=4 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+2 -> 3 벡터와 4 -> 5벡터가 반시계 방향으로 회전하지 않기 때문에 i를 증가시킨다.
+
+![](https://github.com/user-attachments/assets/64afcb95-0fe7-4210-9c0e-f1550f4667a4)
+
+현재 위치한 두 점 i=3, j=4 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+3 -> 4 벡터와 4 -> 5벡터가 반시계 방향으로 회전하기 때문에 j를 증가시킨다.
+
+![](https://github.com/user-attachments/assets/1a54e5b0-938b-474f-bc4c-613c0cec05cf)
+
+현재 위치한 두 점 i=3, j=5 사이의 거리를 계산하여 최댓값에 업데이트한다.  
+3 -> 4 벡터와 5 -> 0벡터가 반시계 방향으로 회전하기 때문에 j를 증가시킨다.  
+j가 6이 되어 반복을 종료한다.
 
 [연습 문제 (백준 9240번)](https://www.acmicpc.net/problem/9240)
 
 ``` c++
-/** https://www.acmicpc.net/problem/9240 제출 코드 */
+/** http://boj.kr/c103693446fc4558a9c6dbbe46642365 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
