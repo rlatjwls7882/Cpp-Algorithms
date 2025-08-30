@@ -252,3 +252,13 @@ Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) �
 이분 탐색 쿼리가 여러 번 주어질 때, 모든 쿼리를 동시에 mid 기준으로 묶어서 병렬 처리함으로써 중복 계산을 줄이는 알고리즘
 
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
+
+## License
+Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). See LICENSE.md for more info.
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
