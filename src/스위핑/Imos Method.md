@@ -13,15 +13,15 @@ Imos Method로 한 변의 길이가 4인 직각 삼각형을 구해보자.
 
 이런식으로 6군데를 마킹한 후
 
-![](https://github.com/user-attachments/assets/b4297514-cbba-4a91-9513-f43a9e8f13be)
+![](https://github.com/user-attachments/assets/0bb2a49b-42f1-45fe-8ff4-d43c6b37da08)
 
 오른쪽으로 한번 쓸고
 
-![](https://github.com/user-attachments/assets/2cf67b37-9f2b-45d5-9d60-d3507fafa66f)
+![](https://github.com/user-attachments/assets/73e9d5e5-a615-4c5d-aff0-2e5782f126e6)
 
 아래로 한번 쓸고
 
-![](https://github.com/user-attachments/assets/37a65625-e8c3-4f92-b563-225e6533abc0)
+![](https://github.com/user-attachments/assets/671e6c95-a31d-4a34-8d64-1ce51e341f32)
 
 오른쪽 대각선 아래로 한번 쓸면 완성된다.
 
