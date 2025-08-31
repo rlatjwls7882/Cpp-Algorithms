@@ -225,7 +225,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(N<sup>D</sup>+Q) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
 
-## TSP (Traveling Salesman Problem, 외판원 순회 문제)
+## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/스위핑/TSP.md)
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
 
 시간복잡도 : O(N² x $2^N$) (N : 도시의 수, $2^N$ : 가능한 방문 조합의 수)
