@@ -58,7 +58,7 @@
   * Offline Query
   * Square Root Decomposition (평방 분할, 제곱근 분할)
   * Mo's Algorithm
-  * Parallel Binary Search (병렬 이분 탐색)
+  * PBS (Parallel Binary Search, 병렬 이분 탐색)
 
 ## [Binary Search (이분 탐색)](src/기본%20알고리즘/Binary%20Search.md)
 정렬된 데이터에서 원하는 값을 찾기 위해 탐색 범위를 절반씩 줄여가는 알고리즘
@@ -248,8 +248,8 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(Q√N)
 
-## [Parallel Binary Search (병렬 이분 탐색)](src/쿼리%20처리/Parallel%20Binary%20Search.md)
-이분 탐색 쿼리가 여러 번 주어질 때, 모든 쿼리를 동시에 mid 기준으로 묶어서 병렬 처리함으로써 중복 계산을 줄이는 알고리즘
+## [PBS (Parallel Binary Search, 병렬 이분 탐색)](src/쿼리%20처리/PBS.md)
+이분 탐색 쿼리가 여러 번 주어질 때, 각 쿼리를 개별 이분탐색하지 않고 같은 mid끼리 묶어 한 번의 검증으로 여러 쿼리를 처리하는 오프라인 기법.
 
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
 
