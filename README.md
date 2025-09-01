@@ -56,7 +56,7 @@
   * Deque Trick
 * 쿼리 처리
   * Offline Query
-  * Square Root Decomposition (평방 분할)
+  * Square Root Decomposition (평방 분할, 제곱근 분할)
   * Mo's Algorithm
   * Parallel Binary Search (병렬 이분 탐색)
 
@@ -238,13 +238,13 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md)
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
 
-## [Square Root Decomposition (평방 분할)](src/쿼리%20처리/Square%20Root%20Decomposition.md)
+## [Square Root Decomposition (평방 분할, 제곱근 분할)](src/쿼리%20처리/Square%20Root%20Decomposition.md)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
 
 ## [Mo's Algorithm](src/쿼리%20처리/Mo's%20Algorithm.md)
-Sqrt Decomposition을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
+제곱근 분할을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
 
 시간복잡도 : O(Q√N)
 
