@@ -1,12 +1,37 @@
-## Sqrt Decomposition (Square Root Decomposition, 평방 분할)
+## Square Root Decomposition (평방 분할)
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
 
 [연습 문제 (백준 2912번)](https://www.acmicpc.net/problem/2912)
 
+![](https://github.com/user-attachments/assets/de79bbcb-12c2-4b97-9293-d8d4e4fb88af)
+
+이러한 N개의 숫자들과, 범위 안에서 과반수가 되는 수를 찾는 쿼리가 주어진다고 생각해보자.
+
+![](https://github.com/user-attachments/assets/5c4c5ae6-5a6d-4a68-8489-d103b6d6f7cf)
+
+이 때, √N개씩 쪼개서 관리하면 더 빨리 쿼리를 해결할 수 있다.  
+int(√8)이어서 여기선 2개씩 쪼개서 bucket에 저장한다.  
+저장하는 값은 해당 범위에서 과반수가 가능한 후보들을 담는다. (과반수인 수가 없으면 제일 많은 수 중 아무거나)
+
+나중에 수의 등장횟수를 이분탐색으로 빨리 찾기 위해 각 수들이 등장하는 위치를 idx라는 이차원 벡터에 오름차순으로 저장해놓는다.
+
+![](https://github.com/user-attachments/assets/36c96830-c0c5-4a29-b2ae-0ab4db52e0c5)
+
+2 ~ 4 범위에서 과반수를 찾아보겠다.  
+이 범위에서는 bucket 부분만 살펴보면 된다.  
+후보인 1과 3을 모두 살펴본 결과 과반수가 없다. (upper_bound(4) - lower_bound(2))  
+2를 확인하지 않는 이유는 어느 구간에서도 과반수인 경우가 없어 전체 구간에서도 과반수일 수가 없다.
+
+![](https://github.com/user-attachments/assets/dd7b2f6b-ea41-4229-a2fb-4e6da13e5b1e)
+
+이번에는 1 ~ 4 범위에서 과반수를 찾아보겠다.  
+이 범위에서는 bucket 부분과 bucket에 포함 안되는 왼쪽 조금 부분을 살펴보면 된다.  
+후보인 1, 2, 3을 모두 살펴본 결과 2가 3개 등장하여 과반수가 된다.
+
 ``` c++
-/** https://www.acmicpc.net/problem/2912 */
+/** http://boj.kr/6c8a6509be2042e3adaae1d068ddb015 */
 #include<bits/stdc++.h>
 using namespace std;
 
