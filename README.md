@@ -1,8 +1,6 @@
 # 대회 / 코테 알고리즘 정리
-
-## 목표
-* 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명 작성
-* 알고리즘 복습 및 추가 (LCA, BCC, EEA)
+본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
+TODO) 알고리즘 복습 및 추가 (LCA, BCC, EEA), 태그 추가 : 정수론(Euclidean Algorithm, Sieve of Eratosthenes, Primality Test, Fermat's Little Theorem)
 
 ## 목차
 * 기본 알고리즘
@@ -254,7 +252,5 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
 
 ## License
-Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). See LICENSE.md for more info.
-
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). See LICENSE.md for more info.
