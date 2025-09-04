@@ -1,6 +1,6 @@
 # 대회 / 코테 알고리즘 정리
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
-TODO) 알고리즘 복습 및 추가 (LCA, BCC, EEA), 설명 추가 : 정수론(Euclidean Algorithm, Sieve of Eratosthenes, Primality Test, Fermat's Little Theorem), 기초 알고리즘 추가(Sliding Window, Meet in the middle), 신발끈 공식
+TODO) 알고리즘 복습 및 추가 (LCA, BCC, EEA), 설명 추가 : 정수론(Euclidean Algorithm, Sieve of Eratosthenes, Primality Test, Fermat's Little Theorem, 오일러 피함수), 기초 알고리즘 추가(Sliding Window, Meet in the middle), 신발끈 공식
 
 ## 목차
 * 기본 알고리즘
