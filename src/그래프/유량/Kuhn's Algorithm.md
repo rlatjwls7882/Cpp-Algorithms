@@ -37,7 +37,7 @@ A4를 연결 가능한 첫번째 매칭 상대인 B3과 연결한다. 중복이 
 직원들을 각각 왼쪽 정점으로, 일들을 각각 오른쪽 정점으로 설정해두고 직원-일 간의 최대 쌍의 수를 구해주면 된다.
 
 ``` c++
-/** http://boj.kr/9a1034036ddb47bfaada13f84cc7e70a 제출 코드 */
+/** http://boj.kr/2dc9d016c40d40508c1992d763a1b512 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -96,20 +96,17 @@ int main(void) {
      * B[i] : i번 오른쪽 정점이 B[i]번 왼쪽 정점과 연결됨.
      * 처음에는 연결이 안되어있어서 -1로 초기화 (꼭 -1일 필요는 없고 절대 등장하지 않은 편한 숫자로 초기화하면 됨)
      */
-    memset(A, -1, sizeof A);
     memset(B, -1, sizeof B);
 
     /** 
      * cnt : 최대 매칭 수
-     * i번 왼쪽 정점이 아직 선택되지 않았다면(A[i]==-1) 매칭할 수 있는지 확인
+     * i번 왼쪽 정점이 매칭할 수 있는지 확인
      * dfs(i)==true면, 새로 매칭 가능
      */
     int cnt=0;
     for(int i=1;i<=N;i++) {
-        if(A[i]==-1) {
-            memset(visited, false, sizeof visited);
-            if(dfs(i)) cnt++;
-        }
+        memset(visited, false, sizeof visited);
+        if(dfs(i)) cnt++;
     }
     cout << cnt;
 }
