@@ -38,7 +38,7 @@ int A[100'001];
  * 처음 범위 : 0 ~ n-1
  * 
  * right가 left보다 큰 동안 :
- * - mid를 (left+right)으로 설정
+ * - mid를 (left+right)/2으로 설정
  * - mid 위치의 값이 현재 탐색중인 값보다 작다면 left = mid+1 (left ~ mid의 값은 전부 작다는 것이 확정되었으니 커팅)
  * - 그렇지 않다면 right = mid (mid+1 ~ right의 값은 전부 크다는 것이 확정되었으니 커팅)
  */
