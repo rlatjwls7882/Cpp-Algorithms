@@ -5,7 +5,7 @@
   * 정수론 (Euclidean Algorithm, Sieve of Eratosthenes, Fermat's Little Theorem, Euler Phi)
   * 기초 알고리즘 (Sliding Window, Meet in the Middle)
   * 기하 (Shoelace Formula)
-  * DP (LIS, LCA, MSIS)
+  * DP (LIS, LCS, MSIS)
 
 ## 목차
 * 기본 알고리즘
