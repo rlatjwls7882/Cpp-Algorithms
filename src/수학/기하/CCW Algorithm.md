@@ -1,4 +1,4 @@
-## CCW (Counter ClockWise) Algorithm
+## CCW (CounterclockWise) Algorithm
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
 
 시간복잡도 : O(1)
