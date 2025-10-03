@@ -201,27 +201,27 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(√N)
 
-## [CCW (CounterclockWise) Algorithm](src/기하/CCW%20Algorithm.md)
+## [CCW (CounterclockWise) Algorithm](src/수학/기하/CCW%20Algorithm.md)
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
 
 시간복잡도 : O(1)
 
-## [Line Intersection](src/기하/Line%20Intersection.md)
+## [Line Intersection](src/수학/기하/Line%20Intersection.md)
 두 선분이 서로 교차하는지 CCW를 통해 판별하는 알고리즘
 
 시간복잡도 : O(1)
 
-## [Graham's Scan (Convex Hull)](src/기하/Graham's%20Scan.md)
+## [Graham's Scan (Convex Hull)](src/수학/기하/Graham's%20Scan.md)
 기준점을 잡아 점들을 각도로 정렬한 후, 스택을 이용해 볼록 껍질의 방향성을 유지하지 않는 점을 제거하며 볼록 껍질을 찾는 알고리즘
 
 시간복잡도 : O(NlogN)
 
-## [Point in Convex Polygon (볼록 다각형 내부의 점 판정)](src/기하/Point%20in%20Convex%20Polygon.md)
+## [Point in Convex Polygon (볼록 다각형 내부의 점 판정)](src/수학/기하/Point%20in%20Convex%20Polygon.md)
 볼록 다각형에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
 
 시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
 
-## [Rotating Calipers (회전하는 캘리퍼스)](src/기하/Rotating%20Calipers.md)
+## [Rotating Calipers (회전하는 캘리퍼스)](src/수학/기하/Rotating%20Calipers.md)
 볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
 
 시간복잡도 : O(N) (그라함 스캔 제외)
