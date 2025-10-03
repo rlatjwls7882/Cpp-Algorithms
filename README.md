@@ -2,10 +2,10 @@
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
 * TODO) 알고리즘 복습 및 추가 (LCA, BCC, EEA, Nim Game, Sprague-Grundy Theorem)  
 * TODO) 설명 추가
-  * 정수론(Euclidean Algorithm, Sieve of Eratosthenes, Primality Test, Fermat's Little Theorem, Euler Phi)
-  * 기초 알고리즘(Sliding Window, Meet in the Middle)
-  * 기하(Shoelace Formula)
-  * DP(LIS, LCA, MSIS)
+  * 정수론 (Euclidean Algorithm, Sieve of Eratosthenes, Fermat's Little Theorem, Euler Phi)
+  * 기초 알고리즘 (Sliding Window, Meet in the Middle)
+  * 기하 (Shoelace Formula)
+  * DP (LIS, LCA, MSIS)
 
 ## 목차
 * 기본 알고리즘
@@ -45,12 +45,15 @@
   * KMP (Knuth-Morris-Pratt) Algorithm
   * Trie
   * Aho-Corasick
-* 기하
-  * CCW (Counter ClockWise) Algorithm
-  * Line Intersection
-  * Graham's Scan (Convex Hull, 볼록 껍질)
-  * Point in Convex Polygon (볼록 다각형 내부의 점 판정)
-  * Rotating Calipers (회전하는 캘리퍼스)
+* 수학
+  * 정수론
+    * Naive Primality Test (소수 판정)
+  * 기하
+    * CCW (CounterclockWise) Algorithm
+    * Line Intersection
+    * Graham's Scan (Convex Hull, 볼록 껍질)
+    * Point in Convex Polygon (볼록 다각형 내부의 점 판정)
+    * Rotating Calipers (회전하는 캘리퍼스)
 * 스위핑
   * Sweeping Algorithm
   * Imos Method (いもす法)
@@ -193,7 +196,12 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
 
-## [CCW (Counter ClockWise) Algorithm](src/기하/CCW%20Algorithm.md)
+## [Naive Primality Test (소수 판정)](src/수학/정수론/Naive%20Primality%20Test.md)
+2부터 √N까지 약수가 있는지 확인하여 소수를 판별하는 알고리즘
+
+시간복잡도 : O(√N)
+
+## [CCW (CounterclockWise) Algorithm](src/기하/CCW%20Algorithm.md)
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
 
 시간복잡도 : O(1)
