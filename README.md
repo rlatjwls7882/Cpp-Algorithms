@@ -2,7 +2,7 @@
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
 * TODO) 알고리즘 복습 및 추가 (LCA, BCC, EEA, Nim Game, Sprague-Grundy Theorem)  
 * TODO) 설명 추가
-  * 정수론 (Euclidean Algorithm, Sieve of Eratosthenes, Fermat's Little Theorem, Euler Phi)
+  * 정수론 (Euclidean Algorithm, Fermat's Little Theorem, Euler Phi)
   * 기초 알고리즘 (Sliding Window, Meet in the Middle)
   * 기하 (Shoelace Formula)
   * DP (LIS, LCS, MSIS)
@@ -48,6 +48,7 @@
 * 수학
   * 정수론
     * Naive Primality Test (소수 판정)
+    * Sieve of Eratosthenes (에라토스테네스의 체)
   * 기하
     * CCW (CounterclockWise) Algorithm
     * Line Intersection
@@ -200,6 +201,11 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 2부터 √N까지 약수가 있는지 확인하여 N이 소수인지 판별하는 알고리즘
 
 시간복잡도 : O(√N)
+
+## [Sieve of Eratosthenes (에라토스테네스의 체)](src/수학/정수론/Sieve%20of%20Eratosthenes.md)
+1부터 N까지의 소수를 미리 구하는 전처리 알고리즘
+
+시간복잡도 : $O(N\log{\log{N}})$
 
 ## [CCW (CounterclockWise) Algorithm](src/수학/기하/CCW%20Algorithm.md)
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
