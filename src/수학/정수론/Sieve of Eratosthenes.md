@@ -1,4 +1,4 @@
-# Sieve of Eratosthenes (에라토스테네스의 체)
+## Sieve of Eratosthenes (에라토스테네스의 체)
 1부터 N까지의 소수를 미리 구하는 전처리 알고리즘
 
 시간복잡도 : $O(N\log{\log{N}})$
