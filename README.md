@@ -1,6 +1,6 @@
 # 대회 / 코테 알고리즘 정리
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
-* TODO) 공부 (Hungarian, Hopcroft-Karp Algorithm)
+* TODO) 공부 (Hungarian, Hopcroft-Karp Algorithm, Gaussian Elimination)
 * TODO) 알고리즘 복습 및 설명 추가 (LCA, BCC, EEA, Nim Game, Sprague-Grundy Theorem)  
 * TODO) 설명 추가
   * 정수론 (Euclidean Algorithm, Fermat's Little Theorem, Euler Phi)
