@@ -7,7 +7,7 @@
   * 기초 알고리즘 (Sliding Window, Meet in the Middle)
   * 기하 (Shoelace Formula)
   * DP (LIS, LCS, MSIS)
-  * Segment Tree Walk
+  * Walking on Segment Tree
 
 ## 목차
 * 기본 알고리즘
