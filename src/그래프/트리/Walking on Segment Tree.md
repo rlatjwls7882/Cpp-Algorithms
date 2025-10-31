@@ -11,7 +11,7 @@
 
 ![](https://github.com/user-attachments/assets/9f679c39-ccc5-4689-8403-1037f9ef3014)
 
-남아있는 값 중 3번째로 작은 값을 뽑아 낸다면  
+예를 들어 남은 원소 중 3번째로 작은 값 찾는다면,
 현재 정점 (1번)에서 왼쪽 자식의 구간 합이 2이기 때문에 적어도 왼쪽 자식 구간은 고려 안해도 된다. (k에 2를 빼고 오른쪽 자식으로 이동.)
 
 ![](https://github.com/user-attachments/assets/792c8bea-ad14-49ee-b549-05e9fde5ef99)
