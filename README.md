@@ -170,7 +170,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
 ## [Walking on Segment Tree](src/그래프/트리/Walking%20on%20Segment%20Tree.md)
-세그먼트 트리의 구간 합을 이용해 이분 탐색으로 k번째 원소를 찾는 테크닉
+세그먼트 트리의 구간 합을 이용하여 이분 탐색으로 k번째 원소를 찾는 테크닉
 
 시간 복잡도 : O(QlogN) (Q : 쿼리의 수)
 
