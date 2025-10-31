@@ -1,13 +1,12 @@
 # 대회 / 코테 알고리즘 정리
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
 * TODO) 새로 공부 (Hungarian, Hopcroft-Karp Algorithm, Gaussian Elimination)
-* TODO) 알고리즘 복습 (LCA, BCC, EEA, Sprague-Grundy Theorem)  
+* TODO) 복습 (LCA, BCC, EEA, Sprague-Grundy Theorem)  
 * TODO) 설명 추가
   * 정수론 (Euclidean Algorithm, Fermat's Little Theorem, Euler Phi, Inclusion–Exclusion Principle)
   * 기초 알고리즘 (Sliding Window, Meet in the Middle)
   * 기하 (Shoelace Formula)
   * DP (LIS, LCS, MSIS)
-  * Walking on Segment Tree
 
 ## 목차
 * 기본 알고리즘
@@ -40,6 +39,7 @@
     * 2-SAT (2-Satisfiability)
   * 트리
     * Segment Tree
+    * Walking on Segment Tree
     * Segment Tree with Lazy Propagation
     * Merge Sort Tree
     * HLD (Heavy Light Decomposition)
@@ -168,6 +168,11 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 완전 이진 트리 구조를 이용하여 구간 쿼리를 최적화하는 알고리즘
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
+
+## [Walking on Segment Tree](src/그래프/트리/Walking%20on%20Segment%20Tree.md)
+세그먼트 트리의 구간 합을 이용해 이분 탐색으로 k번째 원소를 찾는 테크닉
+
+시간 복잡도 : O(QlogN) (Q : 쿼리의 수)
 
 ## [Segment Tree with Lazy Propagation](src/그래프/트리/Segment%20Tree%20with%20Lazy%20Propagation.md)
 세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
