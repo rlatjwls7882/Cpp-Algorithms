@@ -1,4 +1,4 @@
-## KMP (Knuth-Morris-Pratt) Algorithm
+## KMP (Knuth-Morris-Pratt) Algorithm 🟢 Platinum V
 한 문자열에서 다른 문자열이 어디에 등장하는지 찾아주는 문자열 검색 알고리즘
 
 시간복잡도 : O(N+M) (N+M : 두 문자열의 길이 합)
