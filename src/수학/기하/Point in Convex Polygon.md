@@ -1,4 +1,4 @@
-## Point in Convex Polygon (볼록 다각형 내부의 점 판정)
+## Point in Convex Polygon (볼록 다각형 내부의 점 판정) 🟢 Platinum III
 볼록 다각형에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
 
 시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
