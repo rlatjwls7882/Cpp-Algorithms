@@ -1,4 +1,4 @@
-## Naive Primality Test (소수 판정)
+## Naive Primality Test (소수 판정) ⚪ Silver IV
 2부터 √N까지 약수가 있는지 확인하여 N이 소수인지 판별하는 알고리즘
 
 시간복잡도 : O(√N)
