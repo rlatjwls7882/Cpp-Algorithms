@@ -1,4 +1,4 @@
-## Rotating Calipers (회전하는 캘리퍼스)
+## Rotating Calipers (회전하는 캘리퍼스) 🟢 Platinum III
 볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
 
 시간복잡도 : O(N) (그라함 스캔 제외)
