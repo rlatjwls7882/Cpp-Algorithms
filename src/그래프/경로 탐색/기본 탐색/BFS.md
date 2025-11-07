@@ -1,4 +1,4 @@
-## BFS (Breadth First Search, 너비 우선 탐색)
+## BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
 그래프에서 시작 정점에서 가까운 정점부터 차례대로 탐색하는 알고리즘
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
