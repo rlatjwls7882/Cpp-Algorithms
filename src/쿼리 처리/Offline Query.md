@@ -1,4 +1,4 @@
-## Offline Query
+## Offline Query 🟢 Platinum IV
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
 
 [연습 문제 (백준 13306번)](https://www.acmicpc.net/problem/13306)
