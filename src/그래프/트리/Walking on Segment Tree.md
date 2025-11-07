@@ -1,4 +1,4 @@
-## Walking on Segment Tree
+## Walking on Segment Tree 🟢 Platinum V
 세그먼트 트리의 구간 합을 이용하여 이분 탐색으로 k번째 원소를 찾는 테크닉
 
 시간 복잡도 : O(QlogN) (Q : 쿼리의 수)
