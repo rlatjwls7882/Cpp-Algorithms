@@ -1,4 +1,4 @@
-## Sweeping Algorithm
+## Sweeping Algorithm 🟡 Gold V
 선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
 
 시간복잡도 : O(NlogN) (N : 이벤트 개수, 정렬 O(NlogN) + 스캔 O(N))
