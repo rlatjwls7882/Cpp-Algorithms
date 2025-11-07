@@ -1,4 +1,4 @@
-## Segment Tree with Lazy Propagation
+## Segment Tree with Lazy Propagation 🟢 Platinum IV
 세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
