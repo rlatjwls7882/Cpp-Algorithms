@@ -1,4 +1,4 @@
-## PBS(Parallel Binary Search, 병렬 이분 탐색)
+## PBS(Parallel Binary Search, 병렬 이분 탐색) 🟢 Platinum I
 이분 탐색 쿼리가 여러 번 주어질 때, 각 쿼리를 개별 이분탐색하지 않고 같은 mid끼리 묶어 한 번의 검증으로 여러 쿼리를 처리하는 오프라인 기법.
 
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
