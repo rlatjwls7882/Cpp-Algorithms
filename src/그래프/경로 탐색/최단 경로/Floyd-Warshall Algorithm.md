@@ -1,4 +1,4 @@
-## Floyd-Warshall Algorithm
+## Floyd-Warshall Algorithm 🟡 Gold IV
 모든 정점 쌍 사이의 최단 거리를 DP로 구하는 알고리즘
 
 시간복잡도 : O(V³), 공간복잡도 : O(V²)
