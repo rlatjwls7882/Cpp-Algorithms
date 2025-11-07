@@ -1,4 +1,4 @@
-## Tarjan’s Algorithm (SCC)
+## Tarjan’s Algorithm (SCC) 🟢 Platinum V
 
 그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)을 한번의 dfs로 뽑아내는 알고리즘
 SCC : 임의의 두 정점 사이에 사이클이 존재해 서로 왔다 갔다 할 수 있는 정점들의 그룹
