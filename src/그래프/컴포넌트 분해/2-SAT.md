@@ -1,4 +1,4 @@
-## 2-SAT (2-Satisfiability)
+## 2-SAT (2-Satisfiability) 🟢 Platinum IV
 2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/논리곱_표준형)가 주어졌을 때, 이를 만족시도록 변수에 (True/False)를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC를 형성해 확인하는 문제
 
 시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
