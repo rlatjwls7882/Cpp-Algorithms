@@ -1,4 +1,4 @@
-## SPFA (Shortest Path Faster Algorithm)
+## SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
 큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
 
 시간복잡도 : 경험적 평균 O(V+E), 최악 O(VE) (V : 정점 수, E : 간선 수)
