@@ -1,4 +1,4 @@
-## HLD (Heavy Light Decomposition)
+## HLD (Heavy Light Decomposition) 🟢 Platinum I
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
 
 시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
