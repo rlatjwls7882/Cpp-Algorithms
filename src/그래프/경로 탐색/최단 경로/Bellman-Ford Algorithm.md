@@ -1,4 +1,4 @@
-## Bellman-Ford Algorithm
+## Bellman-Ford Algorithm 🟡 Gold IV
 가중치가 음수인 그래프에서도, 모든 간선을 최대 V-1번 완화해 최단 거리를 구하고 음수 사이클 여부를 판별하는 알고리즘
 
 시간복잡도 : O(VE)
