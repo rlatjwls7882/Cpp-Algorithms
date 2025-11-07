@@ -1,4 +1,4 @@
-# 대회 / 코테 알고리즘 정리
+# 대회 / 코딩테스트 알고리즘 정리
 본 문서의 목적은 증명보다는 알고리즘 동작 방식과 구현 중심으로 설명을 제공하여, 학습 및 복습 시 빠르게 참고할 수 있도록 하는 것입니다.  
 * TODO) 새로 공부 (Hungarian, Hopcroft-Karp Algorithm, Gaussian Elimination)
 * TODO) 복습 (LCA, BCC, EEA, Sprague-Grundy Theorem, Convex Hull Trick)  
