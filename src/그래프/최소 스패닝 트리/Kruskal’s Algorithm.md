@@ -1,4 +1,4 @@
-## Kruskal’s Algorithm
+## Kruskal’s Algorithm 🟡 Gold IV
 간선을 가중치 순으로 정렬해 사이클을 피하며 [최소 스패닝 트리](https://en.wikipedia.org/wiki/Minimum_spanning_tree)를 만드는 알고리즘
 
 시간복잡도 : O(ElogE) (E : 간선 수)
