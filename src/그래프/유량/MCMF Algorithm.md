@@ -1,4 +1,4 @@
-## MCMF (Min Cost Max Flow) Algorithm
+## MCMF (Min Cost Max Flow) Algorithm 🟢 Platinum III
 Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최대의 유량을 흘리면서, 그 중에서 최소 비용을 찾는 알고리즘
 
 시간복잡도 : O(FVE) (F : 최대 유량)
