@@ -1,4 +1,4 @@
-## Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)
+## Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭) 🟢 Platinum IV
 
 그래프를 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)로 나타내었을 때 최대 매칭 수(왼쪽과 오른쪽의 쌍의 수)를 찾는 알고리즘
 
