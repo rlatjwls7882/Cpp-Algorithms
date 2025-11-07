@@ -1,4 +1,4 @@
-## Binary Search (이분 탐색)
+## Binary Search (이분 탐색) ⚪ Silver IV
 정렬된 데이터에서 원하는 값을 찾기 위해 탐색 범위를 절반씩 줄여가는 알고리즘
 
 시간복잡도 : O(MlogN) (N : 데이터 개수, M : 탐색 횟수)
