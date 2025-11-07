@@ -1,4 +1,4 @@
-## Aho-Corasick
+## Aho-Corasick 🟢 Platinum II
 Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 시간복잡도 : O(S), 공간복잡도 : O(S) (S : 모든 문자열의 길이)
