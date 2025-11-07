@@ -1,4 +1,4 @@
-## Merge Sort Tree
+## Merge Sort Tree 🟢 Platinum III
 세그먼트 트리에 합병 정렬된 내용을 담아 범위탐색 시간을 줄인 알고리즘 
 
 시간복잡도 : O(NlogN), 공간복잡도 : O(NlogN)
