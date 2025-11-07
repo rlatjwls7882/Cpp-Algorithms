@@ -1,4 +1,4 @@
-## Two Pointer
+## Two Pointer ⚪ Silver III
 두 개의 포인터를 움직이며 배열이나 리스트에서 원하는 조건을 만족하는 구간을 효율적으로 찾는 알고리즘
 
 시간복잡도 : O(NlogN) (N : 데이터 개수, 정렬 O(NlogN) + 스캔 O(N))
