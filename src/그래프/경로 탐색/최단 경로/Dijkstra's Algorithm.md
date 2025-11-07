@@ -1,4 +1,4 @@
-## Dijkstra's Algorithm
+## Dijkstra's Algorithm 🟡 Gold IV
 가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
 
 시간복잡도 : O(ElogV)
