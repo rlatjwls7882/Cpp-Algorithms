@@ -75,7 +75,7 @@ nodeNum은 현재 정점 번호이고, L R은 현재 정점이 나타내는 구�
 [연습 문제 (백준 2042번)](https://www.acmicpc.net/problem/2042)
 
 ``` c++
-/** http://boj.kr/4dbb42cb6d1d492c912cecadf4ab776b 제출 코드 */
+/** 재귀 버전 http://boj.kr/4dbb42cb6d1d492c912cecadf4ab776b 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -136,12 +136,8 @@ void update(int nodeNum, ll val) {
 void init(int N) {
     while(_size<N) _size<<=1;
     _size<<=1;
-
     for(int i=_size/2;i<_size/2+N;i++) cin >> arr[i];
-
-    for(int nodeNum=_size/2-1;nodeNum>0;nodeNum--) {
-        arr[nodeNum]=arr[nodeNum*2]+arr[nodeNum*2+1];
-    }
+    for(int i=_size/2-1;i>0;i--) arr[i]=arr[i*2]+arr[i*2+1];
 }
 
 int main(void) {
@@ -151,11 +147,52 @@ int main(void) {
 
     for(int i=0;i<M+K;i++) {
         ll a, b, c; cin >> a >> b >> c;
-        if(a==1) {
-            update(b-1, c);
-        } else {
-            cout << sum(b-1, c-1, 1, 0, _size/2-1) << endl;
-        }
+        if(a==1) update(b-1, c);
+        else cout << sum(b-1, c-1, 1, 0, _size/2-1) << '\n';
+    }
+}
+```
+
+``` c++
+/** 비재귀 버전 http://boj.kr/67c494b624864f5bbf943c6557578ff0 */
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+
+const int MAX = 1'000'001;
+
+ll _size=1, arr[MAX*4];
+
+void update(int i, ll val) {
+    i+=_size;
+    arr[i]=val;
+    while(i>1) {
+        i>>=1;
+        arr[i] = arr[i*2]+arr[i*2+1];
+    }
+}
+
+ll query(int L, int R) {
+    ll ret=0;
+    for(L+=_size, R+=_size;L<=R;L>>=1, R>>=1) {
+        if(L&1) ret += arr[L++];
+        if(!(R&1)) ret += arr[R--];
+    }
+    return ret;
+}
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    int n, m, k; cin >> n >> m >> k;
+    while(_size<n) _size<<=1;
+    for(int i=_size+1;i<=_size+n;i++) cin >> arr[i];
+    for(int i=_size-1;i>=1;i--) arr[i] = arr[i*2]+arr[i*2+1];
+
+    for(int i=0;i<m+k;i++) {
+        ll a, b, c; cin >> a >> b >> c;
+        if(a==1) update(b, c);
+        else cout << query(b, c) << '\n';
     }
 }
 ```
