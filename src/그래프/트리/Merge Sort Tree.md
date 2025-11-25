@@ -11,24 +11,22 @@
 [연습 문제 (백준 13544번)](https://www.acmicpc.net/problem/13544)
 
 ``` c++
-/** http://boj.kr/4f92e7d51e5c4383b2ae01963d1dea9d 제출 코드 */
+/** 비재귀 버전 http://boj.kr/4f92e7d51e5c4383b2ae01963d1dea9d 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
-const int MAX = 100'000;
+const int MAX = 100'001;
 
-int _size;
-vector<int> arr[MAX*4];
+int _size=1;
+vector<vector<int>> arr(MAX*4);
 
 void init() {
     int n; cin >> n;
-    _size=1;
     while(_size<n) _size<<=1;
-    _size<<=1;
 
-    for(int i=0;i<n;i++) {
+    for(int i=_size+1;i<=_size+n;i++) {
         int A; cin >> A;
-        arr[_size/2+i].push_back(A);
+        arr[i].push_back(A);
     }
 
     /**
@@ -50,14 +48,11 @@ void init() {
      * arr[12] = {5}
      * arr[13] = {8}
      */
-    for(int i=_size/2-1;i>0;i--) {
+    for(int i=_size-1;i>=1;i--) {
         int l=0, r=0;
         while(l<arr[i*2].size() || r<arr[i*2+1].size()) {
-            if(l==arr[i*2].size() || r<arr[i*2+1].size() && arr[i*2][l] > arr[i*2+1][r]) {
-                arr[i].push_back(arr[i*2+1][r++]);
-            } else {
-                arr[i].push_back(arr[i*2][l++]);
-            }
+            if(l==arr[i*2].size() || r<arr[i*2+1].size() && arr[i*2][l] > arr[i*2+1][r]) arr[i].push_back(arr[i*2+1][r++]);
+            else arr[i].push_back(arr[i*2][l++]);
         }
     }
 }
@@ -66,13 +61,11 @@ void init() {
  * 이 문제에서의 목표는 임의의 범위에서 k보다 큰 수를 찾는 것
  * 이분탐색을 사용해서 각각의 쿼리에서 찾는 값의 개수를 logN개까지 줄여줘서 이 문제에 대해서는 시간복잡도가 O(log²N)임
  */
-int getCnt(int L, int R, int nodeNum, int nodeL, int nodeR, int val) {
+int getCnt(int L, int R, int val, int nodeNum=1, int nodeL=0, int nodeR=_size-1) {
     if(R<nodeL || nodeR<L) return 0;
-    if(L<=nodeL && nodeR<=R) {
-        return arr[nodeNum].end() - upper_bound(arr[nodeNum].begin(), arr[nodeNum].end(), val);
-    }
-    int mid = (nodeL+nodeR)/2;
-    return getCnt(L, R, nodeNum*2, nodeL, mid, val) + getCnt(L, R, nodeNum*2+1, mid+1, nodeR, val);
+    if(L<=nodeL && nodeR<=R) return arr[nodeNum].end() - upper_bound(arr[nodeNum].begin(), arr[nodeNum].end(), val);
+    int mid = nodeL+nodeR>>1;
+    return getCnt(L, R, val, nodeNum*2, nodeL, mid) + getCnt(L, R, val, nodeNum*2+1, mid+1, nodeR);
 }
 
 int main() {
@@ -86,7 +79,57 @@ int main() {
         int i = a^lastAns;
         int j = b^lastAns;
         int k = c^lastAns;
-        lastAns = getCnt(i-1, j-1, 1, 0, _size/2-1, k);
+        lastAns = getCnt(i, j, k);
+        cout << lastAns << '\n';
+    }
+}
+```
+
+``` c++
+/** 재귀 버전 http://boj.kr/4ba5d4f580134e34a80d6206cdd3c7f7 제출 코드 */
+#include<bits/stdc++.h>
+using namespace std;
+
+const int MAX = 100'001;
+
+int _size=1;
+vector<vector<int>> arr(MAX*4);
+
+int query(int L, int R, int val) {
+    int ret=0;
+    for(L+=_size, R+=_size;L<=R;L>>=1, R>>=1) {
+        if(L&1) ret += arr[L].end() - upper_bound(arr[L].begin(), arr[L].end(), val), L++;
+        if(!(R&1)) ret += arr[R].end() - upper_bound(arr[R].begin(), arr[R].end(), val), R--;
+    }
+    return ret;
+}
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    int n; cin >> n;
+    while(_size<n) _size<<=1;
+
+    for(int i=_size+1;i<=_size+n;i++) {
+        int A; cin >> A;
+        arr[i].push_back(A);
+    }
+
+    for(int i=_size-1;i>=1;i--) {
+        int l=0, r=0;
+        while(l<arr[i*2].size() || r<arr[i*2+1].size()) {
+            if(l==arr[i*2].size() || r<arr[i*2+1].size() && arr[i*2+1][r]<arr[i*2][l]) arr[i].push_back(arr[i*2+1][r++]);
+            else arr[i].push_back(arr[i*2][l++]);
+        }
+    }
+
+    int lastAns=0;
+    int m; cin >> m;
+    while(m--) {
+        int a, b, c; cin >> a >> b >> c;
+        int i = a^lastAns;
+        int j = b^lastAns;
+        int k = c^lastAns;
+        lastAns = query(i, j, k);
         cout << lastAns << '\n';
     }
 }
