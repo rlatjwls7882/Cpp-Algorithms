@@ -141,7 +141,7 @@ void init(int N) {
 }
 
 int main(void) {
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    ios::sync_with_stdio(0); cin.tie(0);
     int N, M, K; cin >> N >> M >> K;
     init(N);
 
