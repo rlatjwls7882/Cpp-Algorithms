@@ -25,7 +25,7 @@
 [연습 문제 (백준 31492번)](https://www.acmicpc.net/problem/31492)
 
 ``` c++
-/** http://boj.kr/9211d3f3c4204034921c0bc3ac2b7dcb 제출 코드 */
+/** 재귀 버전 http://boj.kr/9211d3f3c4204034921c0bc3ac2b7dcb 제출 코드 */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -74,6 +74,56 @@ int main() {
     for(int i=0;i<n;i++) {
         if(i%2==0) res1.push_back(search(a[i]));
         else res2.push_back(search(a[i]));
+    }
+    for(int e:res1) cout << e << ' '; cout << '\n';
+    for(int e:res2) cout << e << ' ';
+}
+```
+
+``` c++
+/** 비재귀 버전 http://boj.kr/e7e5ff5a31f24d6685d3fa7c342717ab 제출 코드 */
+#include<bits/stdc++.h>
+using namespace std;
+
+const int MAX = 4'000'001;
+int a[MAX], _size=1, arr[MAX*4];
+
+void update(int x) {
+    arr[x]=0;
+    while(x>1) {
+        x>>=1;
+        arr[x] = arr[x*2]+arr[x*2+1];
+    }
+}
+
+int query(int k) {
+    int i=1;
+    while(i<_size) {
+        i<<=1;
+        if(arr[i]<k) {
+            k -= arr[i];
+            i++;
+        }
+    }
+    update(i);
+    return i-_size+1;
+}
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    int n; cin >> n;
+    while(_size<n) _size<<=1;
+
+    for(int i=0;i<n;i++) arr[i+_size]=1;
+    for(int i=_size-1;i>0;i--) arr[i] = arr[i*2]+arr[i*2+1];
+
+    for(int i=0;i<n;i+=2) cin >> a[i];
+    for(int i=1;i<n;i+=2) cin >> a[i];
+
+    vector<int> res1, res2;
+    for(int i=0;i<n;i++) {
+        if(i%2==0) res1.push_back(query(a[i]));
+        else res2.push_back(query(a[i]));
     }
     for(int e:res1) cout << e << ' '; cout << '\n';
     for(int e:res2) cout << e << ' ';
