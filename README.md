@@ -7,7 +7,6 @@
   * 기초 알고리즘 (Sliding Window, Meet in the Middle)
   * 기하 (Shoelace Formula)
   * DP (LIS, LCS, MSIS)
-  * 트리 (Fenwick Tree)
 
 ## 목차
 * 기본 알고리즘
@@ -40,6 +39,7 @@
     * 2-SAT (2-Satisfiability) 🟢 Platinum IV
   * 트리
     * Segment Tree 🟡 Gold I
+    * Fenwick Tree (Binary Indexed Tree) 🟢 Platinum V
     * Walking on Segment Tree 🟢 Platinum V
     * Segment Tree with Lazy Propagation 🟢 Platinum IV
     * Merge Sort Tree 🟢 Platinum III
@@ -66,7 +66,7 @@
   * Deque Trick 🟢 Platinum V
 * 쿼리 처리
   * Offline Query 🟢 Platinum IV
-  * Square Root Decomposition (평방 분할, 제곱근 분할) 🟢 Platinum II
+  * Square Root Decomposition (제곱근 분할법) 🟢 Platinum II
   * Mo's Algorithm 🟢 Platinum II
   * PBS (Parallel Binary Search, 병렬 이분 탐색) 🟢 Platinum I
 
@@ -170,6 +170,11 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
+## [Fenwick Tree (Binary Indexed Tree)](src/그래프/트리/Fenwick%20Tree.md) 🟢 Platinum V
+배열에 누적합을 겹치는 구간 단위로 저장해 구간 합 쿼리를 빠르게 해결하는 자료구조
+
+시간복잡도 : O(logN)
+
 ## [Walking on Segment Tree](src/그래프/트리/Walking%20on%20Segment%20Tree.md) 🟢 Platinum V
 세그먼트 트리의 구간 합을 이용하여 이분 탐색으로 k번째 원소를 찾는 테크닉
 
@@ -263,7 +268,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md) 🟢 Platinum IV
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
 
-## [Square Root Decomposition (평방 분할, 제곱근 분할)](src/쿼리%20처리/Square%20Root%20Decomposition.md) 🟢 Platinum II
+## [Square Root Decomposition (제곱근 분할법)](src/쿼리%20처리/Square%20Root%20Decomposition.md) 🟢 Platinum II
 값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
 
 시간복잡도 : O(Q√N) (Q : 쿼리의 수)
