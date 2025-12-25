@@ -1,12 +1,12 @@
 # 대회 / 코딩테스트 알고리즘 정리
 본 문서는 **알고리즘의 동작 방식과 구현**을 중심으로 설명하여, 학습 및 복습 시 빠르게 참고할 수 있는 자료를 목표로 합니다.
 * TODO) 새로 공부 (Hungarian, Hopcroft-Karp Algorithm, Gaussian Elimination)
-* TODO) 복습 (LCA, BCC, EEA, Sprague-Grundy Theorem, Convex Hull Trick)  
+* TODO) 복습 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5), Convex Hull Trick(P2))  
 * TODO) 설명 추가
-  * 정수론 (Euclidean Algorithm, Fermat's Little Theorem, Euler Phi, Inclusion–Exclusion Principle)
-  * 기초 알고리즘 (Sliding Window, Meet in the Middle)
+  * 정수론 (Euclidean Algorithm(S3?), Fermat's Little Theorem(G1), Euler Phi, Inclusion–Exclusion Principle(G2?))
+  * 기초 알고리즘 (Sliding Window, Meet in the Middle(G3?), Ternary Search(P5))
   * 기하 (Shoelace Formula)
-  * DP (LIS, LCS, MSIS)
+  * DP (LIS(n^2, nlogn), LCS, MSIS)
 
 ## 목차
 * 기본 알고리즘
