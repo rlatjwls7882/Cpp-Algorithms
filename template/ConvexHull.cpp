@@ -10,6 +10,9 @@ struct ConvexHull {
             if(y!=o.y) return y<o.y;
             return x<o.x;
         }
+        bool operator==(const point o) const {
+            return x==o.x && y==o.y;
+        }
     };
     vector<point> hull;
 
@@ -30,6 +33,7 @@ struct ConvexHull {
     }
 
     inline ConvexHull(vector<point> v) {
+        for(int i=0;i<v.size();i++) v[i].p=v[i].q=0;
         sort(v.begin(), v.end());
 
         for(int i=1;i<v.size();i++) {
@@ -43,6 +47,19 @@ struct ConvexHull {
             while(hull.size()>=2 && ccw(hull[hull.size()-2], hull[hull.size()-1], cur)<=0) hull.pop_back();
             hull.push_back(cur);
         }
+    }
+
+    inline bool inConvexHull(point p) {
+        if(ccw(hull[0], hull[1], p)<0) return false;
+        if(ccw(hull[0], hull[hull.size()-1], p)>0) return false;
+
+        int l=1, r=hull.size()-2;
+        while(l<r) {
+            int m = l+r+1>>1;
+            if(ccw(hull[0], hull[m], p)>0) l=m;
+            else r=m-1;
+        }
+        return ccw(hull[l], hull[l+1], p)>=0;
     }
 
     inline ll rotating_calipers() {
