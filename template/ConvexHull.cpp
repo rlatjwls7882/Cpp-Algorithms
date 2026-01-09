@@ -32,6 +32,10 @@ struct ConvexHull {
         return (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y);
     }
 
+    inline ll triArea(point a, point b, point c) { // area*2
+        return a.x*b.y+b.x*c.y+c.x*a.y-a.x*c.y-b.x*a.y-c.x*b.y;
+    }
+
     inline ConvexHull(vector<point> v) {
         for(int i=0;i<v.size();i++) v[i].p=v[i].q=0;
         sort(v.begin(), v.end());
