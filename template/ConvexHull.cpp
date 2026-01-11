@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
 struct ConvexHull {
-    using ll = long long;
     struct point {
         ll x, y, p=0, q=0;
         bool operator<(const point &o) const {
