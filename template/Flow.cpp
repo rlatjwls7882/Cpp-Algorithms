@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("fma")
 using namespace std;
 typedef long long ll;
 const int INF = 0x3f3f3f3f;
@@ -13,19 +15,19 @@ struct Dinic { // O(V²E), 모든 간선의 용량이 1이면 O(min(V^(2/3), E^(
     vector<int> level, work;
     vector<vector<Edge>> conn;
 
-    inline Dinic(int SZ, int s, int e) {
+    Dinic(int SZ, int s, int e) {
         S=s; E=e;
         work = vector<int>(SZ);
         level = vector<int>(SZ);
         conn = vector<vector<Edge>>(SZ);
     }
 
-    inline void edge(int u, int v, ll c) {
+    void edge(int u, int v, ll c) {
         conn[u].push_back({v, (int)conn[v].size(), c});
         conn[v].push_back({u, (int)conn[u].size()-1, 0});
     }
 
-    inline bool bfs() {
+    bool bfs() {
         fill(level.begin(), level.end(), -1);
         queue<int> q; q.push(S);
         level[S]=0;
@@ -57,7 +59,7 @@ struct Dinic { // O(V²E), 모든 간선의 용량이 1이면 O(min(V^(2/3), E^(
         return 0;
     }
 
-    inline ll res() {
+    ll res() {
         ll total=0, flow;
         while(bfs()) {
             fill(work.begin(), work.end(), 0);
@@ -69,23 +71,23 @@ struct Dinic { // O(V²E), 모든 간선의 용량이 1이면 O(min(V^(2/3), E^(
 
 struct MCMF { // O(FVE) F는 최대유량
     int S, E;
+    vector<unsigned char> inQ;
     vector<int> prv;
-    vector<bool> inQ;
     vector<ll> curCost;
     vector<vector<int>> conn;
     vector<vector<ll>> c, cost;
 
-    inline MCMF(int SZ, int s, int e) {
+    MCMF(int SZ, int s, int e) {
         S=s; E=e;
+        inQ = vector<unsigned char>(SZ);
         prv = vector<int>(SZ);
-        inQ = vector<bool>(SZ);
         curCost = vector<ll>(SZ);
         conn = vector<vector<int>>(SZ);
         c = vector<vector<ll>>(SZ, vector<ll>(SZ));
         cost = vector<vector<ll>>(SZ, vector<ll>(SZ));
     }
 
-    inline void edge(int u, int v, ll cap, ll co) {
+    void edge(int u, int v, ll cap, ll co) {
         c[u][v]=cap;
         cost[u][v]=co;
         cost[v][u]=-co;
@@ -93,7 +95,7 @@ struct MCMF { // O(FVE) F는 최대유량
         conn[v].push_back(u);
     }
 
-    inline pair<ll, ll> res() {
+    pair<ll, ll> res() {
         ll totalFlow=0, totalCost=0;
         while(true) {
             queue<int> q; q.push(S);

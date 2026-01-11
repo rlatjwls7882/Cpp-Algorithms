@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("fma")
 using namespace std;
 typedef long long ll;
 
@@ -17,33 +19,33 @@ struct ConvexHull {
     };
     vector<point> hull;
 
-    inline ll ccw(point a, point b, point c) {
+    ll ccw(point a, point b, point c) {
         point v1 = {b.x-a.x, b.y-a.y};
         point v2 = {c.x-a.x, c.y-a.y};
         return v1.x*v2.y-v2.x*v1.y;
     }
 
-    inline ll ccw(point a, point b, point c, point d) {
+    ll ccw(point a, point b, point c, point d) {
         point v1 = {b.x-a.x, b.y-a.y};
         point v2 = {d.x-c.x, d.y-c.y};
         return v1.x*v2.y-v2.x*v1.y;
     }
 
-    inline ll dist(point a, point b) {
+    ll dist(point a, point b) {
         return (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y);
     }
 
-    inline ll triArea(point a, point b, point c) { // area*2
+    ll triArea(point a, point b, point c) { // area*2
         return a.x*b.y+b.x*c.y+c.x*a.y-a.x*c.y-b.x*a.y-c.x*b.y;
     }
 
-    inline ll area() { // area*2
+    ll area() { // area*2
         ll ret=0;
         for(int i=1;i<hull.size()-1;i++) ret += triArea(hull[0], hull[i], hull[i+1]);
         return ret;
     }
 
-    inline void angleSort(vector<point> &v) {
+    void angleSort(vector<point> &v) {
         for(int i=0;i<v.size();i++) v[i].p=v[i].q=0;
         sort(v.begin(), v.end());
 
@@ -58,7 +60,7 @@ struct ConvexHull {
         reverse(v.begin()+revIdx, v.end());
     }
 
-    inline ConvexHull(vector<point> &v) {
+    ConvexHull(vector<point> &v) {
         for(int i=0;i<v.size();i++) v[i].p=v[i].q=0;
         sort(v.begin(), v.end());
 
@@ -75,7 +77,7 @@ struct ConvexHull {
         }
     }
 
-    inline bool inHull(point &p) {
+    bool inHull(point &p) {
         if(ccw(hull[0], hull[1], p)<0) return false;
         if(ccw(hull[0], hull[hull.size()-1], p)>0) return false;
 
@@ -88,7 +90,7 @@ struct ConvexHull {
         return ccw(hull[l], hull[l+1], p)>=0;
     }
 
-    inline ll rotatingCalipers() {
+    ll rotatingCalipers() {
         ll ret=0, i=0, j=1;
         while(i<hull.size() && j<hull.size()) {
             ret = max(ret, dist(hull[i], hull[j]));
