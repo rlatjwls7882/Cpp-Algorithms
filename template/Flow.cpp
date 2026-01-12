@@ -22,8 +22,8 @@ struct Dinic { // O(V²E), 모든 간선의 용량이 1이면 O(min(V^(2/3), E^(
         conn = vector<vector<Edge>>(SZ);
     }
 
-    void edge(int u, int v, ll c) {
-        conn[u].push_back({v, (int)conn[v].size(), c});
+    void edge(int u, int v, ll cap) {
+        conn[u].push_back({v, (int)conn[v].size(), cap});
         conn[v].push_back({u, (int)conn[u].size()-1, 0});
     }
 
