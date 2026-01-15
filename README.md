@@ -1,9 +1,9 @@
 # 대회 / 코딩테스트 알고리즘 정리
 본 문서는 **알고리즘의 동작 방식과 구현**을 중심으로 설명하여, 학습 및 복습 시 빠르게 참고할 수 있는 자료를 목표로 합니다.
-* TODO) 새로 공부 (Hungarian, Hopcroft-Karp Algorithm, Gaussian Elimination)
+* TODO) 새로 공부 (Hungarian, Gaussian Elimination)
 * TODO) 복습 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5?), Convex Hull Trick(P2))  
 * TODO) 설명 추가
-  * 정수론 (Euclidean Algorithm(S3?), Fermat's Little Theorem(G1), Euler Phi, Inclusion–Exclusion Principle(G2?))
+  * 정수론 (Fermat's Little Theorem(G1), Euler Phi(G1?), Inclusion–Exclusion Principle(G2?))
   * 기초 알고리즘 (Sliding Window, Meet in the Middle(G3?), Ternary Search(P5))
   * 기하 (Shoelace Formula)
   * DP (LIS(n^2, nlogn), LCS, MSIS)
@@ -219,6 +219,11 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 1부터 N까지의 소수를 미리 구하는 전처리 알고리즘
 
 시간복잡도 : $O(N\log{\log{N}})$
+
+## [Euclidean Algorithm (유클리드 호제법)](src/수학/정수론/Euclidean%20Algorithm.md) ⚪ Silver IV
+두 수의 최대공약수를 찾는 알고리즘
+
+시간복잡도 : O(log(min(A, B)))
 
 ## [CCW (CounterclockWise) Algorithm](src/수학/기하/CCW%20Algorithm.md) 🟡 Gold V
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
