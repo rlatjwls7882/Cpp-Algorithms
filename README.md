@@ -52,6 +52,8 @@
   * 정수론
     * Naive Primality Test (소수 판정) ⚪ Silver IV
     * Sieve of Eratosthenes (에라토스테네스의 체) ⚪ Silver III
+    * Euclidean Algorithm (유클리드 호제법) ⚪ Silver IV
+    * Exponentiation by Squaring (빠른 거듭제곱) ⚪ Silver I
   * 기하
     * CCW (CounterclockWise) Algorithm 🟡 Gold V
     * Line Intersection 🟡 Gold II
@@ -224,6 +226,11 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 두 수의 최대공약수를 찾는 알고리즘
 
 시간복잡도 : O(log(min(A, B)))
+
+## [Exponentiation by Squaring (빠른 거듭제곱)](src/수학/정수론/Exponentiation%20by%20Squaring.md) ⚪ Silver I
+$x^N$ (mod m)을 빠르게 구하는 방법
+
+시간복잡도 : O(logN)
 
 ## [CCW (CounterclockWise) Algorithm](src/수학/기하/CCW%20Algorithm.md) 🟡 Gold V
 세 점이 이루는 방향이 시계 방향인지, 반시계 방향인지 판별하는 알고리즘
