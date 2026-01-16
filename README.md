@@ -228,7 +228,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 시간복잡도 : O(log(min(A, B)))
 
 ## [Exponentiation by Squaring (빠른 거듭제곱)](src/수학/정수론/Exponentiation%20by%20Squaring.md) ⚪ Silver I
-$x^N$ (mod m)을 빠르게 구하는 방법
+$x^N$ (mod m)을 빠르게 구하는 알고리즘
 
 시간복잡도 : O(logN)
 
