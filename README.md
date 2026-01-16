@@ -234,7 +234,7 @@ $x^N$ (mod m)을 빠르게 구하는 알고리즘
 시간복잡도 : O(logN)
 
 ## [Modular Multiplicative Inverse (모듈러 곱셈의 역원)](src/수학/정수론/Modular%20Multiplicative%20Inverse.md) 🟡 Gold I
-모듈러가 소수일 때 곱셈의 역원을 찾는 알고리즘
+모듈러가 소수일 때 $\frac{a}{b} \bmod m$을 $ab^{-1} \bmod m$으로 계산하는 알고리즘
 
 시간복잡도 : O(logN)
 
