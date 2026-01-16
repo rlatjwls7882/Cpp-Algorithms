@@ -1,5 +1,5 @@
 # Exponentiation by Squaring (빠른 거듭제곱) ⚪ Silver I
-$x^N$ (mod m)을 빠르게 구하는 방법
+$x^N$ (mod m)을 빠르게 구하는 알고리즘
 
 시간복잡도 : O(logN)
 
