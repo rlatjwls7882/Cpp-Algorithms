@@ -3,7 +3,7 @@
 * TODO) 새로 학습 예정 (Hungarian Algorithm)
 * TODO) 복습 예정 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5?), Convex Hull Trick(P2))  
 * TODO) 설명 추가 예정
-  * 정수론 (Fermat's Little Theorem(G1), Euler Phi(G1?), Inclusion–Exclusion Principle(G2?))
+  * 정수론 (Euler Phi(G1?), Inclusion–Exclusion Principle(G2?))
   * 기초 알고리즘 (Sliding Window, Meet in the Middle(G3?), Ternary Search(P5))
   * 기하 (Shoelace Formula)
   * DP (LIS(n^2, nlogn), LCS, MSIS)
@@ -54,6 +54,7 @@
     * Sieve of Eratosthenes (에라토스테네스의 체) ⚪ Silver III
     * Euclidean Algorithm (유클리드 호제법) ⚪ Silver IV
     * Exponentiation by Squaring (빠른 거듭제곱) ⚪ Silver I
+    * Modular Multiplicative Inverse (모듈러 곱셈의 역원) 🟡 Gold I
   * 기하
     * CCW (CounterclockWise) Algorithm 🟡 Gold V
     * Line Intersection 🟡 Gold II
@@ -229,6 +230,11 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 
 ## [Exponentiation by Squaring (빠른 거듭제곱)](src/수학/정수론/Exponentiation%20by%20Squaring.md) ⚪ Silver I
 $x^N$ (mod m)을 빠르게 구하는 알고리즘
+
+시간복잡도 : O(logN)
+
+## [Modular Multiplicative Inverse (모듈러 곱셈의 역원)](src/수학/정수론/Modular%20Multiplicative%20Inverse.md) 🟡 Gold I
+모듈러가 소수일 때 곱셈의 역원을 찾는 알고리즘
 
 시간복잡도 : O(logN)
 
