@@ -34,6 +34,7 @@
     * Edmonds-Karp Algorithm 🟢 Platinum IV
     * Dinic's Algorithm 🟢 Platinum I
     * MCMF (Min Cost Max Flow) Algorithm 🟢 Platinum III
+    * Hopcroft-Karp Algorithm 🟢 Platinum III
   * 컴포넌트 분해
     * Tarjan’s Algorithm (SCC) 🟢 Platinum V
     * 2-SAT (2-Satisfiability) 🟢 Platinum IV
@@ -158,6 +159,11 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
+# [Hopcroft-Karp Algorithm](src/그래프/유량/Hopcroft-Karp%20Algorithm.md) 🟢 Platinum III
+Kuhn's Algorithm을 개선해 Shortest Augmenting Path를 여러개씩 찾는 알고리즘
+
+시간복잡도 : O($E\sqrt V$)
+
 ## [Tarjan’s Algorithm (SCC)](src/그래프/컴포넌트%20분해/Tarjan’s%20Algorithm.md) 🟢 Platinum V
 그래프에서 나타나는 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)을 한번의 dfs로 뽑아내는 알고리즘
 
@@ -216,7 +222,7 @@ Trie구조에 실패 링크를 추가한 일대다 패턴매칭 알고리즘
 ## [Naive Primality Test (소수 판정)](src/수학/정수론/Naive%20Primality%20Test.md) ⚪ Silver IV
 2부터 √N까지 약수가 있는지 확인하여 N이 소수인지 판별하는 알고리즘
 
-시간복잡도 : O(√N)
+시간복잡도 : O($\sqrt N$)
 
 ## [Sieve of Eratosthenes (에라토스테네스의 체)](src/수학/정수론/Sieve%20of%20Eratosthenes.md) ⚪ Silver III
 1부터 N까지의 소수를 미리 구하는 전처리 알고리즘
@@ -271,7 +277,7 @@ $x^N$ (mod m)을 빠르게 구하는 알고리즘
 ## [Imos Method (いもす法)](src/스위핑/Imos%20Method.md) 🟢 Platinum IV
 구간(또는 영역)의 증가·감소량을 차분 배열(Difference Array)에 기록한 뒤, 최종적으로 누적 합을 구해 전체 상태를 복원하는 알고리즘
 
-시간복잡도 : O(N<sup>D</sup>+Q) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
+시간복잡도 : O($N^D+Q$) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
 
 ## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/DP/TSP.md) 🟡 Gold I
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
@@ -287,14 +293,14 @@ $x^N$ (mod m)을 빠르게 구하는 알고리즘
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
 
 ## [Square Root Decomposition (제곱근 분할법)](src/쿼리%20처리/Square%20Root%20Decomposition.md) 🟢 Platinum II
-값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
+값을 $\sqrt N$개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O($\sqrt N$) 시간에 처리하는 알고리즘
 
-시간복잡도 : O(Q√N) (Q : 쿼리의 수)
+시간복잡도 : O($Q\sqrt N$) (Q : 쿼리의 수)
 
 ## [Mo's Algorithm](src/쿼리%20처리/Mo's%20Algorithm.md) 🟢 Platinum II
-제곱근 분할을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
+제곱근 분할을 구간 쿼리에 적용시켜 전체 쿼리를 O($Q\sqrt N$) 시간에 해결하는 알고리즘
 
-시간복잡도 : O(Q√N)
+시간복잡도 : O($Q\sqrt N$)
 
 ## [PBS (Parallel Binary Search, 병렬 이분 탐색)](src/쿼리%20처리/PBS.md) 🟢 Platinum I
 이분 탐색 쿼리가 여러 번 주어질 때, 각 쿼리를 개별 이분탐색하지 않고 같은 mid끼리 묶어 한 번의 검증으로 여러 쿼리를 처리하는 오프라인 기법.

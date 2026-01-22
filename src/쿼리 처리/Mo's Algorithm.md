@@ -1,7 +1,7 @@
 ## Mo's Algorithm 🟢 Platinum II
-제곱근 분할을 구간 쿼리에 적용시켜 전체 쿼리를 O(Q√N) 시간에 해결하는 알고리즘
+제곱근 분할을 구간 쿼리에 적용시켜 전체 쿼리를 O($Q\sqrt N$) 시간에 해결하는 알고리즘
 
-시간복잡도 : O(Q√N)
+시간복잡도 : O($Q\sqrt N$)
 
 [연습 문제 (백준 13547번)](https://www.acmicpc.net/problem/13547)
 

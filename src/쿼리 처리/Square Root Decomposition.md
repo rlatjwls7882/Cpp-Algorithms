@@ -1,7 +1,7 @@
 ## Square Root Decomposition (제곱근 분할법) 🟢 Platinum II
-값을 √N개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O(√N) 시간에 처리하는 알고리즘
+값을 $\sqrt N$개씩 연속된 구간들로 나누어 관리하여 특정 구간에 대한 쿼리를 O($\sqrt N$) 시간에 처리하는 알고리즘
 
-시간복잡도 : O(Q√N) (Q : 쿼리의 수)
+시간복잡도 : O($Q\sqrt N$) (Q : 쿼리의 수)
 
 [연습 문제 (백준 2912번)](https://www.acmicpc.net/problem/2912)
 

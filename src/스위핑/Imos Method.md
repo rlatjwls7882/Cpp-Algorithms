@@ -1,7 +1,7 @@
 ## Imos Method (いもす法) 🟢 Platinum IV
 구간(또는 영역)의 증가·감소량을 차분 배열(Difference Array)에 기록한 뒤, 최종적으로 누적 합을 구해 전체 상태를 복원하는 알고리즘
 
-시간복잡도 : O(N<sup>D</sup>+Q) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
+시간복잡도 : O($N^D+Q$) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
 
 ![](https://github.com/user-attachments/assets/b583f51a-1765-44a7-a79d-c0adca081ecb)
 
