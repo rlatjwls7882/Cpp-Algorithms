@@ -290,7 +290,7 @@ $x^N$ (mod m)을 빠르게 구하는 알고리즘
 
 시간복잡도 : O(N)
 
-## [Convex Hull Trick](src/DP/Convex%20Hull%20Trickmd) 🟢 Platinum II
+## [Convex Hull Trick](src/DP/Convex%20Hull%20Trick.md) 🟢 Platinum II
 DP를 볼록껍질 형태로 나타내 최적화하는 방법
 
 시간복잡도 : $O(N \log N)$
