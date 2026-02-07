@@ -1,7 +1,7 @@
 # 대회 / 코딩테스트 알고리즘 정리
 본 문서는 **알고리즘의 동작 방식과 구현**을 중심으로 설명하여, 학습 및 복습 시 빠르게 참고할 수 있는 자료를 목표로 합니다.
 * TODO) 새로 학습 예정 (Hungarian Algorithm)
-* TODO) 복습 예정 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5?), Convex Hull Trick(P2))  
+* TODO) 복습 예정 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5?))  
 * TODO) 설명 추가 예정
   * 정수론 (Euler Phi(G1?), Inclusion–Exclusion Principle(G2?))
   * 기초 알고리즘 (Sliding Window, Meet in the Middle(G3?), Ternary Search(P5))
@@ -68,6 +68,7 @@
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제) 🟡 Gold I
   * Deque Trick 🟢 Platinum V
+  * Convex Hull Trick 🟢 Platinum II
 * 쿼리 처리
   * Offline Query 🟢 Platinum IV
   * Square Root Decomposition (제곱근 분할법) 🟢 Platinum II
@@ -288,6 +289,11 @@ $x^N$ (mod m)을 빠르게 구하는 알고리즘
 덱에 단조 증가 또는 단조 감소하는 인덱스를 유지하여 슬라이딩 윈도우 내에서 최소값 또는 최대값을 O(1)에 찾는 알고리즘
 
 시간복잡도 : O(N)
+
+## [Convex Hull Trick](src/DP/Convex%20Hull%20Trickmd) 🟢 Platinum II
+DP를 볼록껍질 형태로 나타내 최적화하는 방법
+
+시간복잡도 : $O(N \log N)$
 
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md) 🟢 Platinum IV
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
