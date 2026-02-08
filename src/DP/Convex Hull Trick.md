@@ -9,11 +9,11 @@ DP를 볼록껍질 형태로 나타내 최적화하는 방법
 
 이때 x가 $a_i$, 기울기가 $b_j$, y절편이 $dp_j$인 직선의 방정식이라고 생각할 수 있고, 이를 좌표평면 위에 나타내면 다음과 같이 나타난다.
 
-![](https://github.com/user-attachments/assets/5ae15e9b-1a59-4892-b902-0884745fe7e4)
+![](https://github.com/user-attachments/assets/5736b6b6-a5cf-4503-bc37-2e8cee18e618)
 
 여기서 사용할 의미있는 구간만 남기면 다음과 같이 볼록 껍질로 나타난다.
 
-![](https://github.com/user-attachments/assets/f4dd5596-14f2-4d01-8202-a1df02e0d7bc)
+![](https://github.com/user-attachments/assets/a1de5b6f-87d1-4b46-8499-4af0f8aa0d0b)
 
 이제 어느 구간을 사용할 것인지는 교점의 x좌표로 이분탐색하여 찾아낼 수 있다.
 
