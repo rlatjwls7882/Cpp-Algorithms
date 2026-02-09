@@ -202,7 +202,7 @@ Kuhn's Algorithm을 개선해 Shortest Augmenting Path를 여러개씩 찾는 �
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
 
-## [Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation)](src/그래프/트리/Sparse%20Segment%20Tree) 🟢 Platinum IV
+## [Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation)](src/그래프/트리/Sparse%20Segment%20Tree.md) 🟢 Platinum IV
 Dynamic Segment Tree를 느리게 갱신하는 알고리즘
 
 시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
