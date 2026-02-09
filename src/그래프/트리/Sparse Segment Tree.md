@@ -1,4 +1,4 @@
-# Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum IV
+# Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
 Dynamic Segment Tree를 느리게 갱신하는 알고리즘
 
 시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
