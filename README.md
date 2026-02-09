@@ -44,6 +44,7 @@
     * Walking on Segment Tree 🟢 Platinum V
     * Dynamic Segment Tree 🟢 Platinum V
     * Segment Tree with Lazy Propagation 🟢 Platinum IV
+    * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum IV
     * Merge Sort Tree 🟢 Platinum III
     * HLD (Heavy Light Decomposition) 🟢 Platinum I
 * 문자열
@@ -194,12 +195,17 @@ Kuhn's Algorithm을 개선해 Shortest Augmenting Path를 여러개씩 찾는 �
 ## [Dynamic Segment Tree](src/그래프/트리/Dynamic%20Segment%20Tree.md) 🟢 Platinum V
 세그먼트 트리에서 각 노드를 필요한 부분만 동적으로 생성하는 알고리즘
 
-시간복잡도 : $O(Q \logN)$ (Q : 쿼리의 수)
+시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
 
 ## [Segment Tree with Lazy Propagation](src/그래프/트리/Segment%20Tree%20with%20Lazy%20Propagation.md) 🟢 Platinum IV
 세그먼트 트리에서 구간 업데이트를 지연 방식으로 처리하여, 최적화하는 알고리즘 
 
 시간복잡도 : O(QlogN) (Q : 쿼리의 수)
+
+## [Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation)](src/그래프/트리/Sparse%20Segment%20Tree) 🟢 Platinum IV
+Dynamic Segment Tree를 느리게 갱신하는 알고리즘
+
+시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
 
 ## [Merge Sort Tree](src/그래프/트리/Merge%20Sort%20Tree.md) 🟢 Platinum III
 세그먼트 트리에 합병 정렬된 내용을 담아 범위탐색 시간을 줄인 알고리즘 
