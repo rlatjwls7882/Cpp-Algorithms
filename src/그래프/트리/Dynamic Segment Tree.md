@@ -1,7 +1,7 @@
 # Dynamic Segment Tree 🟢 Platinum V
 세그먼트 트리에서 각 노드를 필요한 부분만 동적으로 생성하는 알고리즘
 
-시간복잡도 : $O(Q \logN)$ (Q : 쿼리의 수)
+시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
 
 [연습문제 (백준 2042번)](https://www.acmicpc.net/problem/2042)
 
