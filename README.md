@@ -162,7 +162,7 @@ Edmonds-Karp 알고리즘에 SPFA(Shortest Path Faster Algorithm)를 합쳐 최�
 
 시간복잡도 : O(FVE) (F : 최대 유량)
 
-# [Hopcroft-Karp Algorithm](src/그래프/유량/Hopcroft-Karp%20Algorithm.md) 🟢 Platinum III
+## [Hopcroft-Karp Algorithm](src/그래프/유량/Hopcroft-Karp%20Algorithm.md) 🟢 Platinum III
 Kuhn's Algorithm을 개선해 Shortest Augmenting Path를 여러개씩 찾는 알고리즘
 
 시간복잡도 : O($E\sqrt V$)
