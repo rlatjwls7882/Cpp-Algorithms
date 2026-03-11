@@ -22,8 +22,8 @@
     * DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
     * BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
     * Dijkstra's Algorithm 🟡 Gold IV
+    * Bellman-Ford Algorithm 🟡 Gold IV
     * 최단 경로
-      * Bellman-Ford Algorithm 🟡 Gold IV
       * Floyd-Warshall Algorithm 🟡 Gold IV
       * SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
   * DAG(Directed Acyclic Graph)
@@ -118,10 +118,10 @@
 
 시간복잡도: $O(ElogV)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Bellman-Ford Algorithm](src/그래프/경로%20탐색/최단%20경로/Bellman-Ford%20Algorithm.md) 🟡 Gold IV
-가중치가 음수인 그래프에서도, 모든 간선을 최대 V-1번 완화해 최단 거리를 구하고 음수 사이클 여부를 판별하는 알고리즘
+## [Bellman-Ford Algorithm](src/그래프/경로%20탐색/Bellman-Ford%20Algorithm.md) 🟡 Gold IV
+가중치가 음수인 그래프에서도 최단 거리를 구하고 음수 사이클의 존재 여부를 판별하는 알고리즘
 
-시간복잡도 : O(VE) (V : 정점 수, E : 간선 수)
+시간복잡도: $O(VE)$ ($V$: 정점 수, $E$: 간선 수)
 
 ## [Floyd-Warshall Algorithm](src/그래프/경로%20탐색/최단%20경로/Floyd-Warshall%20Algorithm.md) 🟡 Gold IV
 모든 정점 쌍 사이의 최단 거리를 DP로 구하는 알고리즘
