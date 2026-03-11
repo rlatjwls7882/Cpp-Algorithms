@@ -12,7 +12,7 @@
 * 기본 알고리즘
   * Binary Search (이분 탐색) ⚪ Silver IV
   * Prefix Sum (누적 합) ⚪ Silver III
-  * Two Pointer ⚪ Silver III
+  * Two Pointer (두 포인터) ⚪ Silver III
   * DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
   * Backtracking ⚪ Silver III
 * 그래프
@@ -78,24 +78,24 @@
   * PBS (Parallel Binary Search, 병렬 이분 탐색) 🟢 Platinum I
 
 ## [Binary Search (이분 탐색)](src/기본%20알고리즘/Binary%20Search.md) ⚪ Silver IV
-정렬된 데이터에서 원하는 값을 찾기 위해 탐색 범위를 절반씩 줄여가는 알고리즘
+정렬된 데이터에서 탐색 범위를 절반씩 줄여가며 원하는 값을 찾는 알고리즘
 
-시간복잡도 : O(MlogN) (N : 데이터 개수, M : 탐색 횟수)
+시간복잡도: $O(M\log N)$ ($N$: 데이터 개수, $M$: 탐색 횟수)
 
 ## [Prefix Sum (누적 합)](src/기본%20알고리즘/Prefix%20Sum.md) ⚪ Silver III
-배열의 각 인덱스까지의 합을 미리 계산해 두어, 임의 구간의 합을 O(1)에 구하는 알고리즘
+배열의 누적 합을 미리 계산하여 임의 구간의 합을 $O(1)$에 구하는 알고리즘
 
-시간복잡도 : 전처리 O(N), 쿼리 O(1) (N : 데이터 개수)
+시간복잡도: 전처리 $O(N)$, 쿼리 $O(1)$ ($N$: 데이터 개수)
 
-## [Two Pointer](src/기본%20알고리즘/Two%20Pointer.md) ⚪ Silver III
-두 개의 포인터를 움직이며 배열이나 리스트에서 원하는 조건을 만족하는 구간을 효율적으로 찾는 알고리즘
+## [Two Pointer (두 포인터)](src/기본%20알고리즘/Two%20Pointer.md) ⚪ Silver III
+두 개의 포인터를 움직이며 배열에서 조건을 만족하는 쌍을 효율적으로 찾는 알고리즘
 
-시간복잡도 : O(NlogN) (N : 데이터 개수, 정렬 O(NlogN) + 스캔 O(N))
+시간복잡도: $O(N)$ ($N$: 데이터 개수)
 
 ## [DSU (Disjoint Set Union, 분리 집합)](src/기본%20알고리즘/DSU.md) 🟡 Gold V
-서로 겹치지 않는 집합을 관리하고 합치거나 찾는 연산을 효율적으로 처리하는 자료구조
+서로 겹치지 않는 집합을 관리하여 합치기와 대표 원소 찾기 연산을 효율적으로 처리하는 자료구조
 
-시간복잡도 : O(α(N)) (α : 역아커만 함수 ≒ 상수 시간, N : 데이터 개수)
+시간복잡도: $O(\alpha(N))$ ($\alpha(x)$: 역아커만 함수 \approx 상수 시간, $N$: 데이터 개수)
 
 ## [Backtracking](src/기본%20알고리즘/Backtracking.md) ⚪ Silver III
 모든 경우를 탐색하되, 해답이 될 수 없는 경로는 중간에 가지치기하여 탐색을 중단하는 완전 탐색 알고리즘
