@@ -11,8 +11,8 @@
 
 처음에는 왼쪽 포인터 $left$를 배열의 왼쪽 끝에, 오른쪽 포인터 $right$를 배열의 오른쪽 끝에 두고 탐색을 시작한다.
 
-$A_{\text{left}} + A_{\text{right}} = 9$이므로 $cnt$를 $1$ 증가시키고, 사용한 조합을 제외하기 위해  
-$left$를 $1$ 증가시키며 $right$를 $1$ 감소시킨다.
+$A_{\text{left}} + A_{\text{right}} = 9$이므로 $cnt$를 $1$ 증가시키고, 해당 조합을 다시 사용하지 않도록  
+$left$를 $1$ 증가시키고 $right$를 $1$ 감소시킨다.
 
 ![](https://github.com/user-attachments/assets/62471380-8337-4568-844e-7a4b924a583a)
 
@@ -20,8 +20,8 @@ $A_{\text{left}} + A_{\text{right}} > 9$이므로 합을 줄이기 위해 $right
 
 ![](https://github.com/user-attachments/assets/e44552ce-91d8-4b8d-a3d0-347ac0aea451)
 
-$A_{\text{left}} + A_{\text{right}} = 9$이므로 $cnt$를 $1$ 증가시키고, 사용한 조합을 제외하기 위해  
-$left$를 $1$ 증가시키며 $right$를 $1$ 감소시킨다.
+$A_{\text{left}} + A_{\text{right}} = 9$이므로 $cnt$를 $1$ 증가시키고, 해당 조합을 다시 사용하지 않도록  
+$left$를 $1$ 증가시키고 $right$를 $1$ 감소시킨다.
 
 ![](https://github.com/user-attachments/assets/4aea4b00-6c64-4202-a5e3-e59b2dbf07fb)
 
@@ -29,9 +29,9 @@ $A_{\text{left}} + A_{\text{right}} < 9$이므로 합을 늘리기 위해 $left$
 
 ![](https://github.com/user-attachments/assets/6128e62c-e983-472f-a582-c358e988f76b)
 
-$A_{\text{left}} + A_{\text{right}} > 9$이므로 $right$를 $1$ 감소시킨다. $left \ge right$가 되었기에 탐색을 종료한다.
+$A_{\text{left}} + A_{\text{right}} > 9$이므로 $right$를 $1$ 감소시킨다. $left \ge right$가 되었으므로 탐색을 종료한다.
 
-이렇게 $left < right$인 동안 위 과정을 반복하면, 두 수의 합이 $9$가 되는 모든 쌍을 찾을 수 있다.
+이와 같이 $left < right$인 동안 위 과정을 반복하면 두 수의 합이 $9$가 되는 모든 쌍을 찾을 수 있다.
 
 [연습 문제 (백준 3273번)](https://www.acmicpc.net/problem/3273)
 
