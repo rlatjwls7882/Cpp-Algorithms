@@ -1,45 +1,45 @@
 ## Floyd-Warshall Algorithm 🟡 Gold IV
-모든 정점 쌍 사이의 최단 거리를 DP로 구하는 알고리즘
+DP를 이용해 모든 정점 쌍 사이의 최단 거리를 구하는 알고리즘
 
-시간복잡도 : O(V³), 공간복잡도 : O(V²)
+시간복잡도: $O(V^3)$, 공간복잡도: $O(V^2)$ ($V$: 정점 수)
 
 ![](https://github.com/user-attachments/assets/2ec3a22f-d56c-417a-9375-98aa31300ea1)
 
-위와 같은 그래프를 사용해보겠다.
+위와 같은 그래프를 예시로 사용하겠다.
 
 ![](https://github.com/user-attachments/assets/7cb8c016-4641-4c6d-81cb-49667ba54bad)
 
-그래프의 간선을 입력해 인접 행렬을 만드면 다음과 같다. i번 행, j번 열의 원소는 i번 정점에서 j번 정점에 도달하기 위한 최소 거리이다.
+그래프의 간선을 이용해 인접 행렬을 만들면 다음과 같다. 이때 $i$번 행, $j$번 열의 원소는 **$i$번 정점에서 $j$번 정점까지의 현재 최단 거리**를 의미한다.
 
 ![](https://github.com/user-attachments/assets/12799956-fcf1-4925-8285-732dba799f47)
 
-이후 mid(경유지)를 1로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+이후 **mid(경유지)**를 $1$로 두고 모든 $(start, end)$ 쌍에 대해 최단 거리를 갱신한다.
 
-2 -> 1 -> 3, 3 -> 1 -> 2, 3 -> 1 -> 5, 5 -> 1 -> 3 경로에 대해 최단 거리가 단축된다.
+이 과정에서 **$2 \to 1 \to 3$, $3 \to 1 \to 2$, $3 \to 1 \to 5$, $5 \to 1 \to 3$** 경로의 최단 거리가 단축된다.
 
 ![](https://github.com/user-attachments/assets/43c6cfb2-5628-4013-99d7-53d51fd7d5bb)
 
-mid를 2로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+다음으로 **mid를 $2$로 두고** 모든 $(start, end)$ 쌍에 대해 최단 거리를 갱신한다.
 
-1 -> 2 -> 4, 4 -> 2 -> 1 경로에 대해 최단 거리가 단축된다.
+이 과정에서 **$1 \to 2 \to 4$, $4 \to 2 \to 1$** 경로의 최단 거리가 단축된다.
 
 ![](https://github.com/user-attachments/assets/d69a14a6-893b-4a66-823f-bee996dac040)
 
-mid를 3으로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+이제 **mid를 $3$으로 두고** 모든 $(start, end)$ 쌍에 대해 최단 거리를 갱신한다.
 
-1 -> 3 -> 4, 4 -> 3 -> 1 경로에 대해 최단 거리가 단축된다.
+이 과정에서 **$1 \to 3 \to 4$, $4 \to 3 \to 1$** 경로의 최단 거리가 단축된다.
 
 ![](https://github.com/user-attachments/assets/a5524a8e-d8a8-4d70-ae0b-e540c5e03f54)
 
-mid를 4로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+다음으로 **mid를 $4$로 두고** 모든 $(start, end)$ 쌍에 대해 최단 거리를 갱신한다.
 
-2 -> 4 -> 3, 3 -> 4 -> 2 경로에 대해 최단 거리가 단축된다.
+이 과정에서 **$2 \to 4 \to 3$, $3 \to 4 \to 2$** 경로의 최단 거리가 단축된다.
 
 ![](https://github.com/user-attachments/assets/12b60334-6832-4537-818e-5da7d010ee2a)
 
-mid를 5로 하는 모든 start와 end 쌍에 대해 최단 거리를 구한다.
+마지막으로 **mid를 $5$로 두고** 모든 $(start, end)$ 쌍에 대해 최단 거리를 갱신한다.
 
-mid=5에 대해서는 단축될 최단 거리가 없다.
+하지만 **$mid = 5$**를 경유하는 경우에는 더 짧아지는 경로가 없으므로 행렬은 더 이상 변하지 않는다.
 
 [연습 문제 (백준 11404번)](https://www.acmicpc.net/problem/11404)
 
@@ -48,18 +48,13 @@ mid=5에 대해서는 단축될 최단 거리가 없다.
 #include<bits/stdc++.h>
 using namespace std;
 
-/** 
- * INF : 대략 10억
- * MAX : 최대 정점 수
- * minCost[i][j] : i에서 j로 이동할 때의 최소 비용
- */
 const int INF = 0x3f3f3f3f;
 const int MAX = 101;
 
-int minCost[MAX][MAX];
+int minCost[MAX][MAX]; // minCost[i][j] : i에서 j로 이동할 때의 최소 비용
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
+    cin.tie(0)->sync_with_stdio(0);
     int n, m; cin >> n >> m;
 
     fill(&minCost[0][0], &minCost[MAX-1][MAX], INF);
