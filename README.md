@@ -7,7 +7,7 @@
 
 난이도는 해당 알고리즘이 사용되는 문제의 **최소 티어**를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
 
-# 현재 리메이크중 (Backtracking까지 완료)
+# 현재 리메이크중 (DFS까지 완료)
 
 ## 차례
 * 자료구조
@@ -19,8 +19,8 @@
   * Backtracking ⚪ Silver III
 * 그래프
   * 경로 탐색
+    * DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
     * 기본 탐색
-      * DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
       * BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
     * 최단 경로
       * Dijkstra's Algorithm 🟡 Gold IV
@@ -104,10 +104,10 @@
 
 시간복잡도: 최악 $O(K^n)$ ($K$: 선택지 개수, $n$: 깊이)
 
-## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/DFS.md) ⚪ Silver II
-그래프에서 한 정점에서 한 경로를 끝까지 따라간 뒤 막히면 이전 분기점으로 되돌아가 다른 분기를 탐색하는 알고리즘
+## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/DFS.md) ⚪ Silver II
+그래프에서 한 경로를 가능한 깊게 탐색하다가 막히면 이전 분기점으로 돌아가 다른 경로를 탐색하는 알고리즘
 
-시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
+시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
 ## [BFS (Breadth First Search, 너비 우선 탐색)](src/그래프/경로%20탐색/기본%20탐색/BFS.md) ⚪ Silver II
 그래프에서 시작 정점에서 가까운 정점부터 차례대로 탐색하는 알고리즘
