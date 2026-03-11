@@ -7,7 +7,7 @@
 
 난이도는 해당 알고리즘이 사용되는 문제의 **최소 티어**를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
 
-# 현재 리메이크중 (Floyd-Warshall까지 완료)
+# 현재 리메이크중 (SPFA까지 완료)
 
 ## 차례
 * 자료구조
@@ -24,8 +24,7 @@
     * Dijkstra's Algorithm 🟡 Gold IV
     * Bellman-Ford Algorithm 🟡 Gold IV
     * Floyd-Warshall Algorithm 🟡 Gold IV
-    * 최단 경로
-      * SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
+    * SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
   * DAG(Directed Acyclic Graph)
     * Kahn’s Algorithm (Topological Sort, 위상 정렬) 🟡 Gold III
   * 최소 스패닝 트리
@@ -128,10 +127,10 @@ DP를 이용해 모든 정점 쌍 사이의 최단 거리를 구하는 알고리
 
 시간복잡도: $O(V^3)$, 공간복잡도: $O(V^2)$ ($V$: 정점 수)
 
-## [SPFA (Shortest Path Faster Algorithm)](src/그래프/경로%20탐색/최단%20경로/SPFA.md) 🟡 Gold IV
-큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
+## [SPFA (Shortest Path Faster Algorithm)](src/그래프/경로%20탐색/SPFA.md) 🟡 Gold IV
+Bellman-Ford를 기반으로 큐를 사용해 갱신이 필요한 정점만 처리하여 최단 거리를 구하는 알고리즘
 
-시간복잡도 : 경험적 평균 O(V+E), 최악 O(VE) (V : 정점 수, E : 간선 수)
+시간복잡도: 경험적 평균 $O(V+E)$, 최악 $O(VE)$ ($V$ : 정점 수, $E$ : 간선 수)
 
 ## [Kahn’s Algorithm (Topological Sort, 위상 정렬)](src/그래프/DAG/Kahn’s%20Algorithm.md) 🟡 Gold III
 방향성이 있고 사이클이 없는 그래프[(DAG)](https://ko.wikipedia.org/wiki/유향_비순환_그래프)에서, 모든 정점을 선행 관계를 만족하도록 나열하는 알고리즘
