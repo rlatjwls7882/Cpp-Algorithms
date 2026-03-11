@@ -1,14 +1,15 @@
 # 대회 / 코딩테스트 알고리즘 정리
-본 문서는 **알고리즘의 동작 방식과 구현**을 중심으로 설명하여, 학습 및 복습 시 빠르게 참고할 수 있는 자료를 목표로 합니다.
-* TODO) 새로 학습 예정 (Hungarian Algorithm)
-* TODO) 복습 예정 (LCA, BCC(P4?), EEA(P5?), Sprague-Grundy Theorem(P5?))  
-* TODO) 설명 추가 예정
-  * 정수론 (Euler Phi(G1?), Inclusion–Exclusion Principle(G2?))
-  * 기초 알고리즘 (Sliding Window, Meet in the Middle(G3?), Ternary Search(P5))
-  * 기하 (Shoelace Formula)
-  * DP (LIS(n^2, nlogn), LCS, MSIS)
+본 문서는 $\textbf{알고리즘의 동작 방식과 구현}$을 중심으로 가능한 한 간단하게 설명하여, 학습 및 복습 시 빠르게 참고할 수 있는 자료를 목표로 합니다.
 
-## 목차
+정확한 증명이나 자세한 설명은 본 문서의 범위를 벗어나므로, 필요한 경우 다른 자료를 참고하시기 바랍니다.
+
+또한 $\textbf{차례의 순서는 정확한 난이도 순서를 의미하지 않습니다.}$ 각 알고리즘 제목 옆에 표시된 난이도는 작성자의 경험을 바탕으로 임의로 설정한 것이므로, 실제 난이도와 다를 수 있습니다.
+
+난이도는 해당 알고리즘이 사용되는 문제의 $\textbf{최소 티어}$를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
+
+# 현재 리메이크중 (Two Pointer까지 완료)
+
+## 차례
 * 자료구조
   * DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
 * 기본 알고리즘
