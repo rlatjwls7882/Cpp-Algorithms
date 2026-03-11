@@ -1,59 +1,67 @@
-## Backtracking ⚪ Silver III
-모든 경우를 탐색하되, 해답이 될 수 없는 경로는 중간에 가지치기하여 탐색을 중단하는 완전 탐색 알고리즘
+## Backtracking (백트래킹) ⚪ Silver III
+모든 경우를 탐색하면서 해답이 될 수 없는 경로는 가지치기하여 탐색을 줄이는 완전 탐색 기법
 
-시간복잡도 : 최악 O(Kⁿ) (K : 선택지 개수, n : 깊이)
+시간복잡도: 최악 $O(K^n)$ ($K$: 선택지 개수, $n$: 깊이)
 
-![](https://github.com/user-attachments/assets/753916ab-5999-4c9d-9c03-1d6e5db03b6b)
+$nP_m$의 모든 경우를 오름차순으로 출력하는 문제를 생각해보자.
 
-[연습 문제 (백준 15649번)](https://www.acmicpc.net/problem/15649)
-
-위 문제는 nPm을 전부 출력하는 문제로, 깊이마다 선택지를 하나씩 채워 넣고, 사용된 숫자는 제외하는 방식으로 구현된다.
+이 문제는 백트래킹을 이용해 해결할 수 있다. 각 깊이에서 하나의 숫자를 선택하여 결과 배열을 채우고, 이미 사용한 숫자는 다시 선택하지 않도록 제외함으로써 구현한다.
 
 ![](https://github.com/user-attachments/assets/15c12411-6cf2-45ab-98c7-ec599bd16e6b)
 
-n=4, m=3인 경우를 예로 살펴보겠다.
+예를 들어 $n=4$, $m=3$인 경우를 살펴보자.
 
-초기에는 위와 같이 할당되어 있다.
+초기 상태에서는 아직 어떤 숫자도 선택되지 않았다.
 
 ![](https://github.com/user-attachments/assets/46c53ca8-f25d-41ab-bdf7-b10d0e921297)
 
-출력의 깊이 0 (첫 번째 칸)에서 1~4까지 반복문을 돌며 사용하지 않은 것을 사용한다.
+깊이 $0$에서는 첫 번째 칸에 들어갈 숫자를 결정한다.
 
-그 결과 첫 번째 칸에는 1이 할당되었다.
+$1$부터 $4$까지 차례대로 확인하면서 아직 사용하지 않은 숫자를 선택한다. 먼저 $1$이 선택된다.
 
 ![](https://github.com/user-attachments/assets/93da5a15-d9d3-4396-93d9-90cee6411df0)
 
-깊이 1에서는 2가 할당되어 다음과 같아진다.
+이후 깊이 $1$에서는 두 번째 칸에 들어갈 숫자를 결정한다.
+
+이미 $1$은 사용되었으므로, 남아 있는 숫자 중 가장 앞선 $2$가 선택된다.
 
 ![](https://github.com/user-attachments/assets/08069977-a5ad-4d72-97ed-939239eb67e1)
 
-깊이 2에서는 3이 할당되어 다음과 같아진다.
+다음으로 깊이 $2$에서는 세 번째 칸에 들어갈 숫자를 결정한다.
+
+마찬가지로 사용하지 않은 숫자 중 가장 앞선 $3$이 선택된다.
 
 ![](https://github.com/user-attachments/assets/6950fd5d-b975-4490-aaa9-2b984067e5c1)
 
-깊이 3에서는 범위를 벗어나 지금까지 기록한 '1 2 3'을 출력된다.
+이제 깊이가 $m=3$에 도달했으므로,
+
+현재까지 선택한 값인 **1 2 3**을 출력한다.
 
 ![](https://github.com/user-attachments/assets/65dffecc-8b6b-4f18-8738-a3010b010b62)
 
-다시 깊이 2로 돌아가보니 이번에는 4가 할당된다.
+출력을 마친 뒤에는 백트래킹을 통해 이전 상태로 되돌아간다.
+
+깊이 $2$에서 다음으로 선택할 수 있는 숫자는 $4$이므로, 세 번째 칸의 값을 $4$로 바꾼다.
 
 ![](https://github.com/user-attachments/assets/a95f8b20-3e16-43ef-87da-a6790c8f0df3)
 
-깊이 3에서는 이번에는 기록한 '1 2 4'를 출력된다.
+다시 깊이 $3$에 도달했으므로, 이번에는 **1 2 4**를 출력한다.
 
 ![](https://github.com/user-attachments/assets/dbff43a2-fdc5-4eec-9044-50aef6730a65)
 
-그 다음에는 깊이 1까지 돌아가 깊이 1에 3이 할당된다.
+이후 다시 이전 상태로 돌아가 깊이 $1$에서 다음 가능한 숫자를 선택한다.
+
+두 번째 칸에는 $3$이 들어간다.
 
 ![](https://github.com/user-attachments/assets/c1309fa2-9951-4c4b-abf2-e96b49503d5f)
 
-깊이 2에서는 2가 할당된다.
+그 다음 깊이 $2$에서는 아직 사용하지 않은 숫자 중 $2$가 선택된다.
 
 ![](https://github.com/user-attachments/assets/02d56a61-06dd-4e3d-8790-022f0b89d7e3)
 
-깊이 3에서는 기록한 '1 3 2'가 출력된다.
+따라서 이번에는 **1 3 2**가 출력된다.
 
-이러한 과정을 통해
+이와 같은 과정을 반복하면 가능한 모든 순열이 차례대로 출력된다.
 
 $1 2 3$  
 $1 2 4$  
@@ -61,8 +69,13 @@ $1 3 2$
 $1 3 4$  
 $2 1 3$  
 $2 1 4$  
-$...$  
-이 출력된다.
+$\cdots$  
+
+이처럼 백트래킹은 현재 깊이에서 가능한 값을 하나 선택한 뒤, 더 이상 진행할 수 없거나 하나의 경우를 완성하면 이전 단계로 되돌아가 다음 선택지를 탐색하는 방식으로 동작한다.
+
+![](https://github.com/user-attachments/assets/753916ab-5999-4c9d-9c03-1d6e5db03b6b)
+
+[연습 문제 (백준 15649번)](https://www.acmicpc.net/problem/15649)
 
 ``` c++
 /** http://boj.kr/1a898dba13d74c9fb524af5ca7770877 제출 코드 */
@@ -85,7 +98,7 @@ bool visited[8];
  * - 최대 깊이에 도달하지 않은 경우
  * - - n개의 선택지 중 사용 안된 것을 사용하고 다음 깊이로 이동
  */
-void back(int depth=0) {
+void backtracking(int depth=0) {
     if(depth==m) {
         // 문제 요구사항 : 출력
         for(int i=0;i<m;i++) cout << arr[i] << ' ';
@@ -104,8 +117,8 @@ void back(int depth=0) {
 }
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
+    cin.tie(0)->sync_with_stdio(0);
     cin >> n >> m;
-    back();
+    backtracking();
 }
 ```
