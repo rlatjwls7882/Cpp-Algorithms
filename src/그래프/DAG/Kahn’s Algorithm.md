@@ -1,5 +1,5 @@
 ## Kahn’s Algorithm (Topological Sort, 위상 정렬) 🟡 Gold III
-방향성이 있고 사이클이 없는 그래프(DAG)에서 선행 관계를 만족하도록 정점을 나열하는 알고리즘
+[방향성이 있고 사이클이 없는 그래프(DAG)](https://ko.wikipedia.org/wiki/유향_비순환_그래프)에서 선행 관계를 만족하도록 정점을 나열하는 알고리즘
 
 시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
