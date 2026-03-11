@@ -7,7 +7,7 @@
 
 난이도는 해당 알고리즘이 사용되는 문제의 **최소 티어**를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
 
-# 현재 리메이크중 (BFS까지 완료)
+# 현재 리메이크중 (Dijkstra까지 완료)
 
 ## 차례
 * 자료구조
@@ -21,8 +21,8 @@
   * 경로 탐색
     * DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
     * BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
+    * Dijkstra's Algorithm 🟡 Gold IV
     * 최단 경로
-      * Dijkstra's Algorithm 🟡 Gold IV
       * Bellman-Ford Algorithm 🟡 Gold IV
       * Floyd-Warshall Algorithm 🟡 Gold IV
       * SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
@@ -113,10 +113,10 @@
 
 시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Dijkstra's Algorithm](src/그래프/경로%20탐색/최단%20경로/Dijkstra's%20Algorithm.md) 🟡 Gold IV
-가중치가 음수가 없는 그래프에서, 시작 정점으로부터 누적 거리가 가장 짧은 정점부터 차례대로 탐색하여 최단 거리를 구하는 알고리즘
+## [Dijkstra's Algorithm](src/그래프/경로%20탐색/Dijkstra's%20Algorithm.md) 🟡 Gold IV
+가중치가 음수가 없는 그래프에서 시작 정점으로부터의 최단 거리를 구하는 알고리즘
 
-시간복잡도 : O(ElogV) (V : 정점 수, E : 간선 수)
+시간복잡도: $O(ElogV)$ ($V$: 정점 수, $E$: 간선 수)
 
 ## [Bellman-Ford Algorithm](src/그래프/경로%20탐색/최단%20경로/Bellman-Ford%20Algorithm.md) 🟡 Gold IV
 가중치가 음수인 그래프에서도, 모든 간선을 최대 V-1번 완화해 최단 거리를 구하고 음수 사이클 여부를 판별하는 알고리즘
