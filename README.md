@@ -7,7 +7,7 @@
 
 난이도는 해당 알고리즘이 사용되는 문제의 **최소 티어**를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
 
-# 현재 리메이크중 (Bellman-Ford까지 완료)
+# 현재 리메이크중 (Floyd-Warshall까지 완료)
 
 ## 차례
 * 자료구조
@@ -23,8 +23,8 @@
     * BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
     * Dijkstra's Algorithm 🟡 Gold IV
     * Bellman-Ford Algorithm 🟡 Gold IV
+    * Floyd-Warshall Algorithm 🟡 Gold IV
     * 최단 경로
-      * Floyd-Warshall Algorithm 🟡 Gold IV
       * SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
   * DAG(Directed Acyclic Graph)
     * Kahn’s Algorithm (Topological Sort, 위상 정렬) 🟡 Gold III
@@ -123,10 +123,10 @@
 
 시간복잡도: $O(VE)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Floyd-Warshall Algorithm](src/그래프/경로%20탐색/최단%20경로/Floyd-Warshall%20Algorithm.md) 🟡 Gold IV
-모든 정점 쌍 사이의 최단 거리를 DP로 구하는 알고리즘
+## [Floyd-Warshall Algorithm](src/그래프/경로%20탐색/Floyd-Warshall%20Algorithm.md) 🟡 Gold IV
+DP를 이용해 모든 정점 쌍 사이의 최단 거리를 구하는 알고리즘
 
-시간복잡도 : O(V³), 공간복잡도 : O(V²)
+시간복잡도: $O(V^3)$, 공간복잡도: $O(V^2)$ ($V$: 정점 수)
 
 ## [SPFA (Shortest Path Faster Algorithm)](src/그래프/경로%20탐색/최단%20경로/SPFA.md) 🟡 Gold IV
 큐를 사용해 Bellman-Ford의 간선 완화를 [휴리스틱](https://en.wikipedia.org/wiki/Heuristic_(computer_science))으로 가속하여 최단 거리를 구하는 알고리즘
