@@ -13,7 +13,7 @@
 
 현재 탐색 범위의 가운데 값을 확인한다. $mid = \lfloor \frac{left+right}{2} \rfloor = 3$
 
-이때 $A_{mid}<21$이므로 $left \leq i \leq mid$인 모든 $A_i$가 $21$보다 작다는 것을 알 수 있다.
+이때 $A_{mid} < 21$이므로 $left \leq i \leq mid$인 모든 $A_i$가 $21$보다 작다는 것을 알 수 있다.
 
 따라서 탐색 범위를 $left = mid+1$로 갱신한다.
 
@@ -21,7 +21,7 @@
 
 다시 탐색 범위의 가운데 값을 확인한다. $mid = \lfloor \frac{left+right}{2} \rfloor = 5$
 
-여번에도 $A_{mid}<21$이므로 $left \leq i \leq mid$인 모든 $A_i$가 $21$보다 작다는 것을 알 수 있다.
+이번에도 $A_{mid} < 21$이므로 $left \leq i \leq mid$인 모든 $A_i$가 $21$보다 작다는 것을 알 수 있다.
 
 따라서 탐색 범위를 $left = mid+1$로 갱신한다.
 
@@ -29,17 +29,17 @@
 
 다시 탐색 범위의 가운데 값을 확인한다. $mid = \lfloor \frac{left+right}{2} \rfloor = 6$
 
-이번에는 $A_{mid} \geq 21$이므로 $mid \leq i \leq right$인 모든 $A_i$가 $21$보다 크거나 같다는 것을 알 수 있다.
+이번에는 $A_{mid} \ge 21$이므로 $mid \leq i \leq right$인 모든 $A_i$가 $21$보다 크거나 같다는 것을 알 수 있다.
 
 따라서 탐색 범위를 $right = mid$로 갱신한다.
 
 ![](https://github.com/user-attachments/assets/7b88348e-36b7-490c-818c-6408d07263bc)
 
-이제 $left = right$이기 때문에 더이상 범위를 줄일 수 없다.
+이제 $left = right$이므로 더 이상 탐색 범위를 줄일 수 없다.
 
 마지막으로 $A_{left} = A_{right}$ 값을 확인한다.
 
-이 값이 $21$이 아니기 때문에 배열 $A$에는 $21$이 존재하지 않는다.
+이 값이 $21$이 아니므로 배열 $A$에는 $21$이 존재하지 않는다.
 
 [연습 문제 (백준 1920번)](https://www.acmicpc.net/problem/1920)
 
