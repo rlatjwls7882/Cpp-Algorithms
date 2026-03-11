@@ -1,43 +1,37 @@
 ## Kahn’s Algorithm (Topological Sort, 위상 정렬) 🟡 Gold III
-방향성이 있고 사이클이 없는 그래프[(DAG)](https://ko.wikipedia.org/wiki/유향_비순환_그래프)에서, 모든 정점을 선행 관계를 만족하도록 나열하는 알고리즘
+방향성이 있고 사이클이 없는 그래프(DAG)에서 선행 관계를 만족하도록 정점을 나열하는 알고리즘
 
-시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
+시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
 ![](https://github.com/user-attachments/assets/c09465b0-191a-4f6e-a462-d3390f347c3e)
 
-이렇게 생긴 그래프가 있다고 하자.
+위와 같은 그래프가 있다고 하자.
 
 ![](https://github.com/user-attachments/assets/dcee373c-edf9-4d49-bb53-8b1846884df5)
 
-먼저 각 정점의 진입 차수를 구한다. 그 후 진입 차수가 0인 모든 정점을 큐에 넣는다.
+먼저 각 정점의 **진입 차수**를 계산한다. 이후 진입 차수가 **0인 모든 정점을 큐에 넣는다.** 초기 상태에서는 **1번 정점**이 큐에 들어간다.
 
 ![](https://github.com/user-attachments/assets/1742d00a-5dcd-47ec-b0fb-ada171b86d22)
 
-큐에 가장 앞에 있는 정점인 1번 정점을 꺼낸다. 1번 정점에서 접근 가능한 2번, 3번 정점의 진입차수를 지운다.
-
-그 결과 2번, 3번 정점이 진입차수가 0이 되어 큐에 들어간다.
+큐의 맨 앞에 있는 **1번 정점**을 꺼낸다. 1번 정점에서 갈 수 있는 **2번, 3번 정점**의 진입 차수를 각각 **1 감소시킨다.** 그 결과 **2번, 3번 정점의 진입 차수가 0이 되어 큐에 들어간다.**
 
 ![](https://github.com/user-attachments/assets/527b4e9f-b1d8-496b-b3b0-b2abcfb24e0b)
 
-큐에 가장 앞에 있는 정점인 2번 정점을 꺼낸다. 2번 정점에서 접근 가능한 4번 정점의 진입차수를 지운다.
+다음으로 큐의 맨 앞에 있는 **2번 정점**을 꺼낸다. 2번 정점에서 갈 수 있는 **4번 정점**의 진입 차수를 **1 감소시킨다.**
 
 ![](https://github.com/user-attachments/assets/d3f2da13-4fd5-458a-83d6-d8f0550f6b43)
 
-큐에 가장 앞에 있는 정점인 3번 정점을 꺼낸다. 3번 정점에서 접근 가능한 4번, 5번 정점의 진입차수를 지운다.
-
-그 결과 4번 정점이 진입차수가 0이 되어 큐에 들어간다.
+다음으로 큐의 맨 앞에 있는 **3번 정점**을 꺼낸다. 3번 정점에서 갈 수 있는 **4번, 5번 정점**의 진입 차수를 각각 **1 감소시킨다.** 그 결과 **4번 정점의 진입 차수가 0이 되어 큐에 들어간다.**
 
 ![](https://github.com/user-attachments/assets/65b27450-ca26-4c86-8aea-17cb8da2a4df)
 
-큐에 가장 앞에 있는 정점인 4번 정점을 꺼낸다. 3번 정점에서 접근 가능한 5번 정점의 진입차수를 지운다.
-
-그 결과 5번 정점이 진입차수가 0이 되어 큐에 들어간다.
+다음으로 큐의 맨 앞에 있는 **4번 정점**을 꺼낸다. 4번 정점에서 갈 수 있는 **5번 정점**의 진입 차수를 **1 감소시킨다.** 그 결과 **5번 정점의 진입 차수가 0이 되어 큐에 들어간다.**
 
 ![](https://github.com/user-attachments/assets/caec3611-db39-44fc-940d-88cde058550a)
 
-큐에 가장 앞에 있는 정점인 5번 정점을 꺼낸다. 5번 정점에서는 접근 가능한 정점이 없다.
+다음으로 큐의 맨 앞에 있는 **5번 정점**을 꺼낸다. 5번 정점에서는 더 이상 갈 수 있는 정점이 없다. 다음 반복에서 **큐가 비게 되므로 알고리즘이 종료된다.**
 
-다음 반복에서 큐가 비어 종료한다.
+이때 큐에서 꺼낸 정점의 순서가 바로 그래프의 **위상 정렬 결과**가 된다.
 
 [연습 문제 (백준 2252번)](https://www.acmicpc.net/problem/2252)
 
@@ -46,18 +40,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/** 
- * MAX : 최대 정점 수
- * inDegree[i] : 정점 i으로 들어오는 간선의 개수
- * conn[i] : 정점 i에서 다른 정점으로 향하는 간선들
- */
 const int MAX = 32'001;
 
-int inDegree[MAX];
+int inDegree[MAX]; // inDegree[i] : 정점 i으로 들어오는 간선의 개수
 vector<vector<int>> conn(MAX);
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
+    cin.tie(0)->sync_with_stdio(0);
     int n, m; cin >> n >> m;
     while(m--) {
         int a, b; cin >> a >> b;
@@ -87,7 +76,9 @@ int main() {
         int cur = q.front(); q.pop();
         cout << cur << ' ';
         for(int next:conn[cur]) {
-            if(--inDegree[next]==0) q.push(next);
+            if(--inDegree[next]==0) {
+                q.push(next);
+            }
         }
     }
 }
