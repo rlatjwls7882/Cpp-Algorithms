@@ -16,7 +16,7 @@
   * Binary Search (이분 탐색) ⚪ Silver IV
   * Prefix Sum (누적 합) ⚪ Silver III
   * Two Pointer (두 포인터) ⚪ Silver III
-  * Backtracking ⚪ Silver III
+  * Backtracking (백트래킹) ⚪ Silver III
 * 그래프
   * 경로 탐색
     * DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
