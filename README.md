@@ -86,10 +86,6 @@
 
 
 
-## [Rotating Calipers (회전하는 캘리퍼스)](src/수학/기하/Rotating%20Calipers.md) 🟢 Platinum III
-볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
-
-시간복잡도 : O(N) (그라함 스캔 제외)
 
 ## [Sweeping Algorithm](src/스위핑/Sweeping%20Algorithm.md) 🟡 Gold V
 선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
@@ -341,7 +337,12 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 ## Point in Convex Polygon (볼록 다각형 내부의 점 판정) 🟢 Platinum III
 볼록 다각형에서 기준점을 잡고 이분 탐색으로 점의 내부 포함 여부를 판별하는 알고리즘
 
-시간복잡도: $O(\log N)$ ($N$: 볼록 껍질의 점의 수)
+시간복잡도: $O(\log N)$ ($N$: 볼록 다각형의 점의 수)
+
+## Rotating Calipers (회전하는 캘리퍼스) 🟢 Platinum III
+볼록 다각형에서 서로 가장 먼 두 점을 $O(N)$에 찾는 알고리즘
+
+시간복잡도: $O(N)$
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
