@@ -1,7 +1,7 @@
 ## MCMF (Min Cost Max Flow) Algorithm (SPFA 구현) 🟢 Platinum III
 SPFA로 최단 비용 경로를 반복적으로 찾아 최소 비용 최대 유량을 구하는 알고리즘
 
-시간복잡도: $O(FVE)$ ($F$: 최대 유량)
+시간복잡도: $O(FVE)$ ($V$: 정점 수, $E$: 간선 수, $F$: 최대 유량)
 
 ![](https://github.com/user-attachments/assets/2b044011-572e-4512-af79-d1b4dcb90c38)
 
