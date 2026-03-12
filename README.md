@@ -85,10 +85,6 @@
 # 여기부터 리메이크 필요, 완료된건 뒤쪽에
 
 
-## [Point in Convex Polygon (볼록 다각형 내부의 점 판정)](src/수학/기하/Point%20in%20Convex%20Polygon.md) 🟢 Platinum III
-볼록 다각형에 대해, 기준점을 잡고 이분 탐색을 이용해 점이 내부에 있는지 O(logN)에 판정하는 알고리즘
-
-시간복잡도 : O(logN) (N : 볼록 껍질의 점의 수)
 
 ## [Rotating Calipers (회전하는 캘리퍼스)](src/수학/기하/Rotating%20Calipers.md) 🟢 Platinum III
 볼록 껍질에서 모든 점 쌍 중 가장 먼 두 점 등을 O(N)에 찾는 알고리즘
@@ -341,6 +337,11 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 기준점을 기준으로 점들을 각도 순으로 정렬한 뒤 CCW를 이용해 볼록 껍질을 찾는 알고리즘
 
 시간복잡도: $O(N\log N)$
+
+## Point in Convex Polygon (볼록 다각형 내부의 점 판정) 🟢 Platinum III
+볼록 다각형에서 기준점을 잡고 이분 탐색으로 점의 내부 포함 여부를 판별하는 알고리즘
+
+시간복잡도: $O(\log N)$ ($N$: 볼록 껍질의 점의 수)
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
