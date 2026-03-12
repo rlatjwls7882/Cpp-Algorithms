@@ -20,6 +20,8 @@
   * Dynamic Segment Tree (동적 세그먼트 트리) 🟢 Platinum V
   * Segment Tree with Lazy Propagation 🟢 Platinum IV
   * Merge Sort Tree 🟢 Platinum III
+  * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
+  * HLD (Heavy Light Decomposition) 🟢 Platinum I
 * 기본 알고리즘
   * Binary Search (이분 탐색) ⚪ Silver IV
   * Prefix Sum (누적 합) ⚪ Silver III
@@ -47,11 +49,6 @@
   * 컴포넌트 분해
     * Tarjan’s Algorithm (SCC) 🟢 Platinum V
     * 2-SAT (2-Satisfiability) 🟢 Platinum IV
-
-
-  * 트리
-    * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
-    * HLD (Heavy Light Decomposition) 🟢 Platinum I
 * 문자열
   * KMP (Knuth-Morris-Pratt) Algorithm 🟢 Platinum V
   * Trie 🟢 Platinum IV
@@ -81,12 +78,14 @@
   * Square Root Decomposition (제곱근 분할법) 🟢 Platinum II
   * Mo's Algorithm 🟢 Platinum II
   * PBS (Parallel Binary Search, 병렬 이분 탐색) 🟢 Platinum I
+
+
+
  
 # 여기부터 리메이크 필요, 완료된건 뒤쪽에
-## [Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation)](src/그래프/트리/Sparse%20Segment%20Tree.md) 🟢 Platinum I
-Dynamic Segment Tree를 느리게 갱신하는 알고리즘
 
-시간복잡도 : $O(Q \log N)$ (Q : 쿼리의 수)
+
+
 
 ## [HLD (Heavy Light Decomposition)](src/그래프/트리/HLD.md) 🟢 Platinum I
 트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
@@ -201,7 +200,14 @@ DP를 볼록껍질 형태로 나타내 최적화하는 방법
 
 시간복잡도 : O((N+Q)logC) (C : 최대 이분탐색 범위)
 
+
+
+
 # 여기부터 리메이크 완료
+
+
+
+
 
 ## DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
 서로 겹치지 않는(서로소) 집합을 관리하여 합치기와 대표 원소 찾기 연산을 효율적으로 처리하는 자료구조
@@ -237,6 +243,11 @@ DP를 볼록껍질 형태로 나타내 최적화하는 방법
 세그먼트 트리의 각 노드에 정렬된 배열을 저장하여 구간에서 특정 값보다 큰(또는 작은) 원소를 빠르게 찾는 자료구조
 
 시간복잡도: $O(NlogN)$, 공간복잡도: $O(NlogN)$
+
+## Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
+Dynamic Segment Tree에 Lazy Propagation을 적용한 자료구조
+
+시간복잡도: $O(Q\log N)$ ($Q$: 쿼리의 수)
 
 ## Binary Search (이분 탐색) ⚪ Silver IV
 정렬된 데이터에서 탐색 범위를 절반씩 줄여가며 원하는 값을 찾는 알고리즘
