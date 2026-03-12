@@ -1,6 +1,5 @@
 ## Tarjan’s Algorithm (SCC) 🟢 Platinum V
 그래프에서 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)를 한 번의 DFS로 찾는 알고리즘
-SCC : 임의의 두 정점 사이에 사이클이 존재해 서로 왔다 갔다 할 수 있는 정점들의 그룹
 
 시간복잡도: $O(V + E)$ ($V$: 정점 수, $E$: 간선 수)
 
