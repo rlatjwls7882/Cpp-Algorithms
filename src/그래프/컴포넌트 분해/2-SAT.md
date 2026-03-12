@@ -1,35 +1,44 @@
 ## 2-SAT (2-Satisfiability) 🟢 Platinum IV
-2개의 변수로 이루어진 [CNF](https://ko.wikipedia.org/wiki/논리곱_표준형)가 주어졌을 때, 이를 만족시도록 변수에 (True/False)를 대입 가능한지 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들어 SCC를 형성해 확인하는 문제
+2-[CNF](https://ko.wikipedia.org/wiki/논리곱_표준형) 식이 주어졌을 때 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들고 SCC를 이용해 식이 만족 가능한지 판단하는 알고리즘
 
-시간복잡도 : O(V+E) (V : 정점 수, E : 간선 수)
+시간복잡도: $O(V + E)$ ($V$: 정점 수, $E$: 간선 수)
 
-(A∨B) ∧ (B∨C) 라는 조건은 다음 네 개의 조건으로 분해할 수 있다.  
-- ¬A -> B : A가 참이 아니라면 B가 참이어야 한다.
-- ¬B -> A : B가 참이 아니라면 A가 참이어야 한다.
-- ¬B -> C
-- ¬C -> B
+(A ∨ B) ∧ (B ∨ C) 와 같은 조건이 주어졌다고 하자. 2-SAT에서는 각 절 (A ∨ B)를 다음 두 개의 조건으로 변환한다.
 
-이 네 가지 조건을 동시에 만족해야 한다.
+- ¬A → B
+- ¬B → A
+
+즉 A가 거짓이면 B는 참이어야 하고, B가 거짓이면 A는 참이어야 한다. 따라서 (A ∨ B) ∧ (B ∨ C)는 다음 네 개의 조건으로 표현할 수 있다.
+
+- ¬A → B
+- ¬B → A
+- ¬B → C
+- ¬C → B
+
+이 조건들을 그래프로 나타낸 것이 **Implication Graph**이다.
 
 ![](https://github.com/user-attachments/assets/4e8b38df-e834-47c7-86e1-75c87bef1234)
 
-이를 그래프로 나타내면 이와 같이 나타내진다.
+이와 같이 각 리터럴을 정점으로 두고 조건을 간선으로 표현할 수 있다.
 
 ![](https://github.com/user-attachments/assets/7957c9df-d94c-4547-b0e9-7cfe836745bf)
 
-만약 (¬1∨2) ∧ (¬2∨3) ∧ (2∨¬3) 을 구해야 한다고 하자. 이를 그래프로 나타내면 이렇게 나타내진다.
+예를 들어 (¬1 ∨ 2) ∧ (¬2 ∨ 3) ∧ (2 ∨ ¬3) 이라는 식이 있다고 하자. 이를 implication graph로 표현하면 위와 같은 그래프가 된다.
 
 ![](https://github.com/user-attachments/assets/f8b8ff42-7ae4-47fa-a13a-00a805a21330)
 
-이 그래프를 SCC들을 뽑아내면 이렇게 나타내진다. 같은 SCC에 속한 것들은 서로 도달 가능하므로 true / false 값이 함께 결정된다.
-때문에 이 경우에는 전체 식이 참이 되도록 true / false를 할당할 수 있다.  
-할당하는 방법은 위상 순서가 높은 쪽이 false면 낮은 쪽은 무엇을 할당하든 상관 없지만, 위상 순서가 높은 쪽이 true라면 낮은 쪽도 무조건 true여야 한다.  
-- ¬2와 ¬3이 false라면(2와 3이 true) ¬1은 어떤 것을 할당하든 조건을 만족한다. 반대로 ¬2와 ¬3이 true라면(2와 3이 false) ¬1은 true여야만 전체 조건을 만족한다.  
-- 반대로 1이 false라면 2와 3은 어떤 것을 할당하든 조건을 만족한다. 반대로 1이 true라면 2와 3은 true여야만 전체 조건을 만족한다.  
+이 그래프에서 SCC를 구하면 위와 같이 그룹이 나뉜다. 같은 SCC에 속한 정점들은 서로 도달 가능하므로 반드시 같은 논리 값을 가져야 한다. 따라서 어떤 변수 x와 ¬x가 같은 SCC에 속해 있다면 식을 만족하는 값 할당은 존재하지 않는다.
+
+이 예제에서는 모든 변수와 그 부정이 서로 다른 SCC에 속해 있으므로 식을 만족하는 값 할당이 존재한다. 값을 할당할 때는 SCC를 위상 순서의 역순으로 처리하며 아직 값이 정해지지 않은 변수에 대해 해당 값을 true로 두고 그 부정은 false로 설정한다.
+
+- ¬2와 ¬3이 false라면 (2와 3이 true) ¬1은 어떤 값을 할당하더라도 조건을 만족한다.
+- 반대로 ¬2와 ¬3이 true라면 (2와 3이 false) ¬1은 반드시 true여야 한다.
+- 1이 false라면 2와 3은 어떤 값을 할당하더라도 조건을 만족한다.
+- 반대로 1이 true라면 2와 3도 반드시 true여야 한다.
 
 ![](https://github.com/user-attachments/assets/e0a06b13-071d-4462-8c46-31f7cff28a15)
 
-하지만 이 경우에는 2에 false를 할당하는 것과 2에 true를 할당하는 조건을 동시에 만족시킬 수 없기 때문에 전체 조건을 만족할 수 없다.
+하지만 이 경우에는 2와 ¬2가 같은 SCC에 속하게 된다. 이는 2가 참이어야 한다는 조건과 거짓이어야 한다는 조건이 동시에 존재함을 의미하므로 전체 식을 만족하는 값 할당은 존재하지 않는다.
 
 [연습 문제 (백준 11280번)](https://www.acmicpc.net/problem/11280)
 
