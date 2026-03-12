@@ -7,13 +7,14 @@
 
 난이도는 해당 알고리즘이 사용되는 문제의 **최소 티어**를 기준으로 설정하였으며, 실제로는 더 높은 난이도를 요구할 수도 있습니다.
 
-# 현재 리메이크중 (Fenwick까지 완료)
+# 현재 리메이크중
 
 ## 차례
 * 자료구조
   * DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
-  * Segment Tree 🟡 Gold I
-  * Fenwick Tree (Binary Indexed Tree) 🟢 Platinum V
+  * Segment Tree (세그먼트 트리) 🟡 Gold I
+  * Fenwick Tree (Binary Indexed Tree, 펜윅 트리) 🟢 Platinum V
+  * Walking on Segment Tree (세그 워크) 🟢 Platinum V
 * 기본 알고리즘
   * Binary Search (이분 탐색) ⚪ Silver IV
   * Prefix Sum (누적 합) ⚪ Silver III
@@ -42,7 +43,6 @@
     * Tarjan’s Algorithm (SCC) 🟢 Platinum V
     * 2-SAT (2-Satisfiability) 🟢 Platinum IV
   * 트리
-    * Walking on Segment Tree 🟢 Platinum V
     * Dynamic Segment Tree 🟢 Platinum V
     * Segment Tree with Lazy Propagation 🟢 Platinum IV
     * Merge Sort Tree 🟢 Platinum III
@@ -78,120 +78,122 @@
   * Mo's Algorithm 🟢 Platinum II
   * PBS (Parallel Binary Search, 병렬 이분 탐색) 🟢 Platinum I
 
-## [DSU (Disjoint Set Union, 분리 집합)](src/자료구조/DSU.md) 🟡 Gold V
+## DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
 서로 겹치지 않는(서로소) 집합을 관리하여 합치기와 대표 원소 찾기 연산을 효율적으로 처리하는 자료구조
 
 시간복잡도: $O(\alpha(N))$ ($\alpha(x)$: 역아커만 함수 $\approx$ 상수 시간, $N$: 데이터 개수)
 
-## [Segment Tree](src/자료구조/Segment%20Tree.md) 🟡 Gold I
+## Segment Tree (세그먼트 트리) 🟡 Gold I
 완전 이진 트리 형태로 구간 정보를 저장하여 구간 쿼리와 업데이트를 $O(\log N)$에 처리하는 자료구조
 
 시간복잡도: $O(Q\log N)$ ($Q$: 쿼리의 수)
 
-## [Fenwick Tree (Binary Indexed Tree)](src/자료구조/Fenwick%20Tree.md) 🟢 Platinum V
+## Fenwick Tree (Binary Indexed Tree, 펜윅 트리) 🟢 Platinum V
 배열의 누적합을 부분 구간 합 형태로 저장하여 구간 합과 업데이트를 $O(\log N)$에 처리하는 자료구조
 
 시간복잡도: $O(\log N)$
 
-## [Binary Search (이분 탐색)](src/기본%20알고리즘/Binary%20Search.md) ⚪ Silver IV
+## Walking on Segment Tree (세그 워크) 🟢 Platinum V
+세그먼트 트리의 누적 정보를 이용해 루트에서 리프까지 내려가며 k번째 원소를 찾는 테크닉
+
+시간 복잡도: $O(Q\log N)$ ($Q$: 쿼리의 수)
+
+## Binary Search (이분 탐색) ⚪ Silver IV
 정렬된 데이터에서 탐색 범위를 절반씩 줄여가며 원하는 값을 찾는 알고리즘
 
 시간복잡도: $O(M\log N)$ ($N$: 데이터 개수, $M$: 탐색 횟수)
 
-## [Prefix Sum (누적 합)](src/기본%20알고리즘/Prefix%20Sum.md) ⚪ Silver III
+## Prefix Sum (누적 합) ⚪ Silver III
 배열의 누적 합을 미리 계산하여 임의 구간의 합을 $O(1)$에 구하는 알고리즘
 
 시간복잡도: 전처리 $O(N)$, 쿼리 $O(1)$ ($N$: 데이터 개수)
 
-## [Two Pointer (두 포인터)](src/기본%20알고리즘/Two%20Pointer.md) ⚪ Silver III
+## Two Pointer (두 포인터) ⚪ Silver III
 두 개의 포인터를 움직이며 배열에서 조건을 만족하는 쌍을 효율적으로 찾는 알고리즘
 
 시간복잡도: $O(N)$ ($N$: 데이터 개수)
 
-## [Backtracking (백트래킹)](src/기본%20알고리즘/Backtracking.md) ⚪ Silver III
+## Backtracking (백트래킹) ⚪ Silver III
 모든 경우를 탐색하면서 해답이 될 수 없는 경로는 가지치기하여 탐색을 줄이는 완전 탐색 기법
 
 시간복잡도: 최악 $O(K^n)$ ($K$: 선택지 개수, $n$: 깊이)
 
-## [DFS (Depth First Search, 깊이 우선 탐색)](src/그래프/경로%20탐색/DFS.md) ⚪ Silver II
+## DFS (Depth First Search, 깊이 우선 탐색) ⚪ Silver II
 그래프에서 한 경로를 가능한 깊게 탐색하다가 막히면 이전 분기점으로 돌아가 다른 경로를 탐색하는 알고리즘
 
 시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [BFS (Breadth First Search, 너비 우선 탐색)](src/그래프/경로%20탐색/BFS.md) ⚪ Silver II
+## BFS (Breadth First Search, 너비 우선 탐색) ⚪ Silver II
 그래프에서 시작 정점으로부터 가까운 정점부터 차례대로 탐색하는 알고리즘
 
 시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Dijkstra's Algorithm](src/그래프/최단%20경로/Dijkstra's%20Algorithm.md) 🟡 Gold IV
+## Dijkstra's Algorithm 🟡 Gold IV
 가중치가 음수가 없는 그래프에서 시작 정점으로부터의 최단 거리를 구하는 알고리즘
 
 시간복잡도: $O(ElogV)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Bellman-Ford Algorithm](src/그래프/최단%20경로/Bellman-Ford%20Algorithm.md) 🟡 Gold IV
+## Bellman-Ford Algorithm 🟡 Gold IV
 가중치가 음수인 그래프에서도 최단 거리를 구하고 음수 사이클의 존재 여부를 판별하는 알고리즘
 
 시간복잡도: $O(VE)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Floyd-Warshall Algorithm](src/그래프/최단%20경로/Floyd-Warshall%20Algorithm.md) 🟡 Gold IV
+## Floyd-Warshall Algorithm 🟡 Gold IV
 DP를 이용해 모든 정점 쌍 사이의 최단 거리를 구하는 알고리즘
 
 시간복잡도: $O(V^3)$, 공간복잡도: $O(V^2)$ ($V$: 정점 수)
 
-## [SPFA (Shortest Path Faster Algorithm)](src/그래프/최단%20경로/SPFA.md) 🟡 Gold IV
+## SPFA (Shortest Path Faster Algorithm) 🟡 Gold IV
 Bellman-Ford를 기반으로 큐를 사용해 갱신이 필요한 정점만 처리하여 최단 거리를 구하는 알고리즘
 
 시간복잡도: 경험적 평균 $O(V+E)$, 최악 $O(VE)$ ($V$ : 정점 수, $E$ : 간선 수)
 
-## [Kahn’s Algorithm (Topological Sort, 위상 정렬)](src/그래프/DAG/Kahn’s%20Algorithm.md) 🟡 Gold III
+## Kahn’s Algorithm (Topological Sort, 위상 정렬) 🟡 Gold III
 [방향성이 있고 사이클이 없는 그래프(DAG)](https://ko.wikipedia.org/wiki/유향_비순환_그래프)에서 선행 관계를 만족하도록 정점을 나열하는 알고리즘
 
 시간복잡도: $O(V+E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Kruskal’s Algorithm](src/그래프/최소%20스패닝%20트리/Kruskal’s%20Algorithm.md) 🟡 Gold IV
+## Kruskal’s Algorithm 🟡 Gold IV
 간선을 가중치 순으로 정렬한 뒤 사이클이 생기지 않는 간선만 선택하여 최소 스패닝 트리를 만드는 알고리즘
 
 시간복잡도: $O(E\log E)$ ($E$: 간선 수)
 
-## [Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭)](src/그래프/유량/Kuhn's%20Algorithm.md) 🟢 Platinum IV
+## Kuhn's Algorithm (Maximum Bipartite Matching, 이분 매칭) 🟢 Platinum IV
 [이분 그래프](https://ko.wikipedia.org/wiki/이분_그래프)에서 서로 겹치지 않는 간선의 최대 집합(최대 매칭)을 찾는 알고리즘
 
 시간복잡도: $O(VE)$ ($V$: 왼쪽 그룹의 정점 수)
 
-## [Edmonds-Karp Algorithm](src/그래프/유량/Edmonds-Karp%20Algorithm.md) 🟢 Platinum IV
+## Edmonds-Karp Algorithm 🟢 Platinum IV
 그래프에서 시작 지점(source)에서 유량을 흘려서, 도착 지점(sink)까지 유량이 얼마나 도착하는지 찾는 알고리즘
 
 시간복잡도: $O(VE^2)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Dinic's Algorithm](src/그래프/유량/Dinic's%20Algorithm.md) 🟢 Platinum II
+## Dinic's Algorithm 🟢 Platinum II
 Edmonds-Karp를 개선한 방법으로, 레벨 그래프와 블로킹 플로우를 이용해 최대 유량을 구하는 알고리즘
 
 시간복잡도: $O(V^2E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [MCMF (Min Cost Max Flow) Algorithm (SPFA 구현)](src/그래프/유량/MCMF%20Algorithm.md) 🟢 Platinum III
+## MCMF (Min Cost Max Flow) Algorithm (SPFA 구현) 🟢 Platinum III
 SPFA로 최단 비용 경로를 반복적으로 찾아 최소 비용 최대 유량을 구하는 알고리즘
 
 시간복잡도: $O(FVE)$ ($V$: 정점 수, $E$: 간선 수, $F$: 최대 유량)
 
-## [Hopcroft-Karp Algorithm](src/그래프/유량/Hopcroft-Karp%20Algorithm.md) 🟢 Platinum III
+## Hopcroft-Karp Algorithm 🟢 Platinum III
 Kuhn's Algorithm을 개선해 Shortest Augmenting Path를 여러개씩 찾는 알고리즘
 
 시간복잡도 : O($E\sqrt V$)
 
-## [Tarjan’s Algorithm (SCC)](src/그래프/컴포넌트%20분해/Tarjan’s%20Algorithm.md) 🟢 Platinum V
+## Tarjan’s Algorithm (SCC) 🟢 Platinum V
 그래프에서 [SCC (Strongly Connected Component)](https://ko.wikipedia.org/wiki/강한_연결_요소)를 한 번의 DFS로 찾는 알고리즘
 
 시간복잡도: $O(V + E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [2-SAT (2-Satisfiability)](src/그래프/컴포넌트%20분해/2-SAT.md) 🟢 Platinum IV
+## 2-SAT (2-Satisfiability)) 🟢 Platinum IV
 2-[CNF](https://ko.wikipedia.org/wiki/논리곱_표준형) 식이 주어졌을 때 [Implication Graph](https://en.wikipedia.org/wiki/Implication_graph)를 만들고 SCC를 이용해 식이 만족 가능한지 판단하는 알고리즘
 
 시간복잡도: $O(V + E)$ ($V$: 정점 수, $E$: 간선 수)
 
-## [Walking on Segment Tree](src/그래프/트리/Walking%20on%20Segment%20Tree.md) 🟢 Platinum V
-세그먼트 트리의 구간 합을 이용하여 이분 탐색으로 k번째 원소를 찾는 테크닉
-
-시간 복잡도 : O(QlogN) (Q : 쿼리의 수)
+# 여기까지 리메이크 완료
 
 ## [Dynamic Segment Tree](src/그래프/트리/Dynamic%20Segment%20Tree.md) 🟢 Platinum V
 세그먼트 트리에서 각 노드를 필요한 부분만 동적으로 생성하는 알고리즘
