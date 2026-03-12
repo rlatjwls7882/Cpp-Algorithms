@@ -1,4 +1,4 @@
-## Dinic's Algorithm 🟢 Platinum I
+## Dinic's Algorithm 🟢 Platinum II
 Edmonds-Karp를 개선한 방법으로, 레벨 그래프와 블로킹 플로우를 이용해 최대 유량을 구하는 알고리즘
 
 시간복잡도: $O(V^2E)$ ($V$: 정점 수, $E$: 간선 수)
