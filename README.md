@@ -14,14 +14,6 @@
 ## 차례
 * 자료구조
   * DSU (Disjoint Set Union, 분리 집합) 🟡 Gold V
-  * Segment Tree (세그먼트 트리) 🟡 Gold I
-  * Fenwick Tree (Binary Indexed Tree, 펜윅 트리) 🟢 Platinum V
-  * Walking on Segment Tree (세그 워크) 🟢 Platinum V
-  * Dynamic Segment Tree (동적 세그먼트 트리) 🟢 Platinum V
-  * Segment Tree with Lazy Propagation 🟢 Platinum IV
-  * Merge Sort Tree 🟢 Platinum III
-  * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
-  * HLD (Heavy Light Decomposition) 🟢 Platinum I
 * 기본 알고리즘
   * Binary Search (이분 탐색) ⚪ Silver IV
   * Prefix Sum (누적 합) ⚪ Silver III
@@ -49,6 +41,15 @@
   * 컴포넌트 분해
     * Tarjan’s Algorithm (SCC) 🟢 Platinum V
     * 2-SAT (2-Satisfiability) 🟢 Platinum IV
+  * 세그먼트 트리
+    * Segment Tree (세그먼트 트리) 🟡 Gold I
+    * Fenwick Tree (Binary Indexed Tree, 펜윅 트리) 🟢 Platinum V
+    * Walking on Segment Tree (세그 워크) 🟢 Platinum V
+    * Dynamic Segment Tree (동적 세그먼트 트리) 🟢 Platinum V
+    * Segment Tree with Lazy Propagation 🟢 Platinum IV
+    * Merge Sort Tree 🟢 Platinum III
+    * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation) 🟢 Platinum I
+    * HLD (Heavy Light Decomposition) 🟢 Platinum I
 * 문자열
   * KMP (Knuth-Morris-Pratt) Algorithm 🟢 Platinum V
   * Trie 🟢 Platinum IV
