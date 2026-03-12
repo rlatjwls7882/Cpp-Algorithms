@@ -87,10 +87,6 @@
 
 
 
-## [HLD (Heavy Light Decomposition)](src/그래프/트리/HLD.md) 🟢 Platinum I
-트리에서 세그먼트 트리로 구간 쿼리를 최적화하는 알고리즘
-
-시간복잡도 : O(Qlog²N) (Q : 쿼리의 수)
 
 ## [KMP (Knuth-Morris-Pratt) Algorithm](src/문자열/KMP%20Algorithm.md) 🟢 Platinum V
 한 문자열에서 다른 문자열이 어디에 등장하는지 찾아주는 문자열 검색 알고리즘
@@ -248,6 +244,11 @@ DP를 볼록껍질 형태로 나타내 최적화하는 방법
 Dynamic Segment Tree에 Lazy Propagation을 적용한 자료구조
 
 시간복잡도: $O(Q\log N)$ ($Q$: 쿼리의 수)
+
+## HLD (Heavy Light Decomposition) 🟢 Platinum I
+트리 경로 쿼리를 여러 개의 구간 쿼리로 분해하여 처리하는 알고리즘
+
+시간복잡도: $O(Q\log^2N)$ ($Q$: 쿼리의 수)
 
 ## Binary Search (이분 탐색) ⚪ Silver IV
 정렬된 데이터에서 탐색 범위를 절반씩 줄여가며 원하는 값을 찾는 알고리즘
