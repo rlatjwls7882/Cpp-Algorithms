@@ -15,16 +15,16 @@
 
 ## 목차
 * 자료구조
-  * DSU (Disjoint Set Union)
+  * DSU
   * 세그먼트 트리
     * Segment Tree
-    * Fenwick Tree (Binary Indexed Tree)
+    * Fenwick Tree
     * Walking on Segment Tree
     * Dynamic Segment Tree
     * Segment Tree with Lazy Propagation
     * Merge Sort Tree
-    * Sparse Segment Tree (Dynamic Segment Tree with Lazy Propagation)
-    * HLD (Heavy Light Decomposition)
+    * Sparse Segment Tree
+    * HLD
 * 기본 알고리즘
   * Binary Search
   * Prefix Sum
@@ -71,7 +71,7 @@
     * Rotating Calipers
 * 스위핑
   * Sweeping Algorithm
-  * Imos Method (いもす法, Difference Array Trick)
+  * Imos Method (Difference Array Trick)
 * 동적 프로그래밍
   * TSP
   * Deque Trick
