@@ -86,10 +86,6 @@
 
 
 
-## [Convex Hull Trick](src/DP/Convex%20Hull%20Trick.md) 🟢 Platinum II
-DP를 볼록껍질 형태로 나타내 최적화하는 방법
-
-시간복잡도 : $O(N \log N)$
 
 ## [Offline Query](src/쿼리%20처리/Offline%20Query.md) 🟢 Platinum IV
 복잡한 연산을 단순화하기 위해, 답에 영향을 주지 않도록 쿼리 순서를 재배열해 답을 찾는 테크닉
@@ -111,10 +107,7 @@ DP를 볼록껍질 형태로 나타내 최적화하는 방법
 
 
 
-
 # 여기부터 리메이크 완료
-
-
 
 
 
@@ -339,9 +332,14 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 시간복잡도: $O(N^2 \times 2^N)$ ($N$: 도시의 수)
 
 ## Deque Trick 🟢 Platinum V
-단조성을 유지하는 덱을 이용해 DP 전이를 최적화하는 기법
+단조성을 유지하는 덱을 이용해 DP 전이를 최적화하는 테크닉
 
 시간복잡도: $O(N)$
+
+## Convex Hull Trick (볼록 껍질 최적화) 🟢 Platinum II
+DP 식을 직선의 최솟값(또는 최댓값) 쿼리 형태로 변환하고 단조성을 이용해 전이를 최적화하는 테크닉
+
+시간복잡도: $O(N\log N)$
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
