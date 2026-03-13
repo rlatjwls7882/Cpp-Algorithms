@@ -86,13 +86,6 @@
 
 
 
-
-
-## [Deque Trick](src/DP/Deque%20Trick.md) 🟢 Platinum V
-덱에 단조 증가 또는 단조 감소하는 인덱스를 유지하여 슬라이딩 윈도우 내에서 최소값 또는 최대값을 O(1)에 찾는 알고리즘
-
-시간복잡도 : O(N)
-
 ## [Convex Hull Trick](src/DP/Convex%20Hull%20Trick.md) 🟢 Platinum II
 DP를 볼록껍질 형태로 나타내 최적화하는 방법
 
@@ -344,6 +337,11 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 비트마스크를 이용한 DP로 모든 도시를 한 번씩 방문하는 최소 비용 경로를 구하는 알고리즘
 
 시간복잡도: $O(N^2 \times 2^N)$ ($N$: 도시의 수)
+
+## Deque Trick 🟢 Platinum V
+단조성을 유지하는 덱을 이용해 DP 전이를 최적화하는 기법
+
+시간복잡도: $O(N)$
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
