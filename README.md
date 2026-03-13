@@ -87,11 +87,6 @@
 
 
 
-## [Sweeping Algorithm](src/스위핑/Sweeping%20Algorithm.md) 🟡 Gold V
-선을 한쪽 방향으로 이동시키며 정렬된 이벤트를 순서대로 처리해 문제를 해결하는 알고리즘
-
-시간복잡도 : O(NlogN) (N : 이벤트 개수, 정렬 O(NlogN) + 스캔 O(N))
-
 ## [Imos Method (いもす法)](src/스위핑/Imos%20Method.md) 🟢 Platinum IV
 구간(또는 영역)의 증가·감소량을 차분 배열(Difference Array)에 기록한 뒤, 최종적으로 누적 합을 구해 전체 상태를 복원하는 알고리즘
 
@@ -343,6 +338,11 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 볼록 다각형에서 서로 가장 먼 두 점을 $O(N)$에 찾는 알고리즘
 
 시간복잡도: $O(N)$
+
+## Sweeping Algorithm 🟡 Gold V
+직선을 한 방향으로 이동시키며 이벤트를 정렬된 순서로 처리하는 알고리즘
+
+시간복잡도: 정렬 $O(N \logN)$, 스캔 $O(N)$ ($N$: 이벤트 개수)
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
