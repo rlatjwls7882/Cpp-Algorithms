@@ -69,7 +69,7 @@
     * Rotating Calipers (회전하는 캘리퍼스) 🟢 Platinum III
 * 스위핑
   * Sweeping Algorithm 🟡 Gold V
-  * Imos Method (いもす法) 🟢 Platinum IV
+  * Imos Method (いもす法, Difference Array Trick, 차분 배열 트릭) 🟢 Platinum IV
 * DP
   * TSP (Traveling Salesman Problem, 외판원 순회 문제) 🟡 Gold I
   * Deque Trick 🟢 Platinum V
@@ -86,11 +86,6 @@
 
 
 
-
-## [Imos Method (いもす法)](src/스위핑/Imos%20Method.md) 🟢 Platinum IV
-구간(또는 영역)의 증가·감소량을 차분 배열(Difference Array)에 기록한 뒤, 최종적으로 누적 합을 구해 전체 상태를 복원하는 알고리즘
-
-시간복잡도 : O($N^D+Q$) (N : 각 차원의 크기, D : 차원 수, Q : 쿼리 수)
 
 ## [TSP (Traveling Salesman Problem, 외판원 순회 문제)](src/DP/TSP.md) 🟡 Gold I
 비트마스킹 + DP로 모든 도시를 한 번씩 순회하고 다시 시작 도시로 돌아오는 최소 비용을 계산하는 알고리즘
@@ -342,7 +337,12 @@ CCW를 이용하여 두 선분의 교차 여부를 판별하는 알고리즘
 ## Sweeping Algorithm 🟡 Gold V
 직선을 한 방향으로 이동시키며 이벤트를 정렬된 순서로 처리하는 알고리즘
 
-시간복잡도: 정렬 $O(N \logN)$, 스캔 $O(N)$ ($N$: 이벤트 개수)
+시간복잡도: 정렬 $O(N\log N)$, 스캔 $O(N)$ ($N$: 이벤트 개수)
+
+## Imos Method (いもす法, Difference Array Trick, 차분 배열 트릭) 🟢 Platinum IV
+구간의 변화량을 차분 배열에 기록한 뒤 누적 합으로 전체 상태를 복원하는 알고리즘
+
+시간복잡도: $O(N^D+Q)$ ($N$: 각 차원의 크기, $D$: 차원 수, $Q$: 쿼리 수)
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
