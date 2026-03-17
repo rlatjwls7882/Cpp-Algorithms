@@ -41,6 +41,7 @@ PDF에는 다음 내용이 포함됩니다.
 - Set
 - Map
 - DSU
+- Rope
 
 ### 기초 알고리즘
 - Binary Search
