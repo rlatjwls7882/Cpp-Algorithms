@@ -43,6 +43,7 @@
 - Set
 - Map
 - DSU
+- Order Statistic Tree
 
 ### 기초 알고리즘
 - Binary Search
