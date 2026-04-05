@@ -7,7 +7,7 @@
 👉 **[알고리즘 정리 PDF 보기](./알고리즘%20정리.pdf)**
 
 ## 문서 구성 미리보기
-![미리보기](https://github.com/user-attachments/assets/22d67103-95ea-4a4d-8068-e003fc42455c)
+![미리보기](https://github.com/user-attachments/assets/3f7d16dd-ca10-4dc7-8cc2-e994d3ee1f93)
 
 ## License
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
